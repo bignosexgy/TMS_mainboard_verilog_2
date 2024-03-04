@@ -1,0 +1,181 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus II License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+# Date created = 09:22:30  February 29, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		dev_board_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.0.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:56:40  FEBRUARY 28, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION 15.0.0
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name VERILOG_FILE ../rtl/rtc_seg_led/seg_bcd_dri.v
+set_global_assignment -name VERILOG_FILE ../rtl/rtc_seg_led/pcf8563_ctrl.v
+set_global_assignment -name VERILOG_FILE ../rtl/rtc_seg_led/key_sw_disp.v
+set_global_assignment -name VERILOG_FILE ../rtl/rtc_seg_led/key_debounce.v
+set_global_assignment -name VERILOG_FILE ../rtl/rtc_seg_led/i2c_dri.v
+set_global_assignment -name VERILOG_FILE ../rtl/uart_232/uart_recv.v
+set_global_assignment -name VERILOG_FILE ../rtl/uart_232/uart_loop.v
+set_global_assignment -name VERILOG_FILE ../rtl/uart_232/uart_send.v
+set_global_assignment -name VERILOG_FILE ../rtl/key_led/key_led_association.v
+set_global_assignment -name VERILOG_FILE ../rtl/key_led/led_key.v
+set_global_assignment -name VERILOG_FILE ../rtl/key_led/key_scan.v
+set_global_assignment -name VERILOG_FILE ../rtl/dev_board_top.v
+set_global_assignment -name SDC_FILE ../rtl/SDC1.sdc
+set_global_assignment -name CDF_FILE output_files/Chain7.cdf
+set_global_assignment -name CDF_FILE output_files/Chain2.cdf
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_B8 -to uart_rxd
+set_location_assignment PIN_C3 -to uart_txd
+set_location_assignment PIN_M2 -to sys_clk
+set_location_assignment PIN_M1 -to sys_rst_n
+set_location_assignment PIN_D11 -to led[0]
+set_location_assignment PIN_C11 -to led[1]
+set_location_assignment PIN_E10 -to led[2]
+set_location_assignment PIN_F10 -to led[3]
+set_location_assignment PIN_E16 -to key[0]
+set_location_assignment PIN_E15 -to key[1]
+set_location_assignment PIN_M15 -to key[2]
+set_location_assignment PIN_M16 -to key[3]
+set_location_assignment PIN_N16 -to seg_sel[0]
+set_location_assignment PIN_N15 -to seg_sel[1]
+set_location_assignment PIN_P16 -to seg_sel[2]
+set_location_assignment PIN_P15 -to seg_sel[3]
+set_location_assignment PIN_R16 -to seg_sel[4]
+set_location_assignment PIN_T15 -to seg_sel[5]
+set_location_assignment PIN_M11 -to seg_led[0]
+set_location_assignment PIN_N12 -to seg_led[1]
+set_location_assignment PIN_C9 -to seg_led[2]
+set_location_assignment PIN_N13 -to seg_led[3]
+set_location_assignment PIN_M10 -to seg_led[4]
+set_location_assignment PIN_N11 -to seg_led[5]
+set_location_assignment PIN_P11 -to seg_led[6]
+set_location_assignment PIN_D9 -to seg_led[7]
+set_location_assignment PIN_D8 -to iic_scl
+set_location_assignment PIN_C8 -to iic_sda
+
+# Classic Timing Assignments
+# ==========================
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name TOP_LEVEL_ENTITY dev_board_top
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP4CE10F17C8
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+
+# EDA Netlist Writer Assignments
+# ==============================
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
+
+# Assembler Assignments
+# =====================
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+
+# Power Estimation Assignments
+# ============================
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+# Advanced I/O Timing Assignments
+# ===============================
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+
+# start EDA_TOOL_SETTINGS(eda_simulation)
+# ---------------------------------------
+
+	# EDA Netlist Writer Assignments
+	# ==============================
+	set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+	set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+
+# end EDA_TOOL_SETTINGS(eda_simulation)
+# -------------------------------------
+
+# ---------------------------
+# start ENTITY(dev_board_top)
+
+	# Fitter Assignments
+	# ==================
+	set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to key[3]
+	set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to key[2]
+	set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to key[1]
+	set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to key[0]
+	set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to led[3]
+	set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to led[2]
+	set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to led[1]
+	set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to led[0]
+	set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to sys_clk
+	set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to sys_rst_n
+	set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to uart_rxd
+	set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to uart_txd
+	set_instance_assignment -name SLEW_RATE 2 -to led[3]
+	set_instance_assignment -name SLEW_RATE 2 -to led[2]
+	set_instance_assignment -name SLEW_RATE 2 -to led[1]
+	set_instance_assignment -name SLEW_RATE 2 -to led[0]
+	set_instance_assignment -name SLEW_RATE 2 -to uart_txd
+
+	# start DESIGN_PARTITION(Top)
+	# ---------------------------
+
+		# Incremental Compilation Assignments
+		# ===================================
+		set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+		set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+		set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+
+	# end DESIGN_PARTITION(Top)
+	# -------------------------
+
+# end ENTITY(dev_board_top)
+# -------------------------
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
