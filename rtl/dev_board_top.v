@@ -5,7 +5,7 @@
 //关注微信公众平台微信号："正点原子"，免费获取ZYNQ & FPGA & STM32 & LINUX资料。
 //版权所有，盗版必究。
 //Copyright(C) 正点原子 2018-2028
-//All rights reserved	                               
+//All rights reserved                                  
 //----------------------------------------------------------------------------------------
 // File name:           uart_loopback_top
 // Last modified Date:  2019/10/9 9:56:36
@@ -26,11 +26,11 @@ module dev_board_top(
 
     input           uart_rxd,           //UART接收端口
     output          uart_txd,            //UART发送端口
-	 
-	 output    [3:0]  led,         //4个LED灯
-	 input     [3:0]  key,          //4个按键
-	 
-	//////////////////////////rtc_seg_led begin
+    
+   output    [3:0]  led,         //4个LED灯
+   input     [3:0]  key,          //4个按键
+    
+   //////////////////////////rtc_seg_led begin
     //按键
     //input                key,         //输入按键KEY0
     
@@ -40,13 +40,17 @@ module dev_board_top(
     
     //RTC实时时钟
     output               iic_scl,     //RTC的时钟线scl
-    inout                iic_sda      //RTC的数据线sda   
-   //output
-   //output  reg  [5:0]     seg_sel,        // 数码管位选
-  // output  reg  [7:0]     seg_led         // 数码管段选
+    inout                iic_sda,      //RTC的数据线sda   
+    //output
+    //output  reg  [5:0]     seg_sel,        // 数码管位选
+    // output  reg  [7:0]     seg_led         // 数码管段选
+     
+    //Pulse_logic_gen   
+    output    [4:0]     IGBT                   //5个IGBT驱动端口
+  
     );
-	
-	//////////////////////////rtc_seg_led end
+   
+   //////////////////////////rtc_seg_led end
 
 //parameter define
 parameter  CLK_FREQ = 50000000;         //定义系统时钟频率
@@ -67,7 +71,7 @@ wire       uart_send_en;                //UART发送使能
 wire [7:0] uart_send_data;              //UART发送数据
 wire       uart_tx_busy;                //UART发送忙状态标志
 wire [3:0] led_state;                   //led将要改变的状态
-wire [3:0] key_push;  					//按键当前状态
+wire [3:0] key_push;                 //按键当前状态
 
 
 //////////////////////////rtc_seg_led begin
@@ -90,6 +94,11 @@ wire    [7:0]  year     ;   //年
 wire           key_value;   //消抖后的按键值
 wire    [5:0]  point    ;   //数码管小数点控制
 wire    [23:0] disp_data;   //数码管显示的数值控制
+
+
+wire    [4:0]  IGBT_status; //IGBT当前开通状态 
+wire    [4:0]  IGBT_on_EN;  //IGBT开通控制标志
+wire    [23:0] IGBT_on_time; //IGBT开通时常
 
 //////////////////////////rtc_seg_led end
 
@@ -139,39 +148,80 @@ uart_loop u_uart_loop(
     .send_en        (uart_send_en),     //发送使能信号
     .send_data      (uart_send_data)    //待发送数据
     );
-	 
+    
+//串口控制工作模式模块
+Pulse_logic_gen Pulse_logic_gen_u(
+   .sys_clk                 (sys_clk),          
+   .sys_rst_n               (sys_rst_n),          
+                        
+   .receive_data            (uart_recv_data),     
+   //.Burst_Frequency         (Burst_Frequency),  
+   //.Pulses_Frequency,       (Pulses_Frequency),   
+   //.IGBT_status            (IGBT_status),         
+   //.SCR_status             (SCR_status),        
+   //.IGBT                  (IGBT),                
+   //.SCR                  (SCR),                 
+   //.SCR_on_EN            (SCR_on_EN),        
+   //.IGBT_on_time             (IGBT_on_time),
+   //.SCR_on_time              (SCR_on_time),
+   //.IGBT_on_EN               (IGBT_on_EN)
+    .IGBT                     (IGBT)
+ );
+ 
+ //IGBT和晶闸管驱动信号
+ /*
+ IGBT_SCR IGBT_SCR_u(
+   .sys_clk                 (sys_clk),         
+   .sys_rst_n               (sys_rst_n),          
+                           
+   //.IGBT_counter            (IGBT_counter),       
+   //.SCR_counter            (SCR_counter),        
+   //.Burst_Frequency         (Burst_Frequency),     
+   //.Pulses_Frequency         (Pulses_Frequency),     
+   .IGBT_on_EN               (IGBT_on_EN),         
+   //.SCR_on_EN               (SCR_on_EN),          
+   .IGBT_on_time             (IGBT_on_time),  
+   //.SCR_on_time            (SCR_on_time), 
+   .IGBT_status              (IGBT_status),         
+   //.SCR_status             (SCR_status),        
+   //.SCR                       (SCR),
+   .IGBT                     (IGBT)                
+ );
+*/ 
+ 
+ 
 //flow_led
 /*
 flow_led flow_led_u(
-	.sys_clk        (sys_clk),
-	.sys_rst_n      (sys_rst_n),
-	
-	.led            (led)
+   .sys_clk        (sys_clk),
+   .sys_rst_n      (sys_rst_n),
+   
+   .led            (led)
 );
 */
 key_scan key_scan_u(
-.sys_clk  	(sys_clk), 
-.sys_rst_n	(sys_rst_n), 
+.sys_clk     (sys_clk), 
+.sys_rst_n   (sys_rst_n), 
 
-.key			(key),           
+.key         (key),           
 .key_push   (key_push)
 );
 
 
 led_key led_key_u(
-.sys_clk  		(sys_clk), 
-.sys_rst_n		(sys_rst_n),
+.sys_clk        (sys_clk), 
+.sys_rst_n      (sys_rst_n),
       
-.led          	(led),
-.led_state		(led_state)
+.led             (led),
+.led_state      (led_state)
 );
 
 key_led_association key_led_association_u(
-.sys_clk			(sys_clk),   
-.sys_rst_n		(sys_rst_n), 
+.sys_clk         (sys_clk),   
+.sys_rst_n      (sys_rst_n), 
 
-.key_push		(key_push),
-.led_state 		(led_state)
+.key_push      (key_push),
+.led_state       (led_state)
 );
 
 
@@ -225,7 +275,7 @@ key_debounce u_key_debounce(
     .sys_clk     (sys_clk   ),    //外部50M时钟
     .sys_rst_n   (sys_rst_n ),    //外部复位信号，低有效
     .key         (key       ),    //外部按键输入
-	.key_value   (key_value ),    //按键消抖后的数据
+   .key_value   (key_value ),    //按键消抖后的数据
     .key_flag    ()               //按键数据有效信号
 );
 

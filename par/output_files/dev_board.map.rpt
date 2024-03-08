@@ -1,5 +1,5 @@
 Analysis & Synthesis report for dev_board
-Thu Feb 29 09:27:04 2024
+Fri Mar 08 09:20:52 2024
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
@@ -57,16 +57,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 29 09:27:04 2024       ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 08 09:20:52 2024       ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
 ; Revision Name                      ; dev_board                                   ;
 ; Top-level Entity Name              ; dev_board_top                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 546                                         ;
-;     Total combinational functions  ; 466                                         ;
-;     Dedicated logic registers      ; 317                                         ;
-; Total registers                    ; 317                                         ;
-; Total pins                         ; 28                                          ;
+; Total logic elements               ; 653                                         ;
+;     Total combinational functions  ; 573                                         ;
+;     Dedicated logic registers      ; 391                                         ;
+; Total registers                    ; 391                                         ;
+; Total pins                         ; 33                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -184,18 +184,19 @@ agreement for further details.
 +--------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path     ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                                ; Library ;
 +--------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; ../rtl/rtc_seg_led/seg_bcd_dri.v     ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development Board/rtl/rtc_seg_led/seg_bcd_dri.v     ;         ;
-; ../rtl/rtc_seg_led/pcf8563_ctrl.v    ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development Board/rtl/rtc_seg_led/pcf8563_ctrl.v    ;         ;
-; ../rtl/rtc_seg_led/key_sw_disp.v     ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development Board/rtl/rtc_seg_led/key_sw_disp.v     ;         ;
-; ../rtl/rtc_seg_led/key_debounce.v    ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development Board/rtl/rtc_seg_led/key_debounce.v    ;         ;
-; ../rtl/rtc_seg_led/i2c_dri.v         ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development Board/rtl/rtc_seg_led/i2c_dri.v         ;         ;
-; ../rtl/uart_232/uart_recv.v          ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development Board/rtl/uart_232/uart_recv.v          ;         ;
-; ../rtl/uart_232/uart_loop.v          ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development Board/rtl/uart_232/uart_loop.v          ;         ;
-; ../rtl/uart_232/uart_send.v          ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development Board/rtl/uart_232/uart_send.v          ;         ;
-; ../rtl/key_led/key_led_association.v ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development Board/rtl/key_led/key_led_association.v ;         ;
-; ../rtl/key_led/led_key.v             ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development Board/rtl/key_led/led_key.v             ;         ;
-; ../rtl/key_led/key_scan.v            ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development Board/rtl/key_led/key_scan.v            ;         ;
-; ../rtl/dev_board_top.v               ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development Board/rtl/dev_board_top.v               ;         ;
+; ../rtl/IGBT&SCR/Pulse_logic_gen.v    ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR/Pulse_logic_gen.v    ;         ;
+; ../rtl/rtc_seg_led/seg_bcd_dri.v     ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/seg_bcd_dri.v     ;         ;
+; ../rtl/rtc_seg_led/pcf8563_ctrl.v    ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/pcf8563_ctrl.v    ;         ;
+; ../rtl/rtc_seg_led/key_sw_disp.v     ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_sw_disp.v     ;         ;
+; ../rtl/rtc_seg_led/key_debounce.v    ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_debounce.v    ;         ;
+; ../rtl/rtc_seg_led/i2c_dri.v         ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/i2c_dri.v         ;         ;
+; ../rtl/uart_232/uart_recv.v          ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_recv.v          ;         ;
+; ../rtl/uart_232/uart_loop.v          ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_loop.v          ;         ;
+; ../rtl/uart_232/uart_send.v          ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_send.v          ;         ;
+; ../rtl/key_led/key_led_association.v ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_led_association.v ;         ;
+; ../rtl/key_led/led_key.v             ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/led_key.v             ;         ;
+; ../rtl/key_led/key_scan.v            ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_scan.v            ;         ;
+; ../rtl/dev_board_top.v               ; yes             ; User Verilog HDL File  ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v               ;         ;
 +--------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -204,30 +205,30 @@ agreement for further details.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 546             ;
+; Estimated Total logic elements              ; 653             ;
 ;                                             ;                 ;
-; Total combinational functions               ; 466             ;
+; Total combinational functions               ; 573             ;
 ; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 206             ;
-;     -- 3 input functions                    ; 69              ;
-;     -- <=2 input functions                  ; 191             ;
+;     -- 4 input functions                    ; 235             ;
+;     -- 3 input functions                    ; 75              ;
+;     -- <=2 input functions                  ; 263             ;
 ;                                             ;                 ;
 ; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 343             ;
-;     -- arithmetic mode                      ; 123             ;
+;     -- normal mode                          ; 381             ;
+;     -- arithmetic mode                      ; 192             ;
 ;                                             ;                 ;
-; Total registers                             ; 317             ;
-;     -- Dedicated logic registers            ; 317             ;
+; Total registers                             ; 391             ;
+;     -- Dedicated logic registers            ; 391             ;
 ;     -- I/O registers                        ; 0               ;
 ;                                             ;                 ;
-; I/O pins                                    ; 28              ;
+; I/O pins                                    ; 33              ;
 ;                                             ;                 ;
 ; Embedded Multiplier 9-bit elements          ; 0               ;
 ;                                             ;                 ;
 ; Maximum fan-out node                        ; sys_rst_n~input ;
-; Maximum fan-out                             ; 317             ;
-; Total fan-out                               ; 2672            ;
-; Average fan-out                             ; 3.18            ;
+; Maximum fan-out                             ; 368             ;
+; Total fan-out                               ; 3245            ;
+; Average fan-out                             ; 3.15            ;
 +---------------------------------------------+-----------------+
 
 
@@ -236,7 +237,8 @@ agreement for further details.
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                      ; Library Name ;
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+
-; |dev_board_top                                 ; 466 (1)           ; 317 (0)      ; 0           ; 0            ; 0       ; 0         ; 28   ; 0            ; |dev_board_top                                           ; work         ;
+; |dev_board_top                                 ; 573 (1)           ; 391 (0)      ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |dev_board_top                                           ; work         ;
+;    |Pulse_logic_gen:Pulse_logic_gen_u|         ; 107 (107)         ; 74 (74)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|Pulse_logic_gen:Pulse_logic_gen_u         ; work         ;
 ;    |i2c_dri:u_i2c_dri|                         ; 118 (118)         ; 56 (56)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|i2c_dri:u_i2c_dri                         ; work         ;
 ;    |key_debounce:u_key_debounce|               ; 30 (30)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|key_debounce:u_key_debounce               ; work         ;
 ;    |key_led_association:key_led_association_u| ; 63 (63)           ; 39 (39)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|key_led_association:key_led_association_u ; work         ;
@@ -269,23 +271,26 @@ Encoding Type:  One-Hot
 +----------------------+-------------------+----------------------+----------------------+----------------------+--------------------+---------------------+---------------------+-------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                     ;
-+-----------------------------------------------+----------------------------------------+
-; Register name                                 ; Reason for Removal                     ;
-+-----------------------------------------------+----------------------------------------+
-; pcf8563_ctrl:u_pcf8563_ctrl|i2c_addr[4..15]   ; Stuck at GND due to stuck port data_in ;
-; pcf8563_ctrl:u_pcf8563_ctrl|i2c_data_w[1,6,7] ; Stuck at GND due to stuck port data_in ;
-; pcf8563_ctrl:u_pcf8563_ctrl|sec[7]            ; Stuck at GND due to stuck port data_in ;
-; pcf8563_ctrl:u_pcf8563_ctrl|min[7]            ; Stuck at GND due to stuck port data_in ;
-; pcf8563_ctrl:u_pcf8563_ctrl|hour[6,7]         ; Stuck at GND due to stuck port data_in ;
-; pcf8563_ctrl:u_pcf8563_ctrl|day[6,7]          ; Stuck at GND due to stuck port data_in ;
-; pcf8563_ctrl:u_pcf8563_ctrl|mon[5..7]         ; Stuck at GND due to stuck port data_in ;
-; i2c_dri:u_i2c_dri|addr_t[4..15]               ; Stuck at GND due to stuck port data_in ;
-; i2c_dri:u_i2c_dri|data_wr_t[1,6,7]            ; Stuck at GND due to stuck port data_in ;
-; i2c_dri:u_i2c_dri|cur_state.st_addr16         ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 40        ;                                        ;
-+-----------------------------------------------+----------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                             ;
++-------------------------------------------------------+----------------------------------------+
+; Register name                                         ; Reason for Removal                     ;
++-------------------------------------------------------+----------------------------------------+
+; pcf8563_ctrl:u_pcf8563_ctrl|i2c_addr[4..15]           ; Stuck at GND due to stuck port data_in ;
+; pcf8563_ctrl:u_pcf8563_ctrl|i2c_data_w[1,6,7]         ; Stuck at GND due to stuck port data_in ;
+; pcf8563_ctrl:u_pcf8563_ctrl|sec[7]                    ; Stuck at GND due to stuck port data_in ;
+; pcf8563_ctrl:u_pcf8563_ctrl|min[7]                    ; Stuck at GND due to stuck port data_in ;
+; pcf8563_ctrl:u_pcf8563_ctrl|hour[6,7]                 ; Stuck at GND due to stuck port data_in ;
+; pcf8563_ctrl:u_pcf8563_ctrl|day[6,7]                  ; Stuck at GND due to stuck port data_in ;
+; pcf8563_ctrl:u_pcf8563_ctrl|mon[5..7]                 ; Stuck at GND due to stuck port data_in ;
+; i2c_dri:u_i2c_dri|addr_t[4..15]                       ; Stuck at GND due to stuck port data_in ;
+; i2c_dri:u_i2c_dri|data_wr_t[1,6,7]                    ; Stuck at GND due to stuck port data_in ;
+; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_time[2..23] ; Stuck at GND due to stuck port data_in ;
+; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_time[1]     ; Stuck at VCC due to stuck port data_in ;
+; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_time[0]     ; Stuck at GND due to stuck port data_in ;
+; i2c_dri:u_i2c_dri|cur_state.st_addr16                 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 64                ;                                        ;
++-------------------------------------------------------+----------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -331,12 +336,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 317   ;
-; Number of registers using Synchronous Clear  ; 57    ;
+; Total registers                              ; 391   ;
+; Number of registers using Synchronous Clear  ; 105   ;
 ; Number of registers using Synchronous Load   ; 58    ;
-; Number of registers using Asynchronous Clear ; 316   ;
+; Number of registers using Asynchronous Clear ; 364   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 115   ;
+; Number of registers using Clock Enable       ; 163   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -376,18 +381,19 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |dev_board_top|uart_send:u_uart_send|tx_data[4]                       ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |dev_board_top|Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[2]    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |dev_board_top|uart_send:u_uart_send|tx_data[2]                       ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |dev_board_top|uart_send:u_uart_send|tx_cnt[0]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |dev_board_top|key_led_association:key_led_association_u|led_state[2] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |dev_board_top|seg_bcd_dri:u_seg_bcd_dri|cnt[0]                       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |dev_board_top|uart_loop:u_uart_loop|tx_ready                         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |dev_board_top|uart_recv:u_uart_recv|rx_cnt[3]                        ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |dev_board_top|uart_send:u_uart_send|clk_cnt[1]                       ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |dev_board_top|uart_recv:u_uart_recv|clk_cnt[9]                       ;
-; 3:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |dev_board_top|key_debounce:u_key_debounce|cnt[11]                    ;
-; 16:1               ; 8 bits    ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |dev_board_top|pcf8563_ctrl:u_pcf8563_ctrl|i2c_data_w[5]              ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |dev_board_top|key_scan:key_scan_u|key_push[0]                        ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |dev_board_top|i2c_dri:u_i2c_dri|cnt[2]                               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |dev_board_top|key_led_association:key_led_association_u|led_state[3] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |dev_board_top|seg_bcd_dri:u_seg_bcd_dri|cnt[1]                       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |dev_board_top|uart_loop:u_uart_loop|send_en                          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |dev_board_top|uart_recv:u_uart_recv|rx_cnt[1]                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |dev_board_top|uart_send:u_uart_send|clk_cnt[9]                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |dev_board_top|uart_recv:u_uart_recv|clk_cnt[6]                       ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |dev_board_top|key_debounce:u_key_debounce|cnt[10]                    ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |dev_board_top|pcf8563_ctrl:u_pcf8563_ctrl|i2c_addr[3]                ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |dev_board_top|key_scan:key_scan_u|key_push[2]                        ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |dev_board_top|i2c_dri:u_i2c_dri|cnt[0]                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 
 
@@ -484,29 +490,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 28                          ;
-; cycloneiii_ff         ; 317                         ;
+; boundary_port         ; 33                          ;
+; cycloneiii_ff         ; 391                         ;
 ;     CLR               ; 90                          ;
-;     CLR SCLR          ; 55                          ;
+;     CLR SCLR          ; 79                          ;
 ;     CLR SLD           ; 57                          ;
 ;     ENA               ; 1                           ;
-;     ENA CLR           ; 111                         ;
+;     ENA CLR           ; 135                         ;
 ;     ENA CLR SCLR      ; 2                           ;
 ;     ENA CLR SLD       ; 1                           ;
+;     ENA SCLR          ; 24                          ;
+;     plain             ; 2                           ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 469                         ;
-;     arith             ; 123                         ;
+; cycloneiii_lcell_comb ; 576                         ;
+;     arith             ; 192                         ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 122                         ;
-;     normal            ; 346                         ;
+;         2 data inputs ; 191                         ;
+;     normal            ; 384                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 16                          ;
+;         1 data inputs ; 19                          ;
 ;         2 data inputs ; 54                          ;
-;         3 data inputs ; 69                          ;
-;         4 data inputs ; 206                         ;
+;         3 data inputs ; 75                          ;
+;         4 data inputs ; 235                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 2.82                        ;
+; Average LUT depth     ; 2.98                        ;
 +-----------------------+-----------------------------+
 
 
@@ -515,7 +523,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -525,37 +533,45 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Thu Feb 29 09:26:58 2024
+    Info: Processing started: Fri Mar 08 09:20:45 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dev_board -c dev_board
 Info (11104): Parallel Compilation has detected 20 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
-Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development board/rtl/rtc_seg_led/seg_bcd_dri.v
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/igbt&scr/pulse_logic_gen.v
+    Info (12023): Found entity 1: Pulse_logic_gen
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/rtc_seg_led/seg_bcd_dri.v
     Info (12023): Found entity 1: seg_bcd_dri
-Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development board/rtl/rtc_seg_led/pcf8563_ctrl.v
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/rtc_seg_led/pcf8563_ctrl.v
     Info (12023): Found entity 1: pcf8563_ctrl
-Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development board/rtl/rtc_seg_led/key_sw_disp.v
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/rtc_seg_led/key_sw_disp.v
     Info (12023): Found entity 1: key_sw_disp
-Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development board/rtl/rtc_seg_led/key_debounce.v
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/rtc_seg_led/key_debounce.v
     Info (12023): Found entity 1: key_debounce
-Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development board/rtl/rtc_seg_led/i2c_dri.v
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/rtc_seg_led/i2c_dri.v
     Info (12023): Found entity 1: i2c_dri
-Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development board/rtl/uart_232/uart_recv.v
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/uart_232/uart_recv.v
     Info (12023): Found entity 1: uart_recv
-Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development board/rtl/uart_232/uart_loop.v
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/uart_232/uart_loop.v
     Info (12023): Found entity 1: uart_loop
-Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development board/rtl/uart_232/uart_send.v
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/uart_232/uart_send.v
     Info (12023): Found entity 1: uart_send
-Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development board/rtl/key_led/key_led_association.v
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/key_led/key_led_association.v
     Info (12023): Found entity 1: key_led_association
-Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development board/rtl/key_led/led_key.v
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/key_led/led_key.v
     Info (12023): Found entity 1: led_key
-Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development board/rtl/key_led/key_scan.v
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/key_led/key_scan.v
     Info (12023): Found entity 1: key_scan
-Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development board/rtl/dev_board_top.v
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/dev_board_top.v
     Info (12023): Found entity 1: dev_board_top
 Info (12127): Elaborating entity "dev_board_top" for the top level hierarchy
 Info (12128): Elaborating entity "uart_recv" for hierarchy "uart_recv:u_uart_recv"
 Info (12128): Elaborating entity "uart_send" for hierarchy "uart_send:u_uart_send"
 Info (12128): Elaborating entity "uart_loop" for hierarchy "uart_loop:u_uart_loop"
+Info (12128): Elaborating entity "Pulse_logic_gen" for hierarchy "Pulse_logic_gen:Pulse_logic_gen_u"
+Warning (10036): Verilog HDL or VHDL warning at Pulse_logic_gen.v(48): object "IGBT_status" assigned a value but never read
+Warning (10855): Verilog HDL warning at Pulse_logic_gen.v(56): initial value for variable IGBT_on_EN should be constant
+Warning (10230): Verilog HDL assignment warning at Pulse_logic_gen.v(81): truncated value with size 32 to match size of target (24)
+Warning (10230): Verilog HDL assignment warning at Pulse_logic_gen.v(92): truncated value with size 32 to match size of target (24)
+Warning (10034): Output port "IGBT[4..1]" at Pulse_logic_gen.v(38) has no driver
 Info (12128): Elaborating entity "key_scan" for hierarchy "key_scan:key_scan_u"
 Info (12128): Elaborating entity "led_key" for hierarchy "led_key:led_key_u"
 Info (12128): Elaborating entity "key_led_association" for hierarchy "key_led_association:key_led_association_u"
@@ -567,25 +583,30 @@ Info (12128): Elaborating entity "key_sw_disp" for hierarchy "key_sw_disp:u_key_
 Info (12128): Elaborating entity "seg_bcd_dri" for hierarchy "seg_bcd_dri:u_seg_bcd_dri"
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "IGBT[1]" is stuck at GND
+    Warning (13410): Pin "IGBT[2]" is stuck at GND
+    Warning (13410): Pin "IGBT[3]" is stuck at GND
+    Warning (13410): Pin "IGBT[4]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development Board/par/output_files/dev_board.map.smsg
+Info (144001): Generated suppressed messages file D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/output_files/dev_board.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 578 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 690 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 20 output pins
+    Info (21059): Implemented 25 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 550 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4897 megabytes
-    Info: Processing ended: Thu Feb 29 09:27:04 2024
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:13
+    Info (21061): Implemented 657 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4902 megabytes
+    Info: Processing ended: Fri Mar 08 09:20:52 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development Board/par/output_files/dev_board.map.smsg.
+The suppressed messages can be found in D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/output_files/dev_board.map.smsg.
 
 

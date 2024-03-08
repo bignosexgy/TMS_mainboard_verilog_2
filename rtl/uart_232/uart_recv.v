@@ -5,7 +5,7 @@
 //关注微信公众平台微信号："正点原子"，免费获取ZYNQ & FPGA & STM32 & LINUX资料。
 //版权所有，盗版必究。
 //Copyright(C) 正点原子 2018-2028
-//All rights reserved	                               
+//All rights reserved                                  
 //----------------------------------------------------------------------------------------
 // File name:           uart_recv
 // Last modified Date:  2019/10/9 9:56:36
@@ -21,7 +21,7 @@
 //****************************************************************************************//
 
 module uart_recv(
-    input			     sys_clk,                  //系统时钟
+    input              sys_clk,                  //系统时钟
     input              sys_rst_n,                //系统复位，低电平有效
     
     input              uart_rxd,                 //UART接收端口
@@ -92,8 +92,8 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
         else
             clk_cnt <= 16'd0;             //对系统时钟计数达一个波特率周期后清零
     end
-    else                              				
-        clk_cnt <= 16'd0;						//接收过程结束，计数器清零
+    else                                          
+        clk_cnt <= 16'd0;                  //接收过程结束，计数器清零
 end
 
 //进入接收过程后，启动接收数据计数器
@@ -101,13 +101,13 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
     if (!sys_rst_n)                             
         rx_cnt  <= 4'd0;
     else if ( rx_flag ) begin                //处于接收过程
-        if (clk_cnt == BPS_CNT - 1)				//对系统时钟计数达一个波特率周期
-            rx_cnt <= rx_cnt + 1'b1;			//此时接收数据计数器加1
+        if (clk_cnt == BPS_CNT - 1)            //对系统时钟计数达一个波特率周期
+            rx_cnt <= rx_cnt + 1'b1;         //此时接收数据计数器加1
         else
             rx_cnt <= rx_cnt;       
     end
-	 else
-        rx_cnt  <= 4'd0;						//接收过程结束，计数器清零
+    else
+        rx_cnt  <= 4'd0;                  //接收过程结束，计数器清零
 end
 
 //根据接收数据计数器来寄存uart接收端口数据
@@ -150,4 +150,4 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
     end    
 end
 
-endmodule	
+endmodule   

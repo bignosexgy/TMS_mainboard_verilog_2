@@ -1,0 +1,429 @@
+m255
+K4
+z2
+!s11f vlog 2019.2 2019.04, Apr 17 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim
+vio_buf_opdrn
+Z1 !s110 1709718785
+!i10b 1
+!s100 z0EcHz62UYUVHTAOUgnd]2
+!s11b 82Z<fJ>P0R298bEb[D[KA0
+I_X[El=?n8L]>VBi4PF0zf1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1429796851
+Z4 8c:/altera/15.0/quartus/eda/sim_lib/sgate.v
+Z5 Fc:/altera/15.0/quartus/eda/sim_lib/sgate.v
+L0 249
+Z6 OL;L;2019.2;69
+r1
+!s85 0
+31
+Z7 !s108 1709718785.000000
+!s107 c:/altera/15.0/quartus/eda/sim_lib/sgate.v|
+Z8 !s90 -reportprogress|300|-vlog01compat|-work|sgate_ver|c:/altera/15.0/quartus/eda/sim_lib/sgate.v|
+!i113 0
+Z9 o-vlog01compat -work sgate_ver -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 tCvgOpt 0
+vio_buf_tri
+R1
+!i10b 1
+!s100 OkVkfhJlbI5njJOG1hTe^2
+!s11b NP87XSJFS^>P<j9[>KOzH3
+Iz;>`[LQL0Vf^F[[V:6GA42
+R2
+R0
+R3
+R4
+R5
+L0 221
+R6
+r1
+!s85 0
+31
+R7
+Z11 !s107 c:/altera/15.0/quartus/eda/sim_lib/sgate.v|
+R8
+!i113 0
+R9
+R10
+vmux21
+R1
+!i10b 1
+!s100 Sc^=5aRZnTN9<QgD6G?[00
+!s11b H8J4]<nW^KcfOfAn=5CF42
+I[ROAC9=l4WRCPlL1EAj2E0
+R2
+R0
+R3
+R4
+R5
+L0 191
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+voper_add
+R1
+!i10b 1
+!s100 ZR=EZ2WV8G<94^6TNJgX?0
+!s11b GAEi_:Ok68z^b@]o4WNe<2
+IzU_SA0H_7l:e^d8Jm^:GP0
+R2
+R0
+R3
+R4
+R5
+L0 19
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+voper_addsub
+R1
+!i10b 1
+!s100 <1G1iC9RHGaXFX]m5]F:L1
+!s11b 8cjcDZK@P7P?5K[TLU^]o3
+IgCNeLzJEz35d1H:@Nf9ab3
+R2
+R0
+R3
+R4
+R5
+L0 96
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+voper_bus_mux
+R1
+!i10b 1
+!s100 Yh<nR1o=YIi<HDhM9J[UE3
+!s11b hhX7PNfT_U]N`jfJPKBaA1
+IP8:o_eG0jdM9bacVSo>ha1
+R2
+R0
+R3
+R4
+R5
+L0 1073
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+voper_decoder
+R1
+!i10b 1
+!s100 7A>?IXP`Yj:aEj5TORzhN0
+!s11b 5J=65HaX[h0d:SN<GHOUN2
+I6doTZ_3TKQ9^<:OTB=n;<0
+R2
+R0
+R3
+R4
+R5
+L0 1037
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+voper_div
+R1
+!i10b 1
+!s100 hnQA^c[7zEOGQc2W[KR6O3
+!s11b 0lFFL:C47<Ha^;G@:<ghz2
+Ie8<@oJlflLLemOlhL<O0O2
+R2
+R0
+R3
+R4
+R5
+L0 395
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+voper_latch
+R1
+!i10b 1
+!s100 ]l:H1;gM=ZLgFVb;FK4GJ2
+!s11b 67hhc^5X2VQ`eZ1481a7A3
+IaF[fWLekV2[AK1HC0:H[:0
+R2
+R0
+R3
+R4
+R5
+L0 1136
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+voper_left_shift
+R1
+!i10b 1
+!s100 J2GE@5C@aGbZ:]90@c92N0
+!s11b Anlk]DT;fl2EIfJa[NIB10
+IN[TT4BUJVcLFzK>RkZJM02
+R2
+R0
+R3
+R4
+R5
+L0 573
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+voper_less_than
+R1
+!i10b 1
+!s100 JJV5Gz8:6iG7g1^_hjA9:1
+!s11b >6I9eeB]lWoNZ>QCjaQ0E2
+IgzL:lX4biNJ[^eBD^<oZn2
+R2
+R0
+R3
+R4
+R5
+L0 854
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+voper_mod
+R1
+!i10b 1
+!s100 02Tza445NgDJJ?Djl`@K`3
+!s11b P6dhD3lCLW`3?@2S_7==h2
+Ijl:8j=ImN8b=7@33hWH[K0
+R2
+R0
+R3
+R4
+R5
+L0 484
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+voper_mult
+R1
+!i10b 1
+!s100 fSLnhaYom_OPiTTF;aMFT1
+!s11b <iTQkJL9T]g9nfbMj8fLP1
+IMIfdcUXg>joWidoZ@Z]Pg1
+R2
+R0
+R3
+R4
+R5
+L0 275
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+voper_mux
+R1
+!i10b 1
+!s100 O]6gciK:1W6Z<z:X6cIgn0
+!s11b chBCSUgSdY4LTf7Yl[dZK2
+I:`eiN6<9SKRL`n8ocbde;0
+R2
+R0
+R3
+R4
+R5
+L0 946
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+voper_right_shift
+R1
+!i10b 1
+!s100 4JLWgO]R0OYfj`aMW[34>0
+!s11b c;VSBdl<S?JV0fDLLAkRi1
+If:6[_Ydd[9<BQ^80MTCZB1
+R2
+R0
+R3
+R4
+R5
+L0 650
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+voper_rotate_left
+R1
+!i10b 1
+!s100 0VQX`l^On;Vf^I0]GHIi63
+!s11b OhA45XLdV=J7keQ<zHo3`3
+I=16Pm_o@jf3Y7PkhXeK?Q1
+R2
+R0
+R3
+R4
+R5
+L0 733
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+voper_rotate_right
+R1
+!i10b 1
+!s100 SBez6G5C20l@Ag]S6mN4a0
+!s11b I_;EIFCPbf<3:libJndD<0
+Ia7KkUUYdVagh][Y`oe;582
+R2
+R0
+R3
+R4
+R5
+L0 794
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+voper_selector
+R1
+!i10b 1
+!s100 IjdF9i1^I`Ja]QScHQUG<1
+!s11b GV71:_AL@SQA8U_YOA@GX0
+IoB8Rik>_UEK7R2@15DMXf0
+R2
+R0
+R3
+R4
+R5
+L0 992
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10
+vtri_bus
+R1
+!i10b 1
+!s100 ZCbCQ[6PzBHXG=_Vb`23j3
+!s11b :Z3_DJX^j]Z66D9iADkOM3
+IP@O?NXj:dT^ol]Qag?TBV1
+R2
+R0
+R3
+R4
+R5
+L0 348
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 0
+R9
+R10

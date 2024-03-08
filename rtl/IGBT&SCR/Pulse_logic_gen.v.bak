@@ -1,0 +1,155 @@
+//****************************************Copyright (c)***********************************//
+//----------------------------------------------------------------------------------------
+// File name:           Pulse_logic_gen
+// Last modified Date:  2024/3/6 
+// Last Version:        V1.0
+// Descriptions:        由刺激模式生成IGBT和晶闸管驱动信号的逻辑控制
+//----------------------------------------------------------------------------------------
+// Created by:          xgy
+// Created date:        2024/3/6 
+// Version:             V1.0
+// Descriptions:        The original version
+//
+//----------------------------------------------------------------------------------------
+//****************************************************************************************//
+
+module Pulse_logic_gen(
+    input               	sys_clk  ,    		//系统时钟
+    input               	sys_rst_n,    		//系统复位，低电平有效
+	 
+	
+	input    reg   [7:0]    receive_data,     	//串口接受到的数据
+	//input   reg  [11:0]  	Burst_Frequency,  	//簇的频率
+	//input   reg  [11:0]  	Pulses_Frequency,  	//脉冲的频率	
+	input  reg  [4:0]  	    IGBT_status,   		//5个IGBT状态标志
+	//input  reg  [1:0]  	SCR_status ,  		//2个SCR状态标志
+    //output  reg  [4:0]  	IGBT,          		//5个IGBT驱动端口
+	//output  reg  [1:0]  	SCR,           		//2个SCR驱动端口	
+	
+	output   reg  [4:0]  	IGBT_on_EN,         //5个IGBT开启使能
+	//output   reg  [1:0]  	SCR_on_EN,          //2个SCR开启使能
+	output   reg  [23:0]    IGBT_on_time[4:0],  //5个IGBT开通时常
+	//output   reg  [23:0]  SCR_on_time[1:0]  	//2个SCR开通时常
+	
+	
+    );
+
+//reg define
+reg [23:0] counter;
+//reg [23:0]  IGBT_counter [4:0];    //IGBT驱动时长
+//reg [1:0]  SCR_counter;     //晶闸管驱动时长
+reg  [11:0]  	Burst_Frequency;  //簇的频率        
+reg  [11:0]  	Pulses_Frequency;  //脉冲的频率	max=100Hz
+reg  [3:0]      stimulate_mod;
+
+//parameter define
+
+
+
+
+//*****************************************************
+//**                    main code
+//***************************************************** 
+                                                                                                                                                                                                                         
+//计数器对系统时钟计数，计时0.2秒
+/*
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n)
+        counter <= 24'd0;
+    else if (counter < 24'd1000_0000)            //20ns*10000000=0.2S
+        counter <= counter + 1'b1;
+    else
+        counter <= 24'd0;
+end
+*/
+//计数器对系统时钟计数，计时1u秒
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n)
+        counter <= 24'd0;
+    else if (counter < 24'd50) begin           //20ns*50=1uS
+	    counter <= counter + 1'b1;		
+	end	
+    else
+        counter <= 24'd0;
+end
+
+
+//通过移位寄存器控制IO口的高低电平，从而改变LED的显示状态
+/*
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n)
+        IGBT <= 4'b00000;
+    else if(counter == 24'd1000_0000) 
+        IGBT <= 4'b00000;
+    else
+        IGBT <= IGBT;
+end
+*/
+//处理串口数据，确定将要进行的工作模式，确定IGBT或晶闸管的工作参数
+always @(posedeg sys_clk or negedge sys_rst_n) begin 
+	if(!sys_rst_n)
+		stimulate_mod <= 1'd0;
+	else if(counter == 24'd50) begin	
+		if(receive_data == 2'h55) begin
+		
+			stimulate_mod <= 1'd4;
+			IGBT_on_time[0] <= 24'd1000;
+		end	
+		else if(receive_data == 2'h77)		
+			stimulate_mod <= 1'd0;
+		else
+			stimulate_mod <= 1'd0;
+	end		
+end
+
+//p mode
+
+
+//r mode
+
+
+
+//TBS mode
+
+
+//single Pulse mode
+//处理串口数据，确定将要进行的工作模式，确定IGBT或晶闸管的工作参数
+always @(posedeg sys_clk or negedge sys_rst_n) begin 
+	if(!sys_rst_n)
+		IGBT_on_EN[0] <= 1'd0;
+	else if(stimulate_mod == 1'd4) begin	
+		//if(!(IGBT_status & 4'b1110))		
+		IGBT_on_EN[0]<=1'b1;			
+	end
+	else if(stimulate_mod == 1'd0)
+		IGBT_on_EN[0]<=1'b0;
+	else 	
+		IGBT_on_EN[0]<=IGBT_on_EN[0];
+end
+
+/*
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n)
+        IGBT <= 4'b00000;
+	else if(!IGBT_on_EN[0]) begin
+		if(IGBT_counter[0] == IGBT_on_time[0]) begin
+			IGBT_counter[0] <=  24'd1000_0000;
+			IGBT_status[0] <= 1'b0;
+			IGBT[0] <= 1'b0;
+		end	
+		else begin 
+			IGBT[0] <= 1'b1;
+			IGBT_status[0] <= 1'b1;
+		end	
+		else begin
+			IGBT[0] <= IGBT[0];
+			IGBT_status[0] <= IGBT_status[0];			
+		end			
+	end		
+	else begin
+		IGBT_status[0] <= 1'b0;
+		IGBT[0] <= 1'b0;
+	end
+end
+*/
+endmodule 
