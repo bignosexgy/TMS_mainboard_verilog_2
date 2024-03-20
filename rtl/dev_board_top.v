@@ -46,11 +46,32 @@ module dev_board_top(
     // output  reg  [7:0]     seg_led         // 数码管段选
      
     //Pulse_logic_gen   
-    output    [4:0]     IGBT                   //5个IGBT驱动端口
-  
+    output    [4:0]     IGBT,                   //5个IGBT驱动端口
+   
+   //ADC
+   input          Otr_A,      // 通道A超出范围
+   input          Otr_B,      // 通道B超出范围
+   input   [13:0]   Adc_In,      // 通道输入数据
+   output         Adc_Clk_A,   // 通道A时钟
+   output         Adc_Clk_B,   // 通道B时钟
+   output          clk_test,    //测试时钟
+   
+   //pcf8591 8bit AD/DA
+    //PCF8591 interface
+    output               scl_pcf8591        ,    // i2c时钟线
+    inout                sda_pcf8591             // i2c数据线
+
+    //user interface
+    //output        [5:0]  sel        ,    // 数码管位选
+    //output        [7:0]  seg_led         // 数码管段选
+	
+	 //数码管
+    //output        [5:0]  seg_sel_pcf8591,     //数码管位选信号
+    //output        [7:0]  seg_led_pcf8591      //数码管段选信号
+   
     );
    
-   //////////////////////////rtc_seg_led end
+//////////////////////////rtc_seg_led end
 
 //parameter define
 parameter  CLK_FREQ = 50000000;         //定义系统时钟频率
@@ -102,6 +123,46 @@ wire    [23:0] IGBT_on_time; //IGBT开通时常
 
 //////////////////////////rtc_seg_led end
 
+
+/////////////////////////SDC
+
+
+wire ReadClk;			// 65MHz时钟
+wire Adc_Clk_65M;		// 65MHz的ADC时钟
+wire clk_test_1;
+
+wire [13:0] CHA_DATA;			// 通道A采集数据
+wire [13:0] CHB_DATA;			// 通道B采集数据
+wire [13:0] Adc_Data_CHA;		// 通道A采集数据
+wire [13:0] Adc_Data_CHB;		// 通道B采集数据
+//wire CHA_Empty;
+//wire CHB_Empty;
+
+
+
+/////pcf8591 8bit AD/DA
+//parameter define
+/*
+parameter    SLAVE_ADDR_pcf8591 =  7'h48        ; // 器件地址(SLAVE_ADDR_pcf8591)
+parameter    BIT_CTRL_pcf8591   =  1'b0         ; // 字地址位控制参数(16b/8b)
+parameter    CLK_FREQ_pcf8591  = 26'd50_000_000; // i2c_dri模块的驱动时钟频率(CLK_FREQ)
+parameter    I2C_FREQ_pcf8591   = 18'd250_000   ; // I2C的SCL时钟频率
+parameter    POINT_pcf8591      = 6'b00_1000    ; // 控制点亮数码管小数点的位置
+
+//wire define
+wire           clk_pcf8591       ;                // I2C操作时钟
+wire           i2c_exec_pcf8591  ;                // i2c触发控制
+wire   [15:0]  i2c_addr_pcf8591  ;                // i2c操作地址
+wire   [ 7:0]  i2c_data_w_pcf8591;                // i2c写入的数据
+wire           i2c_done_pcf8591  ;                // i2c操作结束标志
+wire           i2c_rh_wl_pcf8591 ;                // i2c读写控制
+wire   [ 7:0]  i2c_data_r_pcf8591;                // i2c读出的数据
+wire   [19:0]  num_pcf859       ;                // 数码管要显示的数据
+*/
+//ADC
+assign Adc_Clk_A = Adc_Clk_65M;	// 通道A时钟输出
+assign Adc_Clk_B = ~Adc_Clk_65M; // 通道B时钟输出
+assign clk_test = clk_test_1;
 
 
 
@@ -168,37 +229,7 @@ Pulse_logic_gen Pulse_logic_gen_u(
     .IGBT                     (IGBT)
  );
  
- //IGBT和晶闸管驱动信号
- /*
- IGBT_SCR IGBT_SCR_u(
-   .sys_clk                 (sys_clk),         
-   .sys_rst_n               (sys_rst_n),          
-                           
-   //.IGBT_counter            (IGBT_counter),       
-   //.SCR_counter            (SCR_counter),        
-   //.Burst_Frequency         (Burst_Frequency),     
-   //.Pulses_Frequency         (Pulses_Frequency),     
-   .IGBT_on_EN               (IGBT_on_EN),         
-   //.SCR_on_EN               (SCR_on_EN),          
-   .IGBT_on_time             (IGBT_on_time),  
-   //.SCR_on_time            (SCR_on_time), 
-   .IGBT_status              (IGBT_status),         
-   //.SCR_status             (SCR_status),        
-   //.SCR                       (SCR),
-   .IGBT                     (IGBT)                
- );
-*/ 
- 
- 
-//flow_led
-/*
-flow_led flow_led_u(
-   .sys_clk        (sys_clk),
-   .sys_rst_n      (sys_rst_n),
-   
-   .led            (led)
-);
-*/
+
 key_scan key_scan_u(
 .sys_clk     (sys_clk), 
 .sys_rst_n   (sys_rst_n), 
@@ -297,6 +328,7 @@ key_sw_disp u_key_sw_disp(
     );
 
 //数码管驱动模块
+/*
 seg_bcd_dri u_seg_bcd_dri(
    //input
    .clk          (sys_clk   ),    //时钟信号
@@ -307,7 +339,101 @@ seg_bcd_dri u_seg_bcd_dri(
    .seg_sel      (seg_sel   ),    //数码管位选
    .seg_led      (seg_led   )     //数码管段选
 );    
-    
+*/
+// 模块：PLL
+// 功能：为系统提供时钟源
+PLL PLL_CLK(
+   .inclk0   (sys_clk),         // 外部时钟50Mhz
+   .c0      (ReadClk),         // 65MHz时钟
+   .c1      (Adc_Clk_65M),      // 65MHz的ADC时钟
+   .c2     (clk_test_1)
+);
 
+// 功能：读取通道A通道B的采集数据
+
+DDIO u_DDIO(
+   .datain         ( Adc_In         ),
+   .inclock      ( ReadClk         ),
+   .dataout_h      ( Adc_Data_CHB      ),
+   .dataout_l      ( Adc_Data_CHA      )
+);
+
+FIFO u_CHA_FIFO(
+   .data         ( Adc_Data_CHA       ),
+   .rdclk         ( ReadClk         ),
+   .rdreq         ( ~CHA_Empty      ),
+   .wrclk         ( ReadClk         ),
+   .wrreq         ( 1'b1            ),
+   .q            ( CHA_DATA         ),
+   .rdempty      ( CHA_Empty       )
+);
+
+FIFO u_CHB_FIFO(
+   .data         ( Adc_Data_CHB       ),
+   .rdclk         ( ReadClk         ),
+   .rdreq         ( ~CHB_Empty      ),
+   .wrclk         ( ReadClk         ),
+   .wrreq         ( 1'b1            ),
+   .q            ( CHB_DATA         ),
+   .rdempty      ( CHB_Empty       )
+);
+
+/////////////////pcf8591 ADDA///////////////////////////////////
+//例化AD/DA模块
+/*
+pcf8591 u_pcf8591(
+    //global clock
+    .clk         (sys_clk       ),            // 时钟信号
+    .rst_n       (sys_rst_n ),            // 复位信号
+    //i2c interface
+    .i2c_exec    (i2c_exec_pcf8591  ),            // I2C触发执行信号
+    .i2c_rh_wl   (i2c_rh_wl_pcf8591 ),            // I2C读写控制信号
+    .i2c_addr    (i2c_addr_pcf8591  ),            // I2C器件内地址
+    .i2c_data_w  (i2c_data_w_pcf8591),            // I2C要写的数据
+    .i2c_data_r  (i2c_data_r_pcf8591),            // I2C读出的数据
+    .i2c_done    (i2c_done_pcf8591  ),            // I2C一次操作完成
+    //user interface
+    .num         (num_pcf8591       )             // 采集到的电压
+);
+
+//例化i2c_dri
+i2c_dri_pcf8591 #(
+    .SLAVE_ADDR  (SLAVE_ADDR_pcf8591),            // slave address从机地址，放此处方便参数传递
+    .CLK_FREQ   (CLK_FREQ_pcf8591 ),            // i2c_dri模块的驱动时钟频率(CLK_FREQ)
+    .I2C_FREQ    (I2C_FREQ_pcf8591  )             // I2C的SCL时钟频率
+) u_i2c_dri_pcf8591(
+    //global clock
+    .clk         (sys_clk   ),            // i2c_dri模块的驱动时钟(CLK_FREQ)
+    .rst_n       (sys_rst_n ),            // 复位信号
+    //i2c interface
+    .i2c_exec    (i2c_exec_pcf8591 ),            // I2C触发执行信号
+    .bit_ctrl    (BIT_CTRL_pcf8591  ),            // 器件地址位控制(16b/8b)
+    .i2c_rh_wl   (i2c_rh_wl_pcf8591 ),            // I2C读写控制信号
+    .i2c_addr    (i2c_addr_pcf8591  ),            // I2C器件内地址
+    .i2c_data_w  (i2c_data_w_pcf8591),            // I2C要写的数据
+    .i2c_data_r  (i2c_data_r_pcf8591),            // I2C读出的数据
+    .i2c_done    (i2c_done_pcf8591  ),            // I 2C一次操作完成
+    .scl         (scl_pcf8591       ),            // I2C的SCL时钟信号
+    .sda         (sda_pcf8591       ),            // I2C的SDA信号
+    //user interface
+    .dri_clk     (clk_pcf8591       )             // I2C操作时钟
+);
+
+//例化动态数码管显示模块
+seg_led_pcf8591 u_seg_led_pcf8591(
+    //module clock
+    .clk           (sys_clk  ),           // 时钟信号
+    .rst_n         (sys_rst_n),           // 复位信号
+    //seg_led interface
+    .seg_sel       (seg_sel      ),           // 位选
+    .seg_led       (seg_led  ),           // 段选
+    //user interface
+    .data          (num_pcf8591      ),           // 显示的数值
+    .point         (POINT_pcf8591    ),           // 小数点具体显示的位置,从高到低,高电平有效
+    .en            (1'd1     ),           // 数码管使能信号
+    .sign          (1'b0     )            // 符号位（高电平显示“-”号）
+);
+
+*/
     
 endmodule

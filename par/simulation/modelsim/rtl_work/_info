@@ -8,50 +8,52 @@ z2
 !i10f 100
 cModel Technology
 Z0 dD:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim
-vdev_board_top
-Z1 !s110 1709860879
+vDDIO
+Z1 !s110 1710836220
 !i10b 1
-!s100 dR656BMMmjAn=1F_LRVGh0
-IIh8nf1:3Leh5RB_PN0>EQ3
+!s100 z2zi>mT_:j0O^BMz^g2CG2
+IGiUL06;[f441UbbJ5N7VY1
 Z2 V`JN@9S9cnhjKRR_L]QIcM3
 R0
-w1709799996
-8D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v
-FD:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v
-Z3 L0 23
+w1704350770
+8D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/DDIO.v
+FD:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/DDIO.v
+Z3 L0 39
 Z4 OV;L;10.3d;59
 r1
 !s85 0
 31
-!s108 1709860879.779000
-!s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v|
+!s108 1710836220.472000
+!s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/DDIO.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/DDIO.v|
 !i113 1
 Z5 o-vlog01compat -work work
-!s92 -vlog01compat -work work {+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl}
-vdev_board_top_tb
-!s110 1709860880
+Z6 !s92 -vlog01compat -work work {+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248}
+n@d@d@i@o
+vFIFO
+R1
 !i10b 1
-!s100 Q5Pgc:;Dk8@jz4b4?T8eG2
-I@n7gaVKEkf4UZ6i;5zhM`3
+!s100 N4E>U=YfKVH?8W7QhiTH70
+IUWCA4OUo;93B2lWR[5e571
 R2
 R0
-w1709791619
-8D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt
-FD:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt
-Z6 L0 29
+w1704350791
+8D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/FIFO.v
+FD:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/FIFO.v
+R3
 R4
 r1
 !s85 0
 31
-!s108 1709860880.046000
-!s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt|
+!s108 1710836220.408000
+!s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/FIFO.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/FIFO.v|
 !i113 1
 R5
-!s92 -vlog01compat -work work {+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim}
+R6
+n@f@i@f@o
 vi2c_dri
-Z7 !s110 1709860877
+Z7 !s110 1710836221
 !i10b 1
 !s100 eU7gWK:M`B@Ji:NdYA2bG0
 IOMAFlfKM_N@;fbAo`l>;?3
@@ -65,7 +67,7 @@ R4
 r1
 !s85 0
 31
-!s108 1709860877.941000
+!s108 1710836221.600000
 !s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/i2c_dri.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/i2c_dri.v|
 !i113 1
@@ -81,19 +83,19 @@ R0
 w1709115019
 8D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_debounce.v
 FD:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_debounce.v
-R6
+L0 29
 R4
 r1
 !s85 0
 31
-!s108 1709860877.718000
+!s108 1710836221.366000
 !s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_debounce.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_debounce.v|
 !i113 1
 R5
 R9
 vkey_led_association
-R1
+Z10 !s110 1710836222
 !i10b 1
 !s100 Nae==_90Vh1]Pa;k^K`kc0
 I@7@n94T68O9mKRb?ZA:aS1
@@ -102,19 +104,19 @@ R0
 w1709167921
 8D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_led_association.v
 FD:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_led_association.v
-R3
+Z11 L0 23
 R4
 r1
 !s85 0
 31
-!s108 1709860879.024000
+!s108 1710836222.592000
 !s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_led_association.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_led_association.v|
 !i113 1
 R5
-Z10 !s92 -vlog01compat -work work {+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led}
+Z12 !s92 -vlog01compat -work work {+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led}
 vkey_scan
-R1
+!s110 1710836223
 !i10b 1
 !s100 mKF9TUV?mhAE[jUK9IgGn1
 IS=J:;P;<L<1A<Oz5ccc@11
@@ -123,17 +125,17 @@ R0
 w1709103532
 8D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_scan.v
 FD:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_scan.v
-Z11 L0 28
+Z13 L0 28
 R4
 r1
 !s85 0
 31
-!s108 1709860879.513000
+!s108 1710836223.036000
 !s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_scan.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_scan.v|
 !i113 1
 R5
-R10
+R12
 vkey_sw_disp
 R7
 !i10b 1
@@ -149,14 +151,14 @@ R4
 r1
 !s85 0
 31
-!s108 1709860877.547000
+!s108 1710836221.143000
 !s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_sw_disp.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_sw_disp.v|
 !i113 1
 R5
 R9
 vled_key
-R1
+R10
 !i10b 1
 !s100 fG7c_0RJF8V5:_Ga=[fG82
 IF=[M^OZl14P14akFPPfT61
@@ -165,19 +167,19 @@ R0
 w1709102871
 8D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/led_key.v
 FD:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/led_key.v
-R11
+R13
 R4
 r1
 !s85 0
 31
-!s108 1709860879.266000
+!s108 1710836222.814000
 !s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/led_key.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/led_key.v|
 !i113 1
 R5
-R10
+R12
 vpcf8563_ctrl
-R7
+R1
 !i10b 1
 !s100 >f2e]jblORMglndZXgk0K0
 InT=X8`jTie:]Da@j<9LEk3
@@ -191,20 +193,42 @@ R4
 r1
 !s85 0
 31
-!s108 1709860877.516000
+!s108 1710836220.911000
 !s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/pcf8563_ctrl.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/pcf8563_ctrl.v|
 !i113 1
 R5
 R9
-vPulse_logic_gen
-R7
+vPLL
+R1
 !i10b 1
-!s100 izk<25:4Uj`HEX?T^zgVG3
-IbY0@lGQ=gmILiInKXgSJ42
+!s100 N4KJjDPm;e<DYcid]i9Rd3
+IiZ=4S><adkd6Rf?k6ZQjM1
 R2
 R0
-w1709860732
+w1710818840
+8D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/PLL.v
+FD:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/PLL.v
+L0 40
+R4
+r1
+!s85 0
+31
+!s108 1710836220.291000
+!s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/PLL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/PLL.v|
+!i113 1
+R5
+R6
+n@p@l@l
+vPulse_logic_gen
+R1
+!i10b 1
+!s100 T>cME[2mNWWN^cV[6?UX<3
+In@<G;K=mBCX2CEPnTjLKc0
+R2
+R0
+w1709876891
 8D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR/Pulse_logic_gen.v
 FD:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR/Pulse_logic_gen.v
 L0 16
@@ -212,7 +236,7 @@ R4
 r1
 !s85 0
 31
-!s108 1709860877.450000
+!s108 1710836220.528000
 !s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR/Pulse_logic_gen.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR/Pulse_logic_gen.v|
 !i113 1
@@ -220,7 +244,7 @@ R5
 !s92 -vlog01compat -work work {+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR}
 n@pulse_logic_gen
 vseg_bcd_dri
-R7
+R1
 !i10b 1
 !s100 `I?B5N<4]@IA:4^nIPKKC1
 IWfC09VX=j[iDJfhK0RHmH2
@@ -234,14 +258,14 @@ R4
 r1
 !s85 0
 31
-!s108 1709860877.483000
+!s108 1710836220.671000
 !s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/seg_bcd_dri.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/seg_bcd_dri.v|
 !i113 1
 R5
 R9
 vuart_loop
-Z12 !s110 1709860878
+R10
 !i10b 1
 !s100 M7in7o>Je3IfQccge4@XR1
 I7PiRV8S;Xm_@F_PVCCJTa3
@@ -250,19 +274,19 @@ R0
 w1621223572
 8D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_loop.v
 FD:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_loop.v
-R3
+R11
 R4
 r1
 !s85 0
 31
-!s108 1709860878.489000
+!s108 1710836222.156000
 !s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_loop.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_loop.v|
 !i113 1
 R5
-Z13 !s92 -vlog01compat -work work {+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232}
+Z14 !s92 -vlog01compat -work work {+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232}
 vuart_recv
-R12
+R7
 !i10b 1
 !s100 l`C2OGdXB>?JGP3mY7]JL1
 I:Z6<QjNc1VVzmGA0jPNiT2
@@ -271,19 +295,19 @@ R0
 w1709805773
 8D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_recv.v
 FD:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_recv.v
-R3
+R11
 R4
 r1
 !s85 0
 31
-!s108 1709860878.219000
+!s108 1710836221.859000
 !s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_recv.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_recv.v|
 !i113 1
 R5
-R13
+R14
 vuart_send
-R12
+R10
 !i10b 1
 !s100 ZSD[hYZmf<zZGzKWFALT02
 IHY6f8_mhcEOeCaggQG3F^0
@@ -292,14 +316,14 @@ R0
 w1709108033
 8D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_send.v
 FD:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_send.v
-R3
+R11
 R4
 r1
 !s85 0
 31
-!s108 1709860878.743000
+!s108 1710836222.371000
 !s107 D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_send.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232|D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_send.v|
 !i113 1
 R5
-R13
+R14

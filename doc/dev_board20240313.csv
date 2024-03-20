@@ -1,0 +1,55 @@
+# Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus II License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+
+# Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+# File: D:\work\SynologyDrive\Projects in progress\TMS(Transcranial magnetic stimulate)\verilog\Development_Board\doc\dev_board20240313.csv
+# Generated on: Wed Mar 13 15:53:32 2024
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+IGBT[4],Output,PIN_K6,2,B2_N0,PIN_K6,2.5 V,,,,,
+IGBT[3],Output,PIN_K5,2,B2_N0,PIN_K5,2.5 V,,,,,
+IGBT[2],Output,PIN_L6,2,B2_N0,PIN_L6,2.5 V,,,,,
+IGBT[1],Output,PIN_L4,2,B2_N0,PIN_L4,2.5 V,,,,,
+IGBT[0],Output,PIN_L3,2,B2_N0,PIN_L3,2.5 V,,,,,
+iic_scl,Output,PIN_D8,8,B8_N0,PIN_D8,2.5 V,,,,,
+iic_sda,Bidir,PIN_C8,8,B8_N0,PIN_C8,2.5 V,,,,,
+key[3],Input,PIN_M16,5,B5_N0,PIN_M16,2.5 V,,8mA,,,
+key[2],Input,PIN_M15,5,B5_N0,PIN_M15,2.5 V,,8mA,,,
+key[1],Input,PIN_E15,6,B6_N0,PIN_E15,2.5 V,,8mA,,,
+key[0],Input,PIN_E16,6,B6_N0,PIN_E16,2.5 V,,8mA,,,
+led[3],Output,PIN_F10,7,B7_N0,PIN_F10,2.5 V,,8mA,2,,
+led[2],Output,PIN_E10,7,B7_N0,PIN_E10,2.5 V,,8mA,2,,
+led[1],Output,PIN_C11,7,B7_N0,PIN_C11,2.5 V,,8mA,2,,
+led[0],Output,PIN_D11,7,B7_N0,PIN_D11,2.5 V,,8mA,2,,
+seg_led[7],Output,PIN_D9,7,B7_N0,PIN_D9,2.5 V,,,,,
+seg_led[6],Output,PIN_P11,4,B4_N0,PIN_P11,2.5 V,,,,,
+seg_led[5],Output,PIN_N11,4,B4_N0,PIN_N11,2.5 V,,,,,
+seg_led[4],Output,PIN_M10,4,B4_N0,PIN_M10,2.5 V,,,,,
+seg_led[3],Output,PIN_N13,5,B5_N0,PIN_N13,2.5 V,,,,,
+seg_led[2],Output,PIN_C9,7,B7_N0,PIN_C9,2.5 V,,,,,
+seg_led[1],Output,PIN_N12,4,B4_N0,PIN_N12,2.5 V,,,,,
+seg_led[0],Output,PIN_M11,4,B4_N0,PIN_M11,2.5 V,,,,,
+seg_sel[5],Output,PIN_T15,4,B4_N0,PIN_T15,2.5 V,,,,,
+seg_sel[4],Output,PIN_R16,5,B5_N0,PIN_R16,2.5 V,,,,,
+seg_sel[3],Output,PIN_P15,5,B5_N0,PIN_P15,2.5 V,,,,,
+seg_sel[2],Output,PIN_P16,5,B5_N0,PIN_P16,2.5 V,,,,,
+seg_sel[1],Output,PIN_N15,5,B5_N0,PIN_N15,2.5 V,,,,,
+seg_sel[0],Output,PIN_N16,5,B5_N0,PIN_N16,2.5 V,,,,,
+sys_clk,Input,PIN_M2,2,B2_N0,PIN_M2,2.5 V,,8mA,,,
+sys_rst_n,Input,PIN_M1,2,B2_N0,PIN_M1,2.5 V,,8mA,,,
+uart_rxd,Input,PIN_B8,8,B8_N0,PIN_B8,2.5 V,,8mA,,,
+uart_txd,Output,PIN_C3,8,B8_N0,PIN_C3,2.5 V,,8mA,2,,

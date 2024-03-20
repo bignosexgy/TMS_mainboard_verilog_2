@@ -5,3 +5,11 @@ set_clock_uncertainty  -hold -rise_from sys_clk -rise_to sys_clk 0.150
 
 #set_clock_uncertainty  -setup -rise_from dri_clk -rise_to dri_clk 0.150
 #set_clock_uncertainty  -hold -rise_from dri_clk -rise_to dri_clk 0.150
+
+
+# Automatically constrain PLL and other generated clocks
+derive_pll_clocks -create_base_clocks
+
+# Automatically calculate clock uncertainty to jitter and other effects.
+derive_clock_uncertainty
+

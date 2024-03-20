@@ -12,179 +12,153 @@
 # ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/AD9248 {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/PLL.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:00 on Mar 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/PLL.v 
+# -- Compiling module PLL
+# 
+# Top level modules:
+# 	PLL
+# End time: 16:17:00 on Mar 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/AD9248 {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/FIFO.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:00 on Mar 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/FIFO.v 
+# -- Compiling module FIFO
+# 
+# Top level modules:
+# 	FIFO
+# End time: 16:17:00 on Mar 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/AD9248 {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/DDIO.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:17:00 on Mar 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/DDIO.v 
+# -- Compiling module DDIO
+# 
+# Top level modules:
+# 	DDIO
+# End time: 16:17:00 on Mar 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/IGBT&SCR {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR/Pulse_logic_gen.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 09:21:17 on Mar 08,2024
+# Start time: 16:17:00 on Mar 19,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR/Pulse_logic_gen.v 
 # -- Compiling module Pulse_logic_gen
 # 
 # Top level modules:
 # 	Pulse_logic_gen
-# End time: 09:21:17 on Mar 08,2024, Elapsed time: 0:00:00
+# End time: 16:17:00 on Mar 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/rtc_seg_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/seg_bcd_dri.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 09:21:17 on Mar 08,2024
+# Start time: 16:17:00 on Mar 19,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/seg_bcd_dri.v 
 # -- Compiling module seg_bcd_dri
 # 
 # Top level modules:
 # 	seg_bcd_dri
-# End time: 09:21:17 on Mar 08,2024, Elapsed time: 0:00:00
+# End time: 16:17:00 on Mar 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/rtc_seg_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/pcf8563_ctrl.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 09:21:17 on Mar 08,2024
+# Start time: 16:17:00 on Mar 19,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/pcf8563_ctrl.v 
 # -- Compiling module pcf8563_ctrl
 # 
 # Top level modules:
 # 	pcf8563_ctrl
-# End time: 09:21:17 on Mar 08,2024, Elapsed time: 0:00:00
+# End time: 16:17:00 on Mar 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/rtc_seg_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_sw_disp.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 09:21:17 on Mar 08,2024
+# Start time: 16:17:01 on Mar 19,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_sw_disp.v 
 # -- Compiling module key_sw_disp
 # 
 # Top level modules:
 # 	key_sw_disp
-# End time: 09:21:17 on Mar 08,2024, Elapsed time: 0:00:00
+# End time: 16:17:01 on Mar 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/rtc_seg_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_debounce.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 09:21:17 on Mar 08,2024
+# Start time: 16:17:01 on Mar 19,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_debounce.v 
 # -- Compiling module key_debounce
 # 
 # Top level modules:
 # 	key_debounce
-# End time: 09:21:17 on Mar 08,2024, Elapsed time: 0:00:00
+# End time: 16:17:01 on Mar 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/rtc_seg_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/i2c_dri.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 09:21:17 on Mar 08,2024
+# Start time: 16:17:01 on Mar 19,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/i2c_dri.v 
 # -- Compiling module i2c_dri
 # 
 # Top level modules:
 # 	i2c_dri
-# End time: 09:21:17 on Mar 08,2024, Elapsed time: 0:00:00
+# End time: 16:17:01 on Mar 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/uart_232 {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_recv.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 09:21:18 on Mar 08,2024
+# Start time: 16:17:01 on Mar 19,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_recv.v 
 # -- Compiling module uart_recv
 # 
 # Top level modules:
 # 	uart_recv
-# End time: 09:21:18 on Mar 08,2024, Elapsed time: 0:00:00
+# End time: 16:17:01 on Mar 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/uart_232 {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_loop.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 09:21:18 on Mar 08,2024
+# Start time: 16:17:02 on Mar 19,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_loop.v 
 # -- Compiling module uart_loop
 # 
 # Top level modules:
 # 	uart_loop
-# End time: 09:21:18 on Mar 08,2024, Elapsed time: 0:00:00
+# End time: 16:17:02 on Mar 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/uart_232 {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_send.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 09:21:18 on Mar 08,2024
+# Start time: 16:17:02 on Mar 19,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_send.v 
 # -- Compiling module uart_send
 # 
 # Top level modules:
 # 	uart_send
-# End time: 09:21:18 on Mar 08,2024, Elapsed time: 0:00:00
+# End time: 16:17:02 on Mar 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/key_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_led_association.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 09:21:19 on Mar 08,2024
+# Start time: 16:17:02 on Mar 19,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_led_association.v 
 # -- Compiling module key_led_association
 # 
 # Top level modules:
 # 	key_led_association
-# End time: 09:21:19 on Mar 08,2024, Elapsed time: 0:00:00
+# End time: 16:17:02 on Mar 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/key_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/led_key.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 09:21:19 on Mar 08,2024
+# Start time: 16:17:02 on Mar 19,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/led_key.v 
 # -- Compiling module led_key
 # 
 # Top level modules:
 # 	led_key
-# End time: 09:21:19 on Mar 08,2024, Elapsed time: 0:00:00
+# End time: 16:17:02 on Mar 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/key_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_scan.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 09:21:19 on Mar 08,2024
+# Start time: 16:17:03 on Mar 19,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_scan.v 
 # -- Compiling module key_scan
 # 
 # Top level modules:
 # 	key_scan
-# End time: 09:21:19 on Mar 08,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 09:21:19 on Mar 08,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v 
-# -- Compiling module dev_board_top
-# 
-# Top level modules:
-# 	dev_board_top
-# End time: 09:21:19 on Mar 08,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/par/simulation/modelsim {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 09:21:20 on Mar 08,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt 
-# -- Compiling module dev_board_top_tb
-# 
-# Top level modules:
-# 	dev_board_top_tb
-# End time: 09:21:20 on Mar 08,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  dev_board_top_tb
-# vsim -gui "+altera" -l msim_transcript -do "dev_board_run_msim_rtl_verilog.do" 
-# Start time: 09:21:20 on Mar 08,2024
-# Loading work.dev_board_top_tb
-# Loading work.dev_board_top
-# Loading work.uart_recv
-# Loading work.uart_send
-# Loading work.uart_loop
-# Loading work.Pulse_logic_gen
-# Loading work.key_scan
-# Loading work.led_key
-# Loading work.key_led_association
-# Loading work.i2c_dri
-# Loading work.pcf8563_ctrl
-# Loading work.key_debounce
-# Loading work.key_sw_disp
-# Loading work.seg_bcd_dri
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Note: $stop    : D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt(70)
-#    Time: 1100 ns  Iteration: 0  Instance: /dev_board_top_tb
-# Break in Module dev_board_top_tb at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt line 70
-# Simulation Breakpoint: Break in Module dev_board_top_tb at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt line 70
-# MACRO ./dev_board_run_msim_rtl_verilog.do PAUSED at line 29
-run -all
-# Break key hit
-# Break in Module dev_board_top_tb at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt line 77
-# End time: 09:32:43 on Mar 08,2024, Elapsed time: 0:11:23
+# End time: 16:17:03 on Mar 19,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
