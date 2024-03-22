@@ -12,153 +12,816 @@
 # ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/pcf8591 {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/seg_led_pcf8591.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:55:56 on Mar 21,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/seg_led_pcf8591.v 
+# -- Compiling module seg_led_pcf8591
+# 
+# Top level modules:
+# 	seg_led_pcf8591
+# End time: 17:55:56 on Mar 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/pcf8591 {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:55:56 on Mar 21,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v 
+# -- Compiling module pcf8591
+# 
+# Top level modules:
+# 	pcf8591
+# End time: 17:55:56 on Mar 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/pcf8591 {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/i2c_dri_pcf8591.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:55:56 on Mar 21,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/i2c_dri_pcf8591.v 
+# -- Compiling module i2c_dri_pcf8591
+# 
+# Top level modules:
+# 	i2c_dri_pcf8591
+# End time: 17:55:57 on Mar 21,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/AD9248 {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/PLL.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 16:17:00 on Mar 19,2024
+# Start time: 17:55:57 on Mar 21,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/PLL.v 
 # -- Compiling module PLL
 # 
 # Top level modules:
 # 	PLL
-# End time: 16:17:00 on Mar 19,2024, Elapsed time: 0:00:00
+# End time: 17:55:57 on Mar 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/AD9248 {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/FIFO.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 16:17:00 on Mar 19,2024
+# Start time: 17:55:57 on Mar 21,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/FIFO.v 
 # -- Compiling module FIFO
 # 
 # Top level modules:
 # 	FIFO
-# End time: 16:17:00 on Mar 19,2024, Elapsed time: 0:00:00
+# End time: 17:55:57 on Mar 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/AD9248 {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/DDIO.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 16:17:00 on Mar 19,2024
+# Start time: 17:55:57 on Mar 21,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/DDIO.v 
 # -- Compiling module DDIO
 # 
 # Top level modules:
 # 	DDIO
-# End time: 16:17:00 on Mar 19,2024, Elapsed time: 0:00:00
+# End time: 17:55:57 on Mar 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/IGBT&SCR {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR/Pulse_logic_gen.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 16:17:00 on Mar 19,2024
+# Start time: 17:55:57 on Mar 21,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR/Pulse_logic_gen.v 
 # -- Compiling module Pulse_logic_gen
 # 
 # Top level modules:
 # 	Pulse_logic_gen
-# End time: 16:17:00 on Mar 19,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/rtc_seg_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/seg_bcd_dri.v}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 16:17:00 on Mar 19,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/seg_bcd_dri.v 
-# -- Compiling module seg_bcd_dri
-# 
-# Top level modules:
-# 	seg_bcd_dri
-# End time: 16:17:00 on Mar 19,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/rtc_seg_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/pcf8563_ctrl.v}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 16:17:00 on Mar 19,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/pcf8563_ctrl.v 
-# -- Compiling module pcf8563_ctrl
-# 
-# Top level modules:
-# 	pcf8563_ctrl
-# End time: 16:17:00 on Mar 19,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/rtc_seg_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_sw_disp.v}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 16:17:01 on Mar 19,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_sw_disp.v 
-# -- Compiling module key_sw_disp
-# 
-# Top level modules:
-# 	key_sw_disp
-# End time: 16:17:01 on Mar 19,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/rtc_seg_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_debounce.v}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 16:17:01 on Mar 19,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_debounce.v 
-# -- Compiling module key_debounce
-# 
-# Top level modules:
-# 	key_debounce
-# End time: 16:17:01 on Mar 19,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/rtc_seg_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/i2c_dri.v}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 16:17:01 on Mar 19,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/i2c_dri.v 
-# -- Compiling module i2c_dri
-# 
-# Top level modules:
-# 	i2c_dri
-# End time: 16:17:01 on Mar 19,2024, Elapsed time: 0:00:00
+# End time: 17:55:57 on Mar 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/uart_232 {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_recv.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 16:17:01 on Mar 19,2024
+# Start time: 17:55:57 on Mar 21,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_recv.v 
 # -- Compiling module uart_recv
 # 
 # Top level modules:
 # 	uart_recv
-# End time: 16:17:01 on Mar 19,2024, Elapsed time: 0:00:00
+# End time: 17:55:58 on Mar 21,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/uart_232 {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_loop.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 16:17:02 on Mar 19,2024
+# Start time: 17:55:58 on Mar 21,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_loop.v 
 # -- Compiling module uart_loop
 # 
 # Top level modules:
 # 	uart_loop
-# End time: 16:17:02 on Mar 19,2024, Elapsed time: 0:00:00
+# End time: 17:55:58 on Mar 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/uart_232 {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_send.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 16:17:02 on Mar 19,2024
+# Start time: 17:55:58 on Mar 21,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_send.v 
 # -- Compiling module uart_send
 # 
 # Top level modules:
 # 	uart_send
-# End time: 16:17:02 on Mar 19,2024, Elapsed time: 0:00:00
+# End time: 17:55:58 on Mar 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/key_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_led_association.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 16:17:02 on Mar 19,2024
+# Start time: 17:55:58 on Mar 21,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_led_association.v 
 # -- Compiling module key_led_association
 # 
 # Top level modules:
 # 	key_led_association
-# End time: 16:17:02 on Mar 19,2024, Elapsed time: 0:00:00
+# End time: 17:55:58 on Mar 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/key_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/led_key.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 16:17:02 on Mar 19,2024
+# Start time: 17:55:58 on Mar 21,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/led_key.v 
 # -- Compiling module led_key
 # 
 # Top level modules:
 # 	led_key
-# End time: 16:17:02 on Mar 19,2024, Elapsed time: 0:00:00
+# End time: 17:55:58 on Mar 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl/key_led {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_scan.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 16:17:03 on Mar 19,2024
+# Start time: 17:55:59 on Mar 21,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_scan.v 
 # -- Compiling module key_scan
 # 
 # Top level modules:
 # 	key_scan
-# End time: 16:17:03 on Mar 19,2024, Elapsed time: 0:00:00
+# End time: 17:55:59 on Mar 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/rtl {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:55:59 on Mar 21,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v 
+# -- Compiling module dev_board_top
+# 
+# Top level modules:
+# 	dev_board_top
+# End time: 17:55:59 on Mar 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/par/db {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/db/pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:55:59 on Mar 21,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/db" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/db/pll_altpll.v 
+# -- Compiling module PLL_altpll
+# 
+# Top level modules:
+# 	PLL_altpll
+# End time: 17:55:59 on Mar 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/work/SynologyDrive/Projects\ in\ progress/TMS(Transcranial\ magnetic\ stimulate)/verilog/Development_Board/par/simulation/modelsim {D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 17:55:59 on Mar 21,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim" D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt 
+# -- Compiling module dev_board_top_tb
+# 
+# Top level modules:
+# 	dev_board_top_tb
+# End time: 17:55:59 on Mar 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  dev_board_top_tb
+# vsim -gui "+altera" -l msim_transcript -do "dev_board_run_msim_rtl_verilog.do" 
+# Start time: 17:56:00 on Mar 21,2024
+# Loading work.dev_board_top_tb
+# Loading work.dev_board_top
+# Loading work.uart_recv
+# Loading work.uart_send
+# Loading work.uart_loop
+# Loading work.Pulse_logic_gen
+# Loading work.key_scan
+# Loading work.led_key
+# Loading work.key_led_association
+# Loading work.PLL
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.DDIO
+# Loading altera_mf_ver.altddio_in
+# Loading work.FIFO
+# Loading altera_mf_ver.dcfifo
+# Loading altera_mf_ver.dcfifo_mixed_widths
+# Loading altera_mf_ver.dcfifo_low_latency
+# Loading altera_mf_ver.ALTERA_MF_HINT_EVALUATION
+# Loading altera_mf_ver.dcfifo_dffpipe
+# Loading work.pcf8591
+# Loading work.i2c_dri_pcf8591
+# Loading work.seg_led_pcf8591
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# Loading altera_mf_ver.dcfifo_async
+# Loading altera_mf_ver.dcfifo_fefifo
+# ** Warning: (vsim-3017) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Too few port connections. Expected 6, found 4.
+# 
+#         Region: /dev_board_top_tb/i1/PLL_CLK
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'areset'.
+# 
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'locked'.
+# 
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(375): [PCDPC] - Port size (20) does not match connection size (1) for port 'num'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v(37).
+# 
+#         Region: /dev_board_top_tb/i1/u_pcf8591
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(414): [PCDPC] - Port size (20) does not match connection size (1) for port 'data'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/seg_led_pcf8591.v(26).
+# 
+#         Region: /dev_board_top_tb/i1/u_seg_led_pcf8591
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: dev_board_top_tb.i1.PLL_CLK.altpll_component.cycloneiii_pll.pll3
+# ** Note: $stop    : D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt(88)
+#    Time: 1100 ns  Iteration: 0  Instance: /dev_board_top_tb
+# Break in Module dev_board_top_tb at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt line 88
+# Simulation Breakpoint: Break in Module dev_board_top_tb at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt line 88
+# MACRO ./dev_board_run_msim_rtl_verilog.do PAUSED at line 31
+run -all
+restart
+# ** Warning: (vsim-3017) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Too few port connections. Expected 6, found 4.
+# 
+#         Region: /dev_board_top_tb/i1/PLL_CLK
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'areset'.
+# 
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'locked'.
+# 
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(375): [PCDPC] - Port size (20) does not match connection size (1) for port 'num'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v(37).
+# 
+#         Region: /dev_board_top_tb/i1/u_pcf8591
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(414): [PCDPC] - Port size (20) does not match connection size (1) for port 'data'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/seg_led_pcf8591.v(26).
+# 
+#         Region: /dev_board_top_tb/i1/u_seg_led_pcf8591
+run -all
+# GetModuleFileName: 找不到指定的模块。
+# 
+# 
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: dev_board_top_tb.i1.PLL_CLK.altpll_component.cycloneiii_pll.pll3
+# ** Note: $stop    : D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt(88)
+#    Time: 1100 ns  Iteration: 0  Instance: /dev_board_top_tb
+# Break in Module dev_board_top_tb at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt line 88
+run -all
+restart
+# ** Warning: (vsim-3017) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Too few port connections. Expected 6, found 4.
+# 
+#         Region: /dev_board_top_tb/i1/PLL_CLK
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'areset'.
+# 
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'locked'.
+# 
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(375): [PCDPC] - Port size (20) does not match connection size (1) for port 'num'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v(37).
+# 
+#         Region: /dev_board_top_tb/i1/u_pcf8591
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(414): [PCDPC] - Port size (20) does not match connection size (1) for port 'data'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/seg_led_pcf8591.v(26).
+# 
+#         Region: /dev_board_top_tb/i1/u_seg_led_pcf8591
+run -all
+# GetModuleFileName: 找不到指定的模块。
+# 
+# 
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: dev_board_top_tb.i1.PLL_CLK.altpll_component.cycloneiii_pll.pll3
+# ** Note: $stop    : D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt(88)
+#    Time: 1100 ns  Iteration: 0  Instance: /dev_board_top_tb
+# Break in Module dev_board_top_tb at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt line 88
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 96
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 105
+run -all
+restart
+# ** Warning: (vsim-3017) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Too few port connections. Expected 6, found 4.
+# 
+#         Region: /dev_board_top_tb/i1/PLL_CLK
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'areset'.
+# 
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'locked'.
+# 
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(375): [PCDPC] - Port size (20) does not match connection size (1) for port 'num'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v(37).
+# 
+#         Region: /dev_board_top_tb/i1/u_pcf8591
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(414): [PCDPC] - Port size (20) does not match connection size (1) for port 'data'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/seg_led_pcf8591.v(26).
+# 
+#         Region: /dev_board_top_tb/i1/u_seg_led_pcf8591
+run -all
+# GetModuleFileName: 找不到指定的模块。
+# 
+# 
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: dev_board_top_tb.i1.PLL_CLK.altpll_component.cycloneiii_pll.pll3
+# ** Note: $stop    : D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt(88)
+#    Time: 1100 ns  Iteration: 0  Instance: /dev_board_top_tb
+# Break in Module dev_board_top_tb at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt line 88
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 96
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 105
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+restart
+# ** Warning: (vsim-3017) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Too few port connections. Expected 6, found 4.
+# 
+#         Region: /dev_board_top_tb/i1/PLL_CLK
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'areset'.
+# 
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'locked'.
+# 
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(375): [PCDPC] - Port size (20) does not match connection size (1) for port 'num'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v(37).
+# 
+#         Region: /dev_board_top_tb/i1/u_pcf8591
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(414): [PCDPC] - Port size (20) does not match connection size (1) for port 'data'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/seg_led_pcf8591.v(26).
+# 
+#         Region: /dev_board_top_tb/i1/u_seg_led_pcf8591
+run -all
+# GetModuleFileName: 找不到指定的模块。
+# 
+# 
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: dev_board_top_tb.i1.PLL_CLK.altpll_component.cycloneiii_pll.pll3
+# ** Note: $stop    : D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt(88)
+#    Time: 1100 ns  Iteration: 0  Instance: /dev_board_top_tb
+# Break in Module dev_board_top_tb at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt line 88
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 96
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 105
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+restart
+# ** Warning: (vsim-3017) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Too few port connections. Expected 6, found 4.
+# 
+#         Region: /dev_board_top_tb/i1/PLL_CLK
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'areset'.
+# 
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'locked'.
+# 
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(375): [PCDPC] - Port size (20) does not match connection size (1) for port 'num'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v(37).
+# 
+#         Region: /dev_board_top_tb/i1/u_pcf8591
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(414): [PCDPC] - Port size (20) does not match connection size (1) for port 'data'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/seg_led_pcf8591.v(26).
+# 
+#         Region: /dev_board_top_tb/i1/u_seg_led_pcf8591
+run -all
+# GetModuleFileName: 找不到指定的模块。
+# 
+# 
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: dev_board_top_tb.i1.PLL_CLK.altpll_component.cycloneiii_pll.pll3
+# ** Note: $stop    : D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt(88)
+#    Time: 1100 ns  Iteration: 0  Instance: /dev_board_top_tb
+# Break in Module dev_board_top_tb at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt line 88
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 96
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 105
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 111
+run -all
+restart
+# ** Warning: (vsim-3017) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Too few port connections. Expected 6, found 4.
+# 
+#         Region: /dev_board_top_tb/i1/PLL_CLK
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'areset'.
+# 
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'locked'.
+# 
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(375): [PCDPC] - Port size (20) does not match connection size (1) for port 'num'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v(37).
+# 
+#         Region: /dev_board_top_tb/i1/u_pcf8591
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(414): [PCDPC] - Port size (20) does not match connection size (1) for port 'data'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/seg_led_pcf8591.v(26).
+# 
+#         Region: /dev_board_top_tb/i1/u_seg_led_pcf8591
+run -all
+# GetModuleFileName: 找不到指定的模块。
+# 
+# 
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: dev_board_top_tb.i1.PLL_CLK.altpll_component.cycloneiii_pll.pll3
+# ** Note: $stop    : D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt(88)
+#    Time: 1100 ns  Iteration: 0  Instance: /dev_board_top_tb
+# Break in Module dev_board_top_tb at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt line 88
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 96
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 105
+run -all
+# Break in Module i2c_dri_pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/i2c_dri_pcf8591.v line 112
+run -all
+restart
+# ** Warning: (vsim-3017) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Too few port connections. Expected 6, found 4.
+# 
+#         Region: /dev_board_top_tb/i1/PLL_CLK
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'areset'.
+# 
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'locked'.
+# 
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(375): [PCDPC] - Port size (20) does not match connection size (1) for port 'num'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v(37).
+# 
+#         Region: /dev_board_top_tb/i1/u_pcf8591
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(414): [PCDPC] - Port size (20) does not match connection size (1) for port 'data'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/seg_led_pcf8591.v(26).
+# 
+#         Region: /dev_board_top_tb/i1/u_seg_led_pcf8591
+run -all
+# GetModuleFileName: 找不到指定的模块。
+# 
+# 
+# Break in Module i2c_dri_pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/i2c_dri_pcf8591.v line 172
+run -all
+# Break in Module i2c_dri_pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/i2c_dri_pcf8591.v line 115
+run -all
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: dev_board_top_tb.i1.PLL_CLK.altpll_component.cycloneiii_pll.pll3
+# ** Note: $stop    : D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt(88)
+#    Time: 1100 ns  Iteration: 0  Instance: /dev_board_top_tb
+# Break in Module dev_board_top_tb at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt line 88
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 96
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 105
+run -all
+# Break in Module i2c_dri_pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/i2c_dri_pcf8591.v line 112
+run -all
+# Break in Module i2c_dri_pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/i2c_dri_pcf8591.v line 115
+run -all
+# A bookmark named "bookmark1" has been added for window "Source2"
+restart
+# ** Warning: (vsim-3017) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Too few port connections. Expected 6, found 4.
+# 
+#         Region: /dev_board_top_tb/i1/PLL_CLK
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'areset'.
+# 
+# ** Warning: (vsim-3722) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(336): [TFMPC] - Missing connection for port 'locked'.
+# 
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(375): [PCDPC] - Port size (20) does not match connection size (1) for port 'num'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v(37).
+# 
+#         Region: /dev_board_top_tb/i1/u_pcf8591
+# ** Warning: (vsim-3015) D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v(414): [PCDPC] - Port size (20) does not match connection size (1) for port 'data'. The port definition is at: D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/seg_led_pcf8591.v(26).
+# 
+#         Region: /dev_board_top_tb/i1/u_seg_led_pcf8591
+run -all
+# GetModuleFileName: 找不到指定的模块。
+# 
+# 
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 84
+run -all
+# Break in Module i2c_dri_pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/i2c_dri_pcf8591.v line 172
+run -all
+# Break in Module i2c_dri_pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/i2c_dri_pcf8591.v line 115
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 84
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 84
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 84
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 84
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 84
+run -all
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: dev_board_top_tb.i1.PLL_CLK.altpll_component.cycloneiii_pll.pll3
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# ** Note: $stop    : D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt(88)
+#    Time: 1100 ns  Iteration: 0  Instance: /dev_board_top_tb
+# Break in Module dev_board_top_tb at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/dev_board_top_tb.vt line 88
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+run -all
+# Break in Module pcf8591 at D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v line 92
+# End time: 17:53:10 on Mar 22,2024, Elapsed time: 23:57:10
+# Errors: 0, Warnings: 45

@@ -31,29 +31,47 @@ module dev_board_top_tb();
 // general purpose registers
 reg eachvec;
 // test vector input registers
+reg [13:0] Adc_In;
+reg Otr_A;
+reg Otr_B;
 reg treg_iic_sda;
 reg [3:0] key;
+reg treg_sda_pcf8591;
 reg sys_clk;
 reg sys_rst_n;
 reg uart_rxd;
 // wires                                               
+wire Adc_Clk_A;
+wire Adc_Clk_B;
 wire [4:0]  IGBT;
+wire clk_test;
 wire iic_scl;
 wire iic_sda;
 wire [3:0]  led;
+wire scl_pcf8591;
+wire sda_pcf8591;
 wire [7:0]  seg_led;
 wire [5:0]  seg_sel;
 wire uart_txd;
 
 // assign statements (if any)                          
 assign iic_sda = treg_iic_sda;
+assign sda_pcf8591 = treg_sda_pcf8591;
 dev_board_top i1 (
 // port map - connection between master ports and signals/registers   
+		.Adc_Clk_A(Adc_Clk_A),
+	.Adc_Clk_B(Adc_Clk_B),
+	.Adc_In(Adc_In),
 	.IGBT(IGBT),
+	.Otr_A(Otr_A),
+	.Otr_B(Otr_B),
+	.clk_test(clk_test),
 	.iic_scl(iic_scl),
 	.iic_sda(iic_sda),
 	.key(key),
 	.led(led),
+	.scl_pcf8591(scl_pcf8591),
+	.sda_pcf8591(sda_pcf8591),
 	.seg_led(seg_led),
 	.seg_sel(seg_sel),
 	.sys_clk(sys_clk),

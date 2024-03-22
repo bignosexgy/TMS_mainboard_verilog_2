@@ -22,19 +22,19 @@
 
 module pcf8591(
     //clock and reset
-    input                 clk        ,    // 时钟信号
+    input                 clk_pcf8591        ,    // 时钟信号
     input                 rst_n      ,    // 复位信号
 
     //i2c interface
-    output   reg          i2c_rh_wl  ,    // I2C读写控制信号
-    output   reg          i2c_exec   ,    // I2C触发执行信号
-    output   reg  [15:0]  i2c_addr   ,    // I2C器件内地址
-    output   reg  [ 7:0]  i2c_data_w ,    // I2C要写的数据
-    input         [ 7:0]  i2c_data_r ,    // I2C读出的数据
-    input                 i2c_done   ,    // I2C一次操作完成
+    output   reg          i2c_rh_wl_pcf8591  ,    // I2C读写控制信号
+    output   reg          i2c_exec_pcf8591   ,    // I2C触发执行信号
+    output   reg  [15:0]  i2c_addr_pcf8591   ,    // I2C器件内地址
+    output   reg  [ 7:0]  i2c_data_w_pcf8591 ,    // I2C要写的数据
+    input         [ 7:0]  i2c_data_r_pcf8591 ,    // I2C读出的数据
+    input                 i2c_done_pcf8591   ,    // I2C一次操作完成
 
     //user interface
-    output   reg  [19:0]  num             // 数码管要显示的数据
+    output   reg  [19:0]  num_pcf859             // 数码管要显示的数据
 );
 
 //parameter
@@ -57,11 +57,11 @@ wire   [19:0]   num_t     ;               // 临时寄存的数据
 assign num_t = V_REF * ad_data ;
 
 //DA输出数据
-always @(posedge clk or negedge rst_n) begin
+always @(posedge clk_pcf8591 or negedge rst_n) begin
     if(rst_n == 1'b0) begin
         da_data  <= 8'd0;
     end
-    else if(i2c_rh_wl == 1'b0 & i2c_done == 1'b1)begin
+    else if(i2c_rh_wl_pcf8591 == 1'b0 & i2c_done_pcf8591 == 1'b1)begin
         if(da_data == 8'd255)
             da_data<= 8'd0;
         else
@@ -70,26 +70,26 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 //AD输入数据处理
-always @(posedge clk or negedge rst_n) begin
+always @(posedge clk_pcf8591 or negedge rst_n) begin
     if(rst_n == 1'b0) begin
-        num <= 20'd0;
+        num_pcf859 <= 20'd0;
     end
     else
-        num <= num_t >> 4'd8;
+        num_pcf859 <= num_t >> 4'd8;
 end
 
 //AD、DA控制及采样
-always @(posedge clk or negedge rst_n) begin
+always @(posedge clk_pcf8591 or negedge rst_n) begin
     if(rst_n == 1'b0) begin
-        i2c_exec <= 1'b0;
-        i2c_rh_wl<= 1'b0;
-        i2c_addr <= 8'd0;
-        i2c_data_w <=  8'd0;
+        i2c_exec_pcf8591 <= 1'b0;
+        i2c_rh_wl_pcf8591<= 1'b0;
+        i2c_addr_pcf8591 <= 8'd0;
+        i2c_data_w_pcf8591 <=  8'd0;
         flow_cnt   <=  4'd0;
         wait_cnt   <= 17'd0;
     end
     else begin
-        i2c_exec <= 1'b0;
+        i2c_exec_pcf8591 <= 1'b0;
         case(flow_cnt)
             'd0: begin
                 if(wait_cnt == 17'd100) begin
@@ -101,14 +101,14 @@ always @(posedge clk or negedge rst_n) begin
             end
             //DA转换输出
             'd1: begin
-                i2c_exec  <= 1'b1;
-                i2c_addr  <= CONTORL_BYTE;
-                i2c_rh_wl <= 1'b0;
-                i2c_data_w<= da_data;
+                i2c_exec_pcf8591  <= 1'b1;
+                i2c_addr_pcf8591  <= CONTORL_BYTE;
+                i2c_rh_wl_pcf8591 <= 1'b0;
+                i2c_data_w_pcf8591<= da_data;
                 flow_cnt  <= flow_cnt + 1'b1;
             end
             'd2: begin
-                if(i2c_done == 1'b1) begin
+                if(i2c_done_pcf8591 == 1'b1) begin
                     flow_cnt<= flow_cnt + 1'b1;
                 end
             end
@@ -124,14 +124,14 @@ always @(posedge clk or negedge rst_n) begin
             end
             //AD转换输入
             'd4: begin
-                i2c_exec  <= 1'b1;
-                i2c_addr  <= CONTORL_BYTE;
-                i2c_rh_wl <= 1'b1;
+                i2c_exec_pcf8591  <= 1'b1;
+                i2c_addr_pcf8591  <= CONTORL_BYTE;
+                i2c_rh_wl_pcf8591 <= 1'b1;
                 flow_cnt  <= flow_cnt + 1'b1;
             end
             'd5: begin
-                if(i2c_done == 1'b1) begin
-                    ad_data <= i2c_data_r;
+                if(i2c_done_pcf8591 == 1'b1) begin
+                    ad_data <= i2c_data_r_pcf8591;
                     flow_cnt<= 4'd0;
                 end
             end

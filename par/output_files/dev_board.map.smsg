@@ -1,1 +1,2 @@
 Warning (10268): Verilog HDL information at key_led_association.v(63): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at dev_board_top.v(107): object "point" differs only in case from object "POINT" in the same scope

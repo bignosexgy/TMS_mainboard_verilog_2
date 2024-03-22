@@ -1,16 +1,16 @@
-Fitter Status : Successful - Wed Mar 20 15:56:25 2024
+Fitter Status : Successful - Fri Mar 22 17:45:13 2024
 Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
 Revision Name : dev_board
 Top-level Entity Name : dev_board_top
 Family : Cyclone IV E
 Device : EP4CE10F17C8
 Timing Models : Final
-Total logic elements : 1,654 / 10,320 ( 16 % )
-    Total combinational functions : 1,110 / 10,320 ( 11 % )
-    Dedicated logic registers : 1,265 / 10,320 ( 12 % )
-Total registers : 1265
+Total logic elements : 1,741 / 10,320 ( 17 % )
+    Total combinational functions : 1,149 / 10,320 ( 11 % )
+    Dedicated logic registers : 1,351 / 10,320 ( 13 % )
+Total registers : 1351
 Total pins : 54 / 180 ( 30 % )
 Total virtual pins : 0
-Total memory bits : 65,280 / 423,936 ( 15 % )
+Total memory bits : 71,424 / 423,936 ( 17 % )
 Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
 Total PLLs : 1 / 2 ( 50 % )
