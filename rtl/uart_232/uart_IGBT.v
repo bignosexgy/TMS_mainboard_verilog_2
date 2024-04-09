@@ -119,7 +119,7 @@ end
 always @(posedge sys_clk or negedge sys_rst_n) begin         
     if (!sys_rst_n) begin	
         rx_buff_1_flag <= 1'b0;
-		//rx_buff_0_flag <= 1'b0;
+		rx_buff_flag <= 1'b0;
 		rx_data_cnt    <= 8'd0;	
     end                                                      
     else begin 
@@ -213,9 +213,7 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
 						rx_buff_flag   <= 1'b0;
 				    end	
                 endcase				   
-			end	
-			
-			
+			end				
 			else if (rx_buff_1_flag == 1'b1 ) begin			
                 if(recv_data == 16'hFA) begin
 				    rx_buff_1_flag <= 1'b0;
@@ -226,7 +224,7 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
 				end
                 else begin
                     rx_buff_1_flag <= 1'b0;
-		            //rx_buff_0_flag <= 1'b0;
+		            rx_buff_flag <= 1'b0;
 		            rx_data_cnt   <= 8'd0;					 				
 				end				  
 			end		
@@ -244,8 +242,10 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
 			end	
 			
         end	
-        else if(rx_data_cnt == 8'd18)	
-            rx_data_cnt <= 8'd0;
+        else if(rx_data_cnt == 8'd18)	begin
+            rx_buff_flag   <= 1'b0;
+			rx_data_cnt <= 8'd0;
+		end	
         else ;    		
     end		
     //else; 		
