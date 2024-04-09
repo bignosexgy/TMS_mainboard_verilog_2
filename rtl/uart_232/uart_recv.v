@@ -26,9 +26,7 @@ module uart_recv(
     
     input              uart_rxd,                 //UART接收端口
     output  reg        uart_done,                //接收一帧数据完成标志
-    //output  reg        rx_flag,                  //接收过程标志信号
-    //output  reg [3:0]  rx_cnt,                   //接收数据计数器
-    //output  reg [7:0]  rxdata,
+   
     output  reg [7:0]  uart_data                 //接收的数据
     );
     
@@ -47,6 +45,8 @@ wire       start_flag;
 reg        rx_flag;                  //接收过程标志信号
 reg [3:0]  rx_cnt;                   //接收数据计数器
 reg [7:0]  rxdata;
+
+
 
 
 //*****************************************************

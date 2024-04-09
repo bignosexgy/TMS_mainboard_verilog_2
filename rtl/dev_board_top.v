@@ -85,6 +85,27 @@ wire       uart_tx_busy;                //UART发送忙状态标志
 wire [3:0] led_state;                   //led将要改变的状态
 wire [3:0] key_push;                 //按键当前状态
 
+wire [7:0] uart_num_send_data; 
+
+wire [7:0] uart_rxdata_buff_0;
+wire [7:0] uart_rxdata_buff_1;
+wire [7:0] uart_rxdata_buff_2;
+wire [7:0] uart_rxdata_buff_3;
+wire [7:0] uart_rxdata_buff_4;
+wire [7:0] uart_rxdata_buff_5;
+wire [7:0] uart_rxdata_buff_6;
+wire [7:0] uart_rxdata_buff_7;
+wire [7:0] uart_rxdata_buff_8;
+wire [7:0] uart_rxdata_buff_9;
+wire [7:0] uart_rxdata_buff_10;
+wire [7:0] uart_rxdata_buff_11;
+wire [7:0] uart_rxdata_buff_12;
+wire [7:0] uart_rxdata_buff_13;
+wire [7:0] uart_rxdata_buff_14;
+wire [7:0] uart_rxdata_buff_15;
+wire [7:0] uart_rxdata_buff_16;
+wire [7:0] uart_rxdata_buff_17;
+
 
 //////////////////////////rtc_seg_led begin
 wire          dri_clk   ;   //I2C操作时钟
@@ -185,9 +206,10 @@ u_uart_send(
     .uart_en        (uart_send_en),
     .uart_din       (uart_send_data),
     .uart_tx_busy   (uart_tx_busy),
-    .uart_txd       (uart_txd)
+    .uart_txd       (uart_txd),
+	.num_send_data  (uart_num_send_data)
     );
-    
+/*   
 //串口环回模块    
 uart_loop u_uart_loop(
     .sys_clk        (sys_clk),             
@@ -200,8 +222,8 @@ uart_loop u_uart_loop(
     .send_en        (uart_send_en),     //发送使能信号
     .send_data      (uart_send_data)    //待发送数据
     );
-    
-//串口控制工作模式模块
+*/    
+//IGBT控制
 Pulse_logic_gen Pulse_logic_gen_u(
    .sys_clk                 (sys_clk),          
    .sys_rst_n               (sys_rst_n),          
@@ -220,6 +242,42 @@ Pulse_logic_gen Pulse_logic_gen_u(
     .IGBT                     (IGBT)
  );
  
+
+//串口设置IGBT工作模式和参数    
+uart_IGBT u_uart_IGBT(
+    .sys_clk        (sys_clk),             
+    .sys_rst_n      (sys_rst_n),           
+   
+    .recv_done      (uart_recv_done),   //接收一帧数据完成标志信号
+    .recv_data      (uart_recv_data),   //接收的数据
+    	      
+				    
+	.tx_busy         (uart_tx_busy),        
+	.send_en         (uart_send_en),        
+	.send_data       (uart_send_data),       
+				    
+	.Num_rx_data     (uart_Num_rx_data),    
+	.rxdata_buff_0   (uart_rxdata_buff_0   ),  
+	.rxdata_buff_1   (uart_rxdata_buff_1   ),  
+	.rxdata_buff_2   (uart_rxdata_buff_2   ),  
+	.rxdata_buff_3   (uart_rxdata_buff_3   ),  
+	.rxdata_buff_4   (uart_rxdata_buff_4   ),  
+	.rxdata_buff_5   (uart_rxdata_buff_5   ),  
+	.rxdata_buff_6   (uart_rxdata_buff_6   ),  
+	.rxdata_buff_7   (uart_rxdata_buff_7   ),  
+	.rxdata_buff_8   (uart_rxdata_buff_8   ),  
+	.rxdata_buff_9   (uart_rxdata_buff_9   ),  
+	.rxdata_buff_10  (uart_rxdata_buff_10  ), 
+	.rxdata_buff_11  (uart_rxdata_buff_11  ),     
+	.rxdata_buff_12  (uart_rxdata_buff_12  ),  
+	.rxdata_buff_13  (uart_rxdata_buff_13  ),  
+	.rxdata_buff_14  (uart_rxdata_buff_14  ),  
+	.rxdata_buff_15  (uart_rxdata_buff_15  ), 
+	.rxdata_buff_16  (uart_rxdata_buff_16  ),   
+	.rxdata_buff_17  (uart_rxdata_buff_17  ) 	
+);
+
+
 
 key_scan key_scan_u(
 .sys_clk     (sys_clk), 
@@ -246,7 +304,7 @@ key_led_association key_led_association_u(
 .led_state       (led_state)
 );
 
-/*
+
 //i2c驱动模块
 i2c_dri #(
     .SLAVE_ADDR  (SLAVE_ADDR),  //从机地址
@@ -317,7 +375,7 @@ key_sw_disp u_key_sw_disp(
     .point        (point),
     .disp_data    (disp_data)
     );
-*/
+
 //数码管驱动模块
 /*
 seg_bcd_dri u_seg_bcd_dri(

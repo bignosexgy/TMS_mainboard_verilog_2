@@ -31,7 +31,8 @@ module uart_send(
     //output  reg        tx_flag,             //发送过程标志信号
     //output  reg [ 7:0] tx_data,             //寄存发送数据
     //output  reg [ 3:0] tx_cnt,              //发送数据计数器
-    output  reg        uart_txd             //UART发送端口
+    output  reg        uart_txd,             //UART发送端口
+	input              num_send_data         //待发送数据的长度
     );
     
 //parameter define
@@ -44,7 +45,7 @@ reg        uart_en_d0;
 reg        uart_en_d1;  
 reg [15:0] clk_cnt;                           //系统时钟计数器
 
-wire             en_flag ;
+wire       en_flag ;
 reg        tx_flag;             //发送过程标志信
 reg [ 7:0] tx_data;             //寄存发送数据
 reg [ 3:0] tx_cnt;              //发送数据计数器

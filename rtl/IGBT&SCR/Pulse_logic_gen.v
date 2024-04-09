@@ -38,26 +38,26 @@ module Pulse_logic_gen(
     );
 
 //reg define
-reg [23:0] counter;
-//reg [23:0]  IGBT_counter [4:0];    //IGBT驱动时长
-reg [23:0]  IGBT_counter_1;    //IGBT驱动时长
-reg [23:0]  IGBT_counter_2;    //IGBT驱动时长
-//reg [1:0]  SCR_counter;     //晶闸管驱动时长
-reg  [11:0]   Burst_Frequency;  //簇的频率        
-reg  [11:0]   Pulses_Frequency;  //脉冲的频率   max=100Hz
-reg  [3:0]    stimulate_mod;
-reg  [4:0]        IGBT_status;            //5个IGBT状态标志
-reg  [4:0]      IGBT_on_EN;                //5个IGBT开启使能
-reg  [23:0]     IGBT_on_time_1;               //5个IGBT开通时常
-reg  [23:0]     IGBT_on_time_2;               //5个IGBT开通时常
-reg  [23:0]    IGBT_Frequency_counter_1;
-reg  [23:0]    IGBT_Frequency_counter_2;
+reg   [23:0]    counter;                       //系统时钟计数器 
+//reg [23:0]  IGBT_counter [4:0];              //IGBT驱动时长
+reg   [23:0]    IGBT_counter_1;                //IGBT驱动时长
+reg   [23:0]    IGBT_counter_2;                //IGBT驱动时长
+//reg [1:0]  SCR_counter;                      //晶闸管驱动时长
+reg   [11:0]    Burst_Frequency;               //簇的频率        
+reg   [11:0]    Pulses_Frequency;              //脉冲的频率   max=100Hz
+reg   [3:0]     stimulate_mod;                 
+reg   [4:0]     IGBT_status;                   //5个IGBT状态标志
+reg   [4:0]     IGBT_on_EN;                    //5个IGBT开启使能
+reg   [23:0]    IGBT_on_time_1;                //通道1IGBT开通时间
+reg   [23:0]    IGBT_on_time_2;                //通道2IGBT开通时间
+reg   [23:0]    Pulses_cycle_counter_1;    //通道1脉冲时钟计数
+reg   [23:0]    Pulses_cycle_counter_2;     //通道2脉冲时钟计数
 //parameter define
  
 
 
 initial  begin
-   IGBT_on_EN <= 5'b0;          //串口通信完成后去掉这一条
+   IGBT_on_EN     <= 5'b0;          //串口通信完成后去掉这一条
    IGBT_counter_1 <= 24'b0;
    IGBT_counter_2 <= 24'b0;
 end
@@ -80,43 +80,35 @@ end
 //确定将要进行的工作模式，确定IGBT1工作参数、开启或关断IGBT
 always @(posedge sys_clk or negedge sys_rst_n) begin 
    if(!sys_rst_n) 
-      IGBT_Frequency_counter_1 <= 24'd0; 
+      Pulses_cycle_counter_1 <= 24'd0; 
    else if(counter == 24'd50) begin      
-     IGBT_Frequency_counter_1 <= IGBT_Frequency_counter_1 + 1;  
-    
-     if(IGBT_Frequency_counter_1 == 24'd1000) begin          //设定IGBT开通时间间隔1mS
+     Pulses_cycle_counter_1 <= Pulses_cycle_counter_1 + 1;      
+     if(Pulses_cycle_counter_1 == 24'd1000) begin          //设定IGBT开通时间间隔1mS
          stimulate_mod <= 4'd4;
          IGBT_on_time_1 <= 24'd100;
-         IGBT_Frequency_counter_1 <= 24'd0;  
+         Pulses_cycle_counter_1 <= 24'd0;  
          IGBT_on_EN[0] <= 1'b1;       
-      end
-    
+      end    
      else begin 
        if(IGBT_on_EN[0] == 1'b1) begin                        //IGBT开通使能
-           IGBT_counter_1 <=  IGBT_counter_1 + 1;      
-      
+           IGBT_counter_1 <=  IGBT_counter_1 + 1;         
            if(IGBT_counter_1 == IGBT_on_time_1) begin     //开通时间计时技术
               //IGBT_counter[0] <=  24'd1000_0000;
-              IGBT_status[0] <= 1'b0;                      //复位IGBT开通状态标志
-           
+              IGBT_status[0] <= 1'b0;                      //复位IGBT开通状态标志           
               IGBT[0] <= 1'b0;                                           //关断IGBT
               IGBT_on_EN[0] <= 1'b0;
               IGBT_counter_1 <=  24'b0; 
-           end 
-       
+           end        
            else begin                                       //IGBT开通计时未结束
               IGBT[0] <= 1'b1;                                  //开通IGBT
               IGBT_status[0] <= 1'b1;                      //置位IGBT开通状态标志
-           end
-       
-        end   
-       
+           end       
+        end          
         else begin                                                       //IGBT关断
            IGBT_status[0] <= 1'b0;
            IGBT[0] <= 1'b0;
            IGBT_counter_1 <=  24'b0; 
-        end
-        
+        end        
      end   
    end
    else
@@ -126,14 +118,14 @@ end
 //确定将要进行的工作模式，确定IGBT2工作参数、开启或关断IGBT工作参数、开启或关断IGBT
 always @(posedge sys_clk or negedge sys_rst_n) begin 
    if(!sys_rst_n) 
-      IGBT_Frequency_counter_2 <= 24'd0; 
+      Pulses_cycle_counter_2 <= 24'd0; 
    else if(counter == 24'd50) begin      
-     IGBT_Frequency_counter_2 <= IGBT_Frequency_counter_2 + 1;  
+     Pulses_cycle_counter_2 <= Pulses_cycle_counter_2 + 1;  
     
-     if(IGBT_Frequency_counter_2 == 24'd1000) begin          //设定IGBT开通时间间隔1mS
+     if(Pulses_cycle_counter_2 == 24'd1000) begin          //设定IGBT开通时间间隔1mS
          stimulate_mod <= 4'd4;
          IGBT_on_time_2 <= 24'd100;
-         IGBT_Frequency_counter_2 <= 24'd0;  
+         Pulses_cycle_counter_2 <= 24'd0;  
          IGBT_on_EN[1] <= 1'b1;       
       end
     
@@ -165,6 +157,7 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
         
      end   
    end
+   
    else
       stimulate_mod <= stimulate_mod;
 end
