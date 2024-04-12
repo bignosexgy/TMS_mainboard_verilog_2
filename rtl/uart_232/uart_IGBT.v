@@ -25,12 +25,10 @@ module uart_IGBT(
     input               sys_rst_n,                 //系统复位，低电平有效
 					    
     input               recv_done,                 //接收一帧数据完成标志
-    input        [7:0]  recv_data,                 //接收的数据
-					    
+    input        [7:0]  recv_data,                 //接收的数据					    
 	input               tx_busy,                   //发送忙状态标志      
     output reg          send_en,                   //发送使能信号
-    output reg   [7:0]  send_data,                 //待发送数据
-			     
+    output reg   [7:0]  send_data,                 //待发送数据			     
 	output reg   [7:0]  Num_rx_data,               //接收到的有效数据长度
 	output reg   [7:0]  rxdata_buff_0,             //frame header 1
     output reg   [7:0]  rxdata_buff_1,             //frame header 2
@@ -43,20 +41,22 @@ module uart_IGBT(
     output reg   [7:0]  rxdata_buff_8,             //discharge time m
     output reg   [7:0]  rxdata_buff_9,             //discharge time l
     output reg   [7:0]  rxdata_buff_10,            //check code h
-    output reg   [7:0]  rxdata_buff_11,             //check code l   
-	output reg   [7:0]  rxdata_buff_12,             //discharge time h
-    output reg   [7:0]  rxdata_buff_13,             //discharge time m
-    output reg   [7:0]  rxdata_buff_14,             //discharge time l
+    output reg   [7:0]  rxdata_buff_11,            //check code l   
+	output reg   [7:0]  rxdata_buff_12,            //discharge time h
+    output reg   [7:0]  rxdata_buff_13,            //discharge time m
+    output reg   [7:0]  rxdata_buff_14,            //discharge time l
     output reg   [7:0]  rxdata_buff_15,            //check code h
-    output reg   [7:0]  rxdata_buff_16,             //check code l  
-	output reg   [7:0]  rxdata_buff_17             //check code l  
-
+    output reg   [7:0]  rxdata_buff_16,            //check code l  
+	output reg   [7:0]  rxdata_buff_17,            //check code l  	
+	output reg   [7:0]  Voltage_cap_set_1,         //脉冲功率，谐振电容1设置电压 
+	output reg   [7:0]  Voltage_cap_set_2,         //脉冲功率，谐振电容2设置电压 
+	output reg   [7:0]  Voltage_cap_set_3          //脉冲功率，支撑电容电容设置电压 
     );
 
 //reg define
-reg recv_done_d0;
-reg recv_done_d1;
-reg tx_ready;
+reg   recv_done_d0;
+reg   recv_done_d1;
+reg   tx_ready;
 reg   Send_One_flag;
 reg   rx_buff_flag;              //帧头第一个数据
 //reg [1:0]  rx_buff_0_flag;            //帧头第二个数据
@@ -85,7 +85,7 @@ reg   [7:0]  txdata_buff_14;            //discharge time h
 reg   [7:0]  txdata_buff_15;            //discharge time m
 reg   [7:0]  txdata_buff_16;            //discharge time l
 reg   [7:0]  txdata_buff_17;           //check code h
-
+reg          recv_full_data_flag;      //接收完整的数据帧标志
 
 
 
@@ -115,12 +115,33 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
     end
 end
 
+
+always @ (rxdata_buff_5) begin
+    case (rxdata_buff_5)
+	    8'd1: begin
+	         Voltage_cap_set_1 <= rxdata_buff_5;   
+	    end
+	    8'd2: begin
+	         Voltage_cap_set_2 <= rxdata_buff_5;   
+	    end
+		8'd3: begin
+	         Voltage_cap_set_3 <= rxdata_buff_5;   
+	    end
+        default
+	        ;
+	endcase	   
+end
+
+
+
 //判断接收完成信号，并在串口发送模块空闲时给出发送使能信号
 always @(posedge sys_clk or negedge sys_rst_n) begin         
     if (!sys_rst_n) begin	
-        rx_buff_1_flag <= 1'b0;
-		rx_buff_flag <= 1'b0;
-		rx_data_cnt    <= 8'd0;	
+        rx_buff_1_flag      <= 1'b0;
+		rx_buff_flag        <= 1'b0;
+		rx_data_cnt         <= 8'd0;	
+		recv_full_data_flag <= 1'b0;
+		Num_rx_data         <= 8'd0;
     end                                                      
     else begin 
 	    if(recv_done_flag) begin                 //检测串口接收到数据       
@@ -128,85 +149,205 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
 			if (rx_buff_flag) begin			   
 			    case(rx_data_cnt)
 				    8'd2 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
+				        rx_data_cnt     <= rx_data_cnt + 1'b1;   
 					    rxdata_buff_2   <= recv_data;
 					    Num_rx_data     <=  recv_data;	
-                        txdata_buff_2  <= recv_data;						
+                        txdata_buff_2   <= recv_data;						
 				    end
 				    8'd3 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
 					    rxdata_buff_3   <= recv_data;	
-                        txdata_buff_3  <= recv_data;						
+                        txdata_buff_3   <= recv_data;
+					    if((rx_data_cnt - 8'd2) == Num_rx_data) begin
+						    recv_full_data_flag <= 1'b1;
+							rx_data_cnt    <= 8'd0;
+						    rx_buff_flag   <= 1'b0;
+							rx_buff_1_flag <= 1'b0;
+						end
+				        else begin
+						    rx_data_cnt    <= rx_data_cnt + 1'b1;					        
+                        end							
 				    end    
 			        8'd4 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
-					    rxdata_buff_4   <= recv_data;
-                        txdata_buff_4  <= recv_data;						
+				        rxdata_buff_4   <= recv_data;	
+                        txdata_buff_4   <= recv_data;
+					    if((rx_data_cnt - 8'd2) == Num_rx_data) begin
+						    recv_full_data_flag <= 1'b1;
+							rx_data_cnt    <= 8'd0;
+						    rx_buff_flag   <= 1'b0;
+							rx_buff_1_flag <= 1'b0;
+						end
+				        else begin
+						    rx_data_cnt    <= rx_data_cnt + 1'b1;					        
+                        end						
 				    end
 			        8'd5 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
-					    rxdata_buff_5   <= recv_data;
-                        txdata_buff_5  <= recv_data;						
+				        rxdata_buff_5   <= recv_data;	
+                        txdata_buff_5   <= recv_data;
+					    if((rx_data_cnt - 8'd2) == Num_rx_data) begin
+						    recv_full_data_flag <= 1'b1;
+							rx_data_cnt    <= 8'd0;
+						    rx_buff_flag   <= 1'b0;
+							rx_buff_1_flag <= 1'b0;
+						end
+				        else begin
+						    rx_data_cnt    <= rx_data_cnt + 1'b1;					        
+                        end							
 				    end
 			        8'd6 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
-					    rxdata_buff_6   <= recv_data;
+				        rxdata_buff_6   <= recv_data;
                         txdata_buff_6  <= recv_data;						
+						 if((rx_data_cnt - 8'd2) == Num_rx_data) begin
+						    recv_full_data_flag <= 1'b1;
+							rx_data_cnt    <= 8'd0;
+						    rx_buff_flag   <= 1'b0;
+							rx_buff_1_flag <= 1'b0;
+						end
+				        else begin
+						    rx_data_cnt    <= rx_data_cnt + 1'b1;					        
+                        end	
 				    end
-			        8'd7 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
+			        8'd7 :begin				        
 					    rxdata_buff_7   <= recv_data; 
 						txdata_buff_7  <= recv_data;
+						 if((rx_data_cnt - 8'd2) == Num_rx_data) begin
+						    recv_full_data_flag <= 1'b1;
+							rx_data_cnt    <= 8'd0;
+						    rx_buff_flag   <= 1'b0;
+							rx_buff_1_flag <= 1'b0;
+						end
+				        else begin
+						    rx_data_cnt    <= rx_data_cnt + 1'b1;					        
+                        end	
 				    end
-			        8'd8 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
+			        8'd8 :begin				        
 					    rxdata_buff_8   <= recv_data;	
                         txdata_buff_8  <= recv_data;  						
+						 if((rx_data_cnt - 8'd2) == Num_rx_data) begin
+						    recv_full_data_flag <= 1'b1;
+							rx_data_cnt    <= 8'd0;
+						    rx_buff_flag   <= 1'b0;
+							rx_buff_1_flag <= 1'b0;
+						end
+				        else begin
+						    rx_data_cnt    <= rx_data_cnt + 1'b1;					        
+                        end	
 				    end
-			        8'd9 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
+			        8'd9 :begin				        
 					    rxdata_buff_9   <= recv_data;	
                         txdata_buff_9  <= recv_data;						
+						 if((rx_data_cnt - 8'd2) == Num_rx_data) begin
+						    recv_full_data_flag <= 1'b1;
+							rx_data_cnt    <= 8'd0;
+						    rx_buff_flag   <= 1'b0;
+							rx_buff_1_flag <= 1'b0;
+						end
+				        else begin
+						    rx_data_cnt    <= rx_data_cnt + 1'b1;					        
+                        end	
 				    end
-			        8'd10 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
+			        8'd10 :begin				        
 					    rxdata_buff_10  <= recv_data;
                         txdata_buff_10  <= recv_data;						
+						 if((rx_data_cnt - 8'd2) == Num_rx_data) begin
+						    recv_full_data_flag <= 1'b1;
+							rx_data_cnt    <= 8'd0;
+						    rx_buff_flag   <= 1'b0;
+							rx_buff_1_flag <= 1'b0;
+						end
+				        else begin
+						    rx_data_cnt    <= rx_data_cnt + 1'b1;					        
+                        end	
 				    end
-				    8'd11 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
+				    8'd11 :begin						        
 					    rxdata_buff_11  <= recv_data;
                         txdata_buff_11  <= recv_data;						
+						 if((rx_data_cnt - 8'd2) == Num_rx_data) begin
+						    recv_full_data_flag <= 1'b1;
+							rx_data_cnt    <= 8'd0;
+						    rx_buff_flag   <= 1'b0;
+							rx_buff_1_flag <= 1'b0;
+						end
+				        else begin
+						    rx_data_cnt    <= rx_data_cnt + 1'b1;					        
+                        end	
 				    end
-				    8'd12 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
+				    8'd12 :begin									        
 					    rxdata_buff_12   <= recv_data;
-                        txdata_buff_12  <= recv_data;						
+                        txdata_buff_12  <= recv_data;
+                        if((rx_data_cnt - 8'd2) == Num_rx_data) begin
+						    recv_full_data_flag <= 1'b1;
+							rx_data_cnt    <= 8'd0;
+						    rx_buff_flag   <= 1'b0;
+							rx_buff_1_flag <= 1'b0;
+						end
+				        else begin
+						    rx_data_cnt    <= rx_data_cnt + 1'b1;					        
+                        end							
 				    end
-			        8'd13 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
+			        8'd13 :begin				        
 					    rxdata_buff_13   <= recv_data;	
                         txdata_buff_13  <= recv_data;						
+						if((rx_data_cnt - 8'd2) == Num_rx_data) begin
+						    recv_full_data_flag <= 1'b1;
+							rx_data_cnt    <= 8'd0;
+						    rx_buff_flag   <= 1'b0;
+							rx_buff_1_flag <= 1'b0;
+						end
+				        else begin
+						    rx_data_cnt    <= rx_data_cnt + 1'b1;					        
+                        end		
 				    end
-			        8'd14 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
+			        8'd14 :begin				        
 					    rxdata_buff_14   <= recv_data;
                         txdata_buff_14  <= recv_data;						
+						if((rx_data_cnt - 8'd2) == Num_rx_data) begin
+						    recv_full_data_flag <= 1'b1;
+							rx_data_cnt    <= 8'd0;
+						    rx_buff_flag   <= 1'b0;
+							rx_buff_1_flag <= 1'b0;
+						end
+				        else begin
+						    rx_data_cnt    <= rx_data_cnt + 1'b1;					        
+                        end		
 				    end
-			        8'd15 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
+			        8'd15 :begin				        
 					    rxdata_buff_15  <= recv_data;
                         txdata_buff_15  <= recv_data;						
+						if((rx_data_cnt - 8'd2) == Num_rx_data) begin
+						    recv_full_data_flag <= 1'b1;
+							rx_data_cnt    <= 8'd0;
+						    rx_buff_flag   <= 1'b0;
+							rx_buff_1_flag <= 1'b0;
+						end
+				        else begin
+						    rx_data_cnt    <= rx_data_cnt + 1'b1;					        
+                        end		
 				    end
-				    8'd16 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
+				    8'd16 :begin				        
 					    rxdata_buff_16  <= recv_data;
                         txdata_buff_16  <= recv_data;						
+						if((rx_data_cnt - 8'd2) == Num_rx_data) begin
+						    recv_full_data_flag <= 1'b1;
+							rx_data_cnt    <= 8'd0;
+						    rx_buff_flag   <= 1'b0;
+							rx_buff_1_flag <= 1'b0;
+						end
+				        else begin
+						    rx_data_cnt    <= rx_data_cnt + 1'b1;					        
+                        end		
 				    end
-				    8'd17 :begin
-				        rx_data_cnt    <= rx_data_cnt + 1'b1;
+				    8'd17 :begin				        
 					    rxdata_buff_17  <= recv_data;	
                         txdata_buff_17  <= recv_data;	                        					
+						if((rx_data_cnt - 8'd2) == Num_rx_data) begin
+						    recv_full_data_flag <= 1'b1;
+							rx_data_cnt    <= 8'd0;
+						    rx_buff_flag   <= 1'b0;
+							rx_buff_1_flag <= 1'b0;
+						end
+				        else begin
+						    rx_data_cnt    <= rx_data_cnt + 1'b1;					        
+                        end		
 				    end
 				    default:begin
 				        rx_data_cnt    <= 8'd0;
@@ -221,6 +362,7 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
 					rx_data_cnt    <= rx_data_cnt + 1'b1;
 		            rxdata_buff_1  <= recv_data;	
 					txdata_buff_1  <= recv_data;
+					recv_full_data_flag <= 1'b0;
 				end
                 else begin
                     rx_buff_1_flag <= 1'b0;
@@ -242,16 +384,17 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
 			end	
 			
         end	
-        else if(rx_data_cnt == 8'd18)	begin
+        else if(recv_full_data_flag == 1'b1)	begin
             rx_buff_flag   <= 1'b0;
 			rx_data_cnt <= 8'd0;
+			recv_full_data_flag <= 1'b0;
 		end	
         else ;    		
     end		
     //else; 		
 end
 
-//判断接收完成一帧信号，并在串口发送模块空闲时给出发送使能信号
+//给发送缓冲数据赋值，在串口发送模块空闲时给出发送使能信号
 always @(posedge sys_clk or negedge sys_rst_n) begin         
     if (!sys_rst_n) begin
         tx_ready  <= 1'b0; 
@@ -260,11 +403,13 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
 		tx_data_cnt <= 8'd0;
     end                                                      
     else begin                                               
-        if(rx_data_cnt == 8'd18)begin                 //检测串口接收到数据
+        //if(rx_data_cnt == 8'd18)begin                 //检测串口接收到数据
+		if(recv_full_data_flag == 1'b1)begin                 //检测串口接收到数据
             Send_One_flag <= 1;
 			Sen_Group_en <= 1;			
         end
 		else if (Sen_Group_en) begin
+		    if(tx_data_cnt <= Num_rx_data + 8'd2)begin          //测试
 		    case(tx_data_cnt)
                 8'd0 :begin
 			        if(Send_One_flag && (~tx_busy)) begin
@@ -673,7 +818,12 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
 			        tx_data_cnt      <= 8'd0;
 			 	    Sen_Group_en     <= 1'b0;
 			    end		
-            endcase       
+            endcase 
+			end
+            else  begin
+                tx_data_cnt      <= 8'd0;
+			 	Sen_Group_en     <= 1'b0;
+			end			
 		end		
 		else 
 		    tx_data_cnt <= 8'd0;

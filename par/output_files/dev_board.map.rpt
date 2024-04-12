@@ -1,5 +1,5 @@
 Analysis & Synthesis report for dev_board
-Tue Apr 09 14:21:47 2024
+Fri Apr 12 13:21:59 2024
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
@@ -46,42 +46,46 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
  38. Parameter Settings for User Entity Instance: Top-level Entity: |dev_board_top
  39. Parameter Settings for User Entity Instance: uart_recv:u_uart_recv
  40. Parameter Settings for User Entity Instance: uart_send:u_uart_send
- 41. Parameter Settings for User Entity Instance: i2c_dri:u_i2c_dri
- 42. Parameter Settings for User Entity Instance: pcf8563_ctrl:u_pcf8563_ctrl
- 43. Parameter Settings for User Entity Instance: PLL:PLL_CLK|altpll:altpll_component
- 44. Parameter Settings for User Entity Instance: DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component
- 45. Parameter Settings for User Entity Instance: FIFO:u_CHA_FIFO|dcfifo:dcfifo_component
- 46. Parameter Settings for User Entity Instance: FIFO:u_CHB_FIFO|dcfifo:dcfifo_component
- 47. Parameter Settings for User Entity Instance: pcf8591:u_pcf8591
- 48. Parameter Settings for User Entity Instance: i2c_dri_pcf8591:u_i2c_dri_pcf8591
- 49. Parameter Settings for Inferred Entity Instance: sld_signaltap:uart_send_recv
- 50. Parameter Settings for Inferred Entity Instance: seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Div1
- 51. Parameter Settings for Inferred Entity Instance: seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Mod2
- 52. Parameter Settings for Inferred Entity Instance: seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Div0
- 53. Parameter Settings for Inferred Entity Instance: seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Mod1
- 54. Parameter Settings for Inferred Entity Instance: seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Mod0
- 55. Parameter Settings for Inferred Entity Instance: seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Div2
- 56. Parameter Settings for Inferred Entity Instance: seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Mod3
- 57. Parameter Settings for Inferred Entity Instance: pcf8591:u_pcf8591|lpm_mult:Mult0
- 58. altpll Parameter Settings by Entity Instance
- 59. dcfifo Parameter Settings by Entity Instance
- 60. lpm_mult Parameter Settings by Entity Instance
- 61. Port Connectivity Checks: "seg_led_pcf8591:u_seg_led_pcf8591"
- 62. Port Connectivity Checks: "i2c_dri_pcf8591:u_i2c_dri_pcf8591"
- 63. Port Connectivity Checks: "FIFO:u_CHB_FIFO"
- 64. Port Connectivity Checks: "FIFO:u_CHA_FIFO"
- 65. Port Connectivity Checks: "PLL:PLL_CLK"
- 66. Port Connectivity Checks: "key_sw_disp:u_key_sw_disp"
- 67. Port Connectivity Checks: "key_debounce:u_key_debounce"
- 68. Port Connectivity Checks: "i2c_dri:u_i2c_dri"
- 69. Port Connectivity Checks: "uart_IGBT:u_uart_IGBT"
- 70. Port Connectivity Checks: "uart_send:u_uart_send"
- 71. SignalTap II Logic Analyzer Settings
- 72. Post-Synthesis Netlist Statistics for Top Partition
- 73. Elapsed Time Per Partition
- 74. Connections to In-System Debugging Instance "uart_send_recv"
- 75. Analysis & Synthesis Messages
- 76. Analysis & Synthesis Suppressed Messages
+ 41. Parameter Settings for User Entity Instance: adc_IGBT:adc_IGBT_u
+ 42. Parameter Settings for User Entity Instance: i2c_dri:u_i2c_dri
+ 43. Parameter Settings for User Entity Instance: pcf8563_ctrl:u_pcf8563_ctrl
+ 44. Parameter Settings for User Entity Instance: PLL:PLL_CLK|altpll:altpll_component
+ 45. Parameter Settings for User Entity Instance: DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component
+ 46. Parameter Settings for User Entity Instance: FIFO:u_CHA_FIFO|dcfifo:dcfifo_component
+ 47. Parameter Settings for User Entity Instance: FIFO:u_CHB_FIFO|dcfifo:dcfifo_component
+ 48. Parameter Settings for User Entity Instance: pcf8591:u_pcf8591
+ 49. Parameter Settings for User Entity Instance: i2c_dri_pcf8591:u_i2c_dri_pcf8591
+ 50. Parameter Settings for Inferred Entity Instance: sld_signaltap:uart_send_recv
+ 51. Parameter Settings for Inferred Entity Instance: seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Div1
+ 52. Parameter Settings for Inferred Entity Instance: seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Mod2
+ 53. Parameter Settings for Inferred Entity Instance: seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Div0
+ 54. Parameter Settings for Inferred Entity Instance: seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Mod1
+ 55. Parameter Settings for Inferred Entity Instance: seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Mod0
+ 56. Parameter Settings for Inferred Entity Instance: seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Div2
+ 57. Parameter Settings for Inferred Entity Instance: seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Mod3
+ 58. Parameter Settings for Inferred Entity Instance: pcf8591:u_pcf8591|lpm_mult:Mult0
+ 59. altpll Parameter Settings by Entity Instance
+ 60. dcfifo Parameter Settings by Entity Instance
+ 61. lpm_mult Parameter Settings by Entity Instance
+ 62. Port Connectivity Checks: "seg_led_pcf8591:u_seg_led_pcf8591"
+ 63. Port Connectivity Checks: "i2c_dri_pcf8591:u_i2c_dri_pcf8591"
+ 64. Port Connectivity Checks: "FIFO:u_CHB_FIFO"
+ 65. Port Connectivity Checks: "FIFO:u_CHA_FIFO"
+ 66. Port Connectivity Checks: "PLL:PLL_CLK"
+ 67. Port Connectivity Checks: "key_sw_disp:u_key_sw_disp"
+ 68. Port Connectivity Checks: "key_debounce:u_key_debounce"
+ 69. Port Connectivity Checks: "i2c_dri:u_i2c_dri"
+ 70. Port Connectivity Checks: "uart_IGBT:u_uart_IGBT"
+ 71. Port Connectivity Checks: "adc_IGBT:adc_IGBT_u"
+ 72. Port Connectivity Checks: "Pulse_logic_gen:Pulse_logic_gen_u"
+ 73. Port Connectivity Checks: "IGBT_SCR:IGBT_SCR_u"
+ 74. Port Connectivity Checks: "uart_send:u_uart_send"
+ 75. SignalTap II Logic Analyzer Settings
+ 76. Post-Synthesis Netlist Statistics for Top Partition
+ 77. Elapsed Time Per Partition
+ 78. Connections to In-System Debugging Instance "uart_send_recv"
+ 79. Analysis & Synthesis Messages
+ 80. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -108,16 +112,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 09 14:21:47 2024       ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 12 13:21:59 2024       ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
 ; Revision Name                      ; dev_board                                   ;
 ; Top-level Entity Name              ; dev_board_top                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,861                                       ;
-;     Total combinational functions  ; 2,029                                       ;
-;     Dedicated logic registers      ; 1,537                                       ;
-; Total registers                    ; 1537                                        ;
-; Total pins                         ; 54                                          ;
+; Total logic elements               ; 2,842                                       ;
+;     Total combinational functions  ; 2,003                                       ;
+;     Dedicated logic registers      ; 1,471                                       ;
+; Total registers                    ; 1471                                        ;
+; Total pins                         ; 63                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 3,840                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -221,12 +225,12 @@ agreement for further details.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 7           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-7         ; < 0.1%      ;
-;     Processors 8-20        ;   0.0%      ;
+;     Processors 2-6         ; < 0.1%      ;
+;     Processors 7-20        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -235,24 +239,26 @@ agreement for further details.
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
 ; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                                                                     ; Library     ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
-; ../rtl/uart_232/uart_IGBT.v                                        ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_IGBT.v                                               ;             ;
+; ../rtl/dev_board_top.v                                             ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v                                                    ;             ;
 ; ../rtl/pcf8591/seg_led_pcf8591.v                                   ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/seg_led_pcf8591.v                                          ;             ;
 ; ../rtl/pcf8591/pcf8591.v                                           ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/pcf8591.v                                                  ;             ;
 ; ../rtl/pcf8591/i2c_dri_pcf8591.v                                   ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/pcf8591/i2c_dri_pcf8591.v                                          ;             ;
 ; ../rtl/AD9248/PLL.v                                                ; yes             ; User Wizard-Generated File                   ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/PLL.v                                                       ;             ;
 ; ../rtl/AD9248/FIFO.v                                               ; yes             ; User Wizard-Generated File                   ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/FIFO.v                                                      ;             ;
 ; ../rtl/AD9248/DDIO.v                                               ; yes             ; User Wizard-Generated File                   ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/AD9248/DDIO.v                                                      ;             ;
+; ../rtl/IGBT&SCR/adc_IGBT.v                                         ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR/adc_IGBT.v                                                ;             ;
+; ../rtl/IGBT&SCR/IGBT&SCR.v                                         ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR/IGBT&SCR.v                                                ;             ;
 ; ../rtl/IGBT&SCR/Pulse_logic_gen.v                                  ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/IGBT&SCR/Pulse_logic_gen.v                                         ;             ;
 ; ../rtl/rtc_seg_led/pcf8563_ctrl.v                                  ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/pcf8563_ctrl.v                                         ;             ;
 ; ../rtl/rtc_seg_led/key_sw_disp.v                                   ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_sw_disp.v                                          ;             ;
 ; ../rtl/rtc_seg_led/key_debounce.v                                  ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/key_debounce.v                                         ;             ;
 ; ../rtl/rtc_seg_led/i2c_dri.v                                       ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/rtc_seg_led/i2c_dri.v                                              ;             ;
+; ../rtl/uart_232/uart_IGBT.v                                        ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_IGBT.v                                               ;             ;
 ; ../rtl/uart_232/uart_recv.v                                        ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_recv.v                                               ;             ;
 ; ../rtl/uart_232/uart_send.v                                        ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/uart_232/uart_send.v                                               ;             ;
 ; ../rtl/key_led/key_led_association.v                               ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_led_association.v                                      ;             ;
 ; ../rtl/key_led/led_key.v                                           ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/led_key.v                                                  ;             ;
 ; ../rtl/key_led/key_scan.v                                          ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/key_led/key_scan.v                                                 ;             ;
-; ../rtl/dev_board_top.v                                             ; yes             ; User Verilog HDL File                        ; D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/rtl/dev_board_top.v                                                    ;             ;
 ; altpll.tdf                                                         ; yes             ; Megafunction                                 ; c:/altera/15.0/quartus/libraries/megafunctions/altpll.tdf                                                                                                                        ;             ;
 ; aglobal150.inc                                                     ; yes             ; Megafunction                                 ; c:/altera/15.0/quartus/libraries/megafunctions/aglobal150.inc                                                                                                                    ;             ;
 ; stratix_pll.inc                                                    ; yes             ; Megafunction                                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratix_pll.inc                                                                                                                   ;             ;
@@ -378,23 +384,23 @@ agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 2,861         ;
+; Estimated Total logic elements              ; 2,842         ;
 ;                                             ;               ;
-; Total combinational functions               ; 2029          ;
+; Total combinational functions               ; 2003          ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 825           ;
-;     -- 3 input functions                    ; 452           ;
-;     -- <=2 input functions                  ; 752           ;
+;     -- 4 input functions                    ; 840           ;
+;     -- 3 input functions                    ; 475           ;
+;     -- <=2 input functions                  ; 688           ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 1567          ;
-;     -- arithmetic mode                      ; 462           ;
+;     -- normal mode                          ; 1605          ;
+;     -- arithmetic mode                      ; 398           ;
 ;                                             ;               ;
-; Total registers                             ; 1537          ;
-;     -- Dedicated logic registers            ; 1537          ;
+; Total registers                             ; 1471          ;
+;     -- Dedicated logic registers            ; 1471          ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
-; I/O pins                                    ; 54            ;
+; I/O pins                                    ; 63            ;
 ; Total memory bits                           ; 3840          ;
 ;                                             ;               ;
 ; Embedded Multiplier 9-bit elements          ; 0             ;
@@ -403,8 +409,8 @@ agreement for further details.
 ;     -- PLLs                                 ; 1             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; sys_clk~input ;
-; Maximum fan-out                             ; 905           ;
-; Total fan-out                               ; 12096         ;
+; Maximum fan-out                             ; 839           ;
+; Total fan-out                               ; 11852         ;
 ; Average fan-out                             ; 3.23          ;
 +---------------------------------------------+---------------+
 
@@ -414,14 +420,13 @@ agreement for further details.
 +-----------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                                                ; Library Name ;
 +-----------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |dev_board_top                                                                                      ; 2029 (1)          ; 1537 (0)     ; 3840        ; 0            ; 0       ; 0         ; 54   ; 0            ; |dev_board_top                                                                                                                                                                                                                                                                                                                                                                                     ; work         ;
+; |dev_board_top                                                                                      ; 2003 (1)          ; 1471 (0)     ; 3840        ; 0            ; 0       ; 0         ; 63   ; 0            ; |dev_board_top                                                                                                                                                                                                                                                                                                                                                                                     ; work         ;
 ;    |PLL:PLL_CLK|                                                                                    ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|PLL:PLL_CLK                                                                                                                                                                                                                                                                                                                                                                         ; work         ;
 ;       |altpll:altpll_component|                                                                     ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|PLL:PLL_CLK|altpll:altpll_component                                                                                                                                                                                                                                                                                                                                                 ; work         ;
 ;          |PLL_altpll:auto_generated|                                                                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|PLL:PLL_CLK|altpll:altpll_component|PLL_altpll:auto_generated                                                                                                                                                                                                                                                                                                                       ; work         ;
-;    |Pulse_logic_gen:Pulse_logic_gen_u|                                                              ; 109 (109)         ; 75 (75)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|Pulse_logic_gen:Pulse_logic_gen_u                                                                                                                                                                                                                                                                                                                                                   ; work         ;
-;    |i2c_dri:u_i2c_dri|                                                                              ; 97 (97)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|i2c_dri:u_i2c_dri                                                                                                                                                                                                                                                                                                                                                                   ; work         ;
+;    |i2c_dri:u_i2c_dri|                                                                              ; 95 (95)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|i2c_dri:u_i2c_dri                                                                                                                                                                                                                                                                                                                                                                   ; work         ;
 ;    |i2c_dri_pcf8591:u_i2c_dri_pcf8591|                                                              ; 104 (104)         ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|i2c_dri_pcf8591:u_i2c_dri_pcf8591                                                                                                                                                                                                                                                                                                                                                   ; work         ;
-;    |key_led_association:key_led_association_u|                                                      ; 62 (62)           ; 39 (39)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|key_led_association:key_led_association_u                                                                                                                                                                                                                                                                                                                                           ; work         ;
+;    |key_led_association:key_led_association_u|                                                      ; 63 (63)           ; 39 (39)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|key_led_association:key_led_association_u                                                                                                                                                                                                                                                                                                                                           ; work         ;
 ;    |key_scan:key_scan_u|                                                                            ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|key_scan:key_scan_u                                                                                                                                                                                                                                                                                                                                                                 ; work         ;
 ;    |led_key:led_key_u|                                                                              ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|led_key:led_key_u                                                                                                                                                                                                                                                                                                                                                                   ; work         ;
 ;    |pcf8563_ctrl:u_pcf8563_ctrl|                                                                    ; 44 (44)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|pcf8563_ctrl:u_pcf8563_ctrl                                                                                                                                                                                                                                                                                                                                                         ; work         ;
@@ -654,9 +659,9 @@ agreement for further details.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                    ; 60 (60)           ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|sld_signaltap:uart_send_recv|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                                                                          ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                 ; 13 (13)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|sld_signaltap:uart_send_recv|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                                                                       ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                 ; 30 (30)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|sld_signaltap:uart_send_recv|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                                                                     ; work         ;
-;    |uart_IGBT:u_uart_IGBT|                                                                          ; 192 (192)         ; 165 (165)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|uart_IGBT:u_uart_IGBT                                                                                                                                                                                                                                                                                                                                                               ; work         ;
-;    |uart_recv:u_uart_recv|                                                                          ; 74 (74)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|uart_recv:u_uart_recv                                                                                                                                                                                                                                                                                                                                                               ; work         ;
-;    |uart_send:u_uart_send|                                                                          ; 55 (55)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|uart_send:u_uart_send                                                                                                                                                                                                                                                                                                                                                               ; work         ;
+;    |uart_IGBT:u_uart_IGBT|                                                                          ; 284 (284)         ; 174 (174)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|uart_IGBT:u_uart_IGBT                                                                                                                                                                                                                                                                                                                                                               ; work         ;
+;    |uart_recv:u_uart_recv|                                                                          ; 67 (67)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|uart_recv:u_uart_recv                                                                                                                                                                                                                                                                                                                                                               ; work         ;
+;    |uart_send:u_uart_send|                                                                          ; 54 (54)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dev_board_top|uart_send:u_uart_send                                                                                                                                                                                                                                                                                                                                                               ; work         ;
 +-----------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -722,196 +727,143 @@ Encoding Type:  One-Hot
 +----------------------+-------------------+----------------------+----------------------+----------------------+--------------------+---------------------+---------------------+-------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                                           ;
-+-----------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-; Register name                                                                                                                     ; Reason for Removal                                                       ;
-+-----------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-; pcf8591:u_pcf8591|num_pcf859[12..19]                                                                                              ; Stuck at GND due to stuck port data_in                                   ;
-; pcf8591:u_pcf8591|i2c_addr_pcf8591[1..5,7..15]                                                                                    ; Stuck at GND due to stuck port data_in                                   ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_h[0..13]                                        ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[0]                                           ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[0]                                            ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[1]                                           ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[1]                                            ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[2]                                           ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[2]                                            ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[3]                                           ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[3]                                            ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[4]                                           ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[4]                                            ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[5]                                           ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[5]                                            ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[6]                                           ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[6]                                            ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[7]                                           ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[7]                                            ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[8]                                           ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[8]                                            ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[9]                                           ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[9]                                            ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[10]                                          ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[10]                                           ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[11]                                          ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[11]                                           ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[12]                                          ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[12]                                           ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[13]                                          ; Lost fanout                                                              ;
-; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[13]                                           ; Lost fanout                                                              ;
-; pcf8563_ctrl:u_pcf8563_ctrl|i2c_addr[4..15]                                                                                       ; Stuck at GND due to stuck port data_in                                   ;
-; pcf8563_ctrl:u_pcf8563_ctrl|i2c_data_w[1,6,7]                                                                                     ; Stuck at GND due to stuck port data_in                                   ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|delayed_wrptr_g[0..6]                                          ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|rdptr_g[0..6]                                                  ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|wrptr_g[0..6]                                                  ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_26d:ws_dgrp|dffpipe_1v8:dffpipe15|dffe16a[0..6] ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_26d:ws_dgrp|dffpipe_1v8:dffpipe15|dffe17a[0..6] ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_16d:rs_dgwp|dffpipe_0v8:dffpipe12|dffe13a[0..6] ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_16d:rs_dgwp|dffpipe_0v8:dffpipe12|dffe14a[0..6] ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a0                         ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a1                         ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a2                         ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a3                         ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a4                         ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a5                         ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a6                         ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|parity9                            ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|sub_parity10a[0,1]                 ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a0                         ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a1                         ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a2                         ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a3                         ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a4                         ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a5                         ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a6                         ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|parity6                            ; Lost fanout                                                              ;
-; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|sub_parity7a[0,1]                  ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|delayed_wrptr_g[0..6]                                          ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|rdptr_g[0..6]                                                  ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|wrptr_g[0..6]                                                  ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_26d:ws_dgrp|dffpipe_1v8:dffpipe15|dffe16a[0..6] ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_26d:ws_dgrp|dffpipe_1v8:dffpipe15|dffe17a[0..6] ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_16d:rs_dgwp|dffpipe_0v8:dffpipe12|dffe13a[0..6] ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_16d:rs_dgwp|dffpipe_0v8:dffpipe12|dffe14a[0..6] ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a0                         ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a1                         ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a2                         ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a3                         ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a4                         ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a5                         ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a6                         ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|parity9                            ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|sub_parity10a[0,1]                 ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a0                         ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a1                         ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a2                         ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a3                         ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a4                         ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a5                         ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a6                         ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|parity6                            ; Lost fanout                                                              ;
-; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|sub_parity7a[0,1]                  ; Lost fanout                                                              ;
-; i2c_dri_pcf8591:u_i2c_dri_pcf8591|addr_t[1..5,7..15]                                                                              ; Stuck at GND due to stuck port data_in                                   ;
-; i2c_dri:u_i2c_dri|addr_t[4..15]                                                                                                   ; Stuck at GND due to stuck port data_in                                   ;
-; i2c_dri:u_i2c_dri|data_wr_t[1,6,7]                                                                                                ; Stuck at GND due to stuck port data_in                                   ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_time_1[7..23]                                                                           ; Stuck at GND due to stuck port data_in                                   ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_time_1[5,6]                                                                             ; Stuck at VCC due to stuck port data_in                                   ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_time_1[3,4]                                                                             ; Stuck at GND due to stuck port data_in                                   ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_time_1[2]                                                                               ; Stuck at VCC due to stuck port data_in                                   ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_time_1[0,1]                                                                             ; Stuck at GND due to stuck port data_in                                   ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_time_2[7..23]                                                                           ; Stuck at GND due to stuck port data_in                                   ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_time_2[5,6]                                                                             ; Stuck at VCC due to stuck port data_in                                   ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_time_2[3,4]                                                                             ; Stuck at GND due to stuck port data_in                                   ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_time_2[2]                                                                               ; Stuck at VCC due to stuck port data_in                                   ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_time_2[0,1]                                                                             ; Stuck at GND due to stuck port data_in                                   ;
-; pcf8591:u_pcf8591|i2c_addr_pcf8591[0]                                                                                             ; Merged with pcf8591:u_pcf8591|i2c_addr_pcf8591[6]                        ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[23]                                                                              ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[23]         ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[22]                                                                              ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[22]         ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[21]                                                                              ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[21]         ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[20]                                                                              ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[20]         ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[19]                                                                              ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[19]         ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[18]                                                                              ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[18]         ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[17]                                                                              ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[17]         ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[16]                                                                              ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[16]         ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[15]                                                                              ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[15]         ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[14]                                                                              ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[14]         ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[13]                                                                              ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[13]         ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[12]                                                                              ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[12]         ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[11]                                                                              ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[11]         ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[10]                                                                              ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[10]         ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[9]                                                                               ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[9]          ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[8]                                                                               ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[8]          ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[7]                                                                               ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[7]          ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[6]                                                                               ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[6]          ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[5]                                                                               ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[5]          ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[4]                                                                               ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[4]          ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[3]                                                                               ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[3]          ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[2]                                                                               ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[2]          ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[1]                                                                               ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[1]          ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_2[0]                                                                               ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[0]          ;
-; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_EN[1]                                                                                   ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_EN[0]              ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[9]                                                                       ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[9]  ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[8]                                                                       ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[8]  ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[7]                                                                       ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[7]  ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[6]                                                                       ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[6]  ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[5]                                                                       ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[5]  ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[3]                                                                       ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[3]  ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[23]                                                                      ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[23] ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[22]                                                                      ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[22] ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[21]                                                                      ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[21] ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[20]                                                                      ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[20] ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[19]                                                                      ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[19] ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[18]                                                                      ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[18] ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[17]                                                                      ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[17] ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[16]                                                                      ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[16] ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[15]                                                                      ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[15] ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[14]                                                                      ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[14] ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[13]                                                                      ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[13] ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[12]                                                                      ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[12] ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[11]                                                                      ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[11] ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[10]                                                                      ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[10] ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[4]                                                                       ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[4]  ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[2]                                                                       ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[2]  ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[1]                                                                       ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[1]  ;
-; Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_2[0]                                                                       ; Merged with Pulse_logic_gen:Pulse_logic_gen_u|Pulses_cycle_counter_1[0]  ;
-; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[9]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[9]                                 ;
-; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[8]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[8]                                 ;
-; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[7]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[7]                                 ;
-; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[6]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[6]                                 ;
-; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[5]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[5]                                 ;
-; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[4]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[4]                                 ;
-; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[3]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[3]                                 ;
-; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[2]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[2]                                 ;
-; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[1]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[1]                                 ;
-; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[0]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[0]                                 ;
-; uart_IGBT:u_uart_IGBT|tx_data_cnt[6,7]                                                                                            ; Merged with uart_IGBT:u_uart_IGBT|tx_data_cnt[5]                         ;
-; i2c_dri_pcf8591:u_i2c_dri_pcf8591|addr_t[6]                                                                                       ; Merged with i2c_dri_pcf8591:u_i2c_dri_pcf8591|addr_t[0]                  ;
-; uart_IGBT:u_uart_IGBT|tx_data_cnt[5]                                                                                              ; Stuck at GND due to stuck port data_in                                   ;
-; seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[16,18,20,22]                                                                        ; Stuck at GND due to stuck port data_in                                   ;
-; seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[17]                                                                                 ; Merged with seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[19]            ;
-; seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[19]                                                                                 ; Merged with seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[21]            ;
-; seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[21]                                                                                 ; Merged with seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[23]            ;
-; pcf8591:u_pcf8591|flow_cnt[3]                                                                                                     ; Stuck at GND due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_0[0]                                                                                            ; Stuck at VCC due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_1[0]                                                                                            ; Stuck at GND due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_0[1]                                                                                            ; Stuck at VCC due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_1[1]                                                                                            ; Stuck at VCC due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_0[2]                                                                                            ; Stuck at VCC due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_1[2]                                                                                            ; Stuck at GND due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_0[3]                                                                                            ; Stuck at VCC due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_1[3]                                                                                            ; Stuck at VCC due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_0[4]                                                                                            ; Stuck at GND due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_1[4]                                                                                            ; Stuck at VCC due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_0[5]                                                                                            ; Stuck at VCC due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_1[5]                                                                                            ; Stuck at VCC due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_0[6]                                                                                            ; Stuck at GND due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_1[6]                                                                                            ; Stuck at VCC due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_0[7]                                                                                            ; Stuck at VCC due to stuck port data_in                                   ;
-; uart_IGBT:u_uart_IGBT|txdata_buff_1[7]                                                                                            ; Stuck at VCC due to stuck port data_in                                   ;
-; i2c_dri:u_i2c_dri|cur_state.st_addr16                                                                                             ; Stuck at GND due to stuck port data_in                                   ;
-; i2c_dri_pcf8591:u_i2c_dri_pcf8591|cur_state.st_addr16                                                                             ; Stuck at GND due to stuck port data_in                                   ;
-; seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[15]                                                                                 ; Stuck at GND due to stuck port data_in                                   ;
-; Total Number of Removed Registers = 385                                                                                           ;                                                                          ;
-+-----------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                ;
++-----------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
+; Register name                                                                                                                     ; Reason for Removal                                            ;
++-----------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
+; pcf8591:u_pcf8591|num_pcf859[12..19]                                                                                              ; Stuck at GND due to stuck port data_in                        ;
+; pcf8591:u_pcf8591|i2c_addr_pcf8591[1..5,7..15]                                                                                    ; Stuck at GND due to stuck port data_in                        ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_h[0..13]                                        ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[0]                                           ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[0]                                            ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[1]                                           ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[1]                                            ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[2]                                           ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[2]                                            ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[3]                                           ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[3]                                            ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[4]                                           ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[4]                                            ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[5]                                           ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[5]                                            ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[6]                                           ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[6]                                            ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[7]                                           ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[7]                                            ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[8]                                           ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[8]                                            ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[9]                                           ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[9]                                            ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[10]                                          ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[10]                                           ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[11]                                          ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[11]                                           ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[12]                                          ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[12]                                           ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[13]                                          ; Lost fanout                                                   ;
+; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[13]                                           ; Lost fanout                                                   ;
+; pcf8563_ctrl:u_pcf8563_ctrl|i2c_addr[4..15]                                                                                       ; Stuck at GND due to stuck port data_in                        ;
+; pcf8563_ctrl:u_pcf8563_ctrl|i2c_data_w[1,6,7]                                                                                     ; Stuck at GND due to stuck port data_in                        ;
+; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_Flag[0]                                                                                 ; Lost fanout                                                   ;
+; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_EN[0]                                                                                   ; Stuck at GND due to stuck port data_in                        ;
+; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_Flag[1]                                                                                 ; Lost fanout                                                   ;
+; IGBT_SCR:IGBT_SCR_u|IGBT[0]                                                                                                       ; Stuck at GND due to stuck port data_in                        ;
+; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_EN[1]                                                                                   ; Stuck at GND due to stuck port data_in                        ;
+; IGBT_SCR:IGBT_SCR_u|IGBT[1]                                                                                                       ; Stuck at GND due to stuck port data_in                        ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|delayed_wrptr_g[0..6]                                          ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|rdptr_g[0..6]                                                  ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|wrptr_g[0..6]                                                  ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_26d:ws_dgrp|dffpipe_1v8:dffpipe15|dffe16a[0..6] ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_26d:ws_dgrp|dffpipe_1v8:dffpipe15|dffe17a[0..6] ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_16d:rs_dgwp|dffpipe_0v8:dffpipe12|dffe13a[0..6] ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_16d:rs_dgwp|dffpipe_0v8:dffpipe12|dffe14a[0..6] ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a0                         ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a1                         ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a2                         ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a3                         ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a4                         ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a5                         ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a6                         ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|parity9                            ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|sub_parity10a[0,1]                 ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a0                         ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a1                         ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a2                         ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a3                         ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a4                         ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a5                         ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a6                         ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|parity6                            ; Lost fanout                                                   ;
+; FIFO:u_CHB_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|sub_parity7a[0,1]                  ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|delayed_wrptr_g[0..6]                                          ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|rdptr_g[0..6]                                                  ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|wrptr_g[0..6]                                                  ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_26d:ws_dgrp|dffpipe_1v8:dffpipe15|dffe16a[0..6] ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_26d:ws_dgrp|dffpipe_1v8:dffpipe15|dffe17a[0..6] ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_16d:rs_dgwp|dffpipe_0v8:dffpipe12|dffe13a[0..6] ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|alt_synch_pipe_16d:rs_dgwp|dffpipe_0v8:dffpipe12|dffe14a[0..6] ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a0                         ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a1                         ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a2                         ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a3                         ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a4                         ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a5                         ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|counter8a6                         ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|parity9                            ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_l5c:wrptr_g1p|sub_parity10a[0,1]                 ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a0                         ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a1                         ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a2                         ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a3                         ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a4                         ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a5                         ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|counter5a6                         ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|parity6                            ; Lost fanout                                                   ;
+; FIFO:u_CHA_FIFO|dcfifo:dcfifo_component|dcfifo_pte1:auto_generated|a_graycounter_pn6:rdptr_g1p|sub_parity7a[0,1]                  ; Lost fanout                                                   ;
+; i2c_dri_pcf8591:u_i2c_dri_pcf8591|addr_t[1..5,7..15]                                                                              ; Stuck at GND due to stuck port data_in                        ;
+; i2c_dri:u_i2c_dri|addr_t[4..15]                                                                                                   ; Stuck at GND due to stuck port data_in                        ;
+; i2c_dri:u_i2c_dri|data_wr_t[1,6,7]                                                                                                ; Stuck at GND due to stuck port data_in                        ;
+; pcf8591:u_pcf8591|i2c_addr_pcf8591[0]                                                                                             ; Merged with pcf8591:u_pcf8591|i2c_addr_pcf8591[6]             ;
+; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[9]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[9]                      ;
+; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[8]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[8]                      ;
+; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[7]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[7]                      ;
+; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[6]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[6]                      ;
+; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[5]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[5]                      ;
+; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[4]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[4]                      ;
+; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[3]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[3]                      ;
+; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[2]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[2]                      ;
+; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[1]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[1]                      ;
+; i2c_dri_pcf8591:u_i2c_dri_pcf8591|clk_cnt[0]                                                                                      ; Merged with i2c_dri:u_i2c_dri|clk_cnt[0]                      ;
+; uart_IGBT:u_uart_IGBT|tx_data_cnt[6,7]                                                                                            ; Merged with uart_IGBT:u_uart_IGBT|tx_data_cnt[5]              ;
+; i2c_dri_pcf8591:u_i2c_dri_pcf8591|addr_t[6]                                                                                       ; Merged with i2c_dri_pcf8591:u_i2c_dri_pcf8591|addr_t[0]       ;
+; uart_IGBT:u_uart_IGBT|tx_data_cnt[5]                                                                                              ; Stuck at GND due to stuck port data_in                        ;
+; seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[16,18,20,22]                                                                        ; Stuck at GND due to stuck port data_in                        ;
+; seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[17]                                                                                 ; Merged with seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[19] ;
+; seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[19]                                                                                 ; Merged with seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[21] ;
+; seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[21]                                                                                 ; Merged with seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[23] ;
+; pcf8591:u_pcf8591|flow_cnt[3]                                                                                                     ; Stuck at GND due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_0[0]                                                                                            ; Stuck at VCC due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_1[0]                                                                                            ; Stuck at GND due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_0[1]                                                                                            ; Stuck at VCC due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_1[1]                                                                                            ; Stuck at VCC due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_0[2]                                                                                            ; Stuck at VCC due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_1[2]                                                                                            ; Stuck at GND due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_0[3]                                                                                            ; Stuck at VCC due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_1[3]                                                                                            ; Stuck at VCC due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_0[4]                                                                                            ; Stuck at GND due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_1[4]                                                                                            ; Stuck at VCC due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_0[5]                                                                                            ; Stuck at VCC due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_1[5]                                                                                            ; Stuck at VCC due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_0[6]                                                                                            ; Stuck at GND due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_1[6]                                                                                            ; Stuck at VCC due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_0[7]                                                                                            ; Stuck at VCC due to stuck port data_in                        ;
+; uart_IGBT:u_uart_IGBT|txdata_buff_1[7]                                                                                            ; Stuck at VCC due to stuck port data_in                        ;
+; i2c_dri:u_i2c_dri|cur_state.st_addr16                                                                                             ; Stuck at GND due to stuck port data_in                        ;
+; i2c_dri_pcf8591:u_i2c_dri_pcf8591|cur_state.st_addr16                                                                             ; Stuck at GND due to stuck port data_in                        ;
+; seg_led_pcf8591:u_seg_led_pcf8591|num_pcf8591[15]                                                                                 ; Stuck at GND due to stuck port data_in                        ;
+; Total Number of Removed Registers = 294                                                                                           ;                                                               ;
++-----------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1018,9 +970,9 @@ Encoding Type:  One-Hot
 ; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_latch_l[13] ; Lost Fanouts              ; DDIO:u_DDIO|altddio_in:ALTDDIO_IN_component|ddio_in_sif:auto_generated|input_cell_l[13]                                         ;
 ; pcf8563_ctrl:u_pcf8563_ctrl|i2c_addr[15]                                                 ; Stuck at GND              ; i2c_dri:u_i2c_dri|addr_t[15]                                                                                                    ;
 ;                                                                                          ; due to stuck port data_in ;                                                                                                                                 ;
-; pcf8591:u_pcf8591|i2c_addr_pcf8591[9]                                                    ; Stuck at GND              ; i2c_dri_pcf8591:u_i2c_dri_pcf8591|addr_t[9]                                                                                     ;
+; pcf8563_ctrl:u_pcf8563_ctrl|i2c_addr[14]                                                 ; Stuck at GND              ; i2c_dri:u_i2c_dri|addr_t[14]                                                                                                    ;
 ;                                                                                          ; due to stuck port data_in ;                                                                                                                                 ;
-; pcf8563_ctrl:u_pcf8563_ctrl|i2c_addr[13]                                                 ; Stuck at GND              ; i2c_dri:u_i2c_dri|addr_t[13]                                                                                                    ;
+; pcf8591:u_pcf8591|i2c_addr_pcf8591[9]                                                    ; Stuck at GND              ; i2c_dri_pcf8591:u_i2c_dri_pcf8591|addr_t[9]                                                                                     ;
 ;                                                                                          ; due to stuck port data_in ;                                                                                                                                 ;
 ; pcf8563_ctrl:u_pcf8563_ctrl|i2c_addr[12]                                                 ; Stuck at GND              ; i2c_dri:u_i2c_dri|addr_t[12]                                                                                                    ;
 ;                                                                                          ; due to stuck port data_in ;                                                                                                                                 ;
@@ -1046,6 +998,10 @@ Encoding Type:  One-Hot
 ;                                                                                          ; due to stuck port data_in ;                                                                                                                                 ;
 ; pcf8563_ctrl:u_pcf8563_ctrl|i2c_data_w[1]                                                ; Stuck at GND              ; i2c_dri:u_i2c_dri|data_wr_t[1]                                                                                                  ;
 ;                                                                                          ; due to stuck port data_in ;                                                                                                                                 ;
+; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_EN[0]                                          ; Stuck at GND              ; IGBT_SCR:IGBT_SCR_u|IGBT[0]                                                                                                     ;
+;                                                                                          ; due to stuck port data_in ;                                                                                                                                 ;
+; Pulse_logic_gen:Pulse_logic_gen_u|IGBT_on_EN[1]                                          ; Stuck at GND              ; IGBT_SCR:IGBT_SCR_u|IGBT[1]                                                                                                     ;
+;                                                                                          ; due to stuck port data_in ;                                                                                                                                 ;
 ; pcf8591:u_pcf8591|i2c_addr_pcf8591[15]                                                   ; Stuck at GND              ; i2c_dri_pcf8591:u_i2c_dri_pcf8591|addr_t[15]                                                                                    ;
 ;                                                                                          ; due to stuck port data_in ;                                                                                                                                 ;
 ; pcf8591:u_pcf8591|i2c_addr_pcf8591[14]                                                   ; Stuck at GND              ; i2c_dri_pcf8591:u_i2c_dri_pcf8591|addr_t[14]                                                                                    ;
@@ -1062,7 +1018,7 @@ Encoding Type:  One-Hot
 ;                                                                                          ; due to stuck port data_in ;                                                                                                                                 ;
 ; pcf8591:u_pcf8591|i2c_addr_pcf8591[7]                                                    ; Stuck at GND              ; i2c_dri_pcf8591:u_i2c_dri_pcf8591|addr_t[7]                                                                                     ;
 ;                                                                                          ; due to stuck port data_in ;                                                                                                                                 ;
-; pcf8563_ctrl:u_pcf8563_ctrl|i2c_addr[14]                                                 ; Stuck at GND              ; i2c_dri:u_i2c_dri|addr_t[14]                                                                                                    ;
+; pcf8563_ctrl:u_pcf8563_ctrl|i2c_addr[13]                                                 ; Stuck at GND              ; i2c_dri:u_i2c_dri|addr_t[13]                                                                                                    ;
 ;                                                                                          ; due to stuck port data_in ;                                                                                                                                 ;
 ; pcf8591:u_pcf8591|i2c_addr_pcf8591[5]                                                    ; Stuck at GND              ; i2c_dri_pcf8591:u_i2c_dri_pcf8591|addr_t[5]                                                                                     ;
 ;                                                                                          ; due to stuck port data_in ;                                                                                                                                 ;
@@ -1084,12 +1040,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1537  ;
-; Number of registers using Synchronous Clear  ; 187   ;
-; Number of registers using Synchronous Load   ; 109   ;
-; Number of registers using Asynchronous Clear ; 768   ;
+; Total registers                              ; 1471  ;
+; Number of registers using Synchronous Clear  ; 140   ;
+; Number of registers using Synchronous Load   ; 112   ;
+; Number of registers using Asynchronous Clear ; 729   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 751   ;
+; Number of registers using Clock Enable       ; 711   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1110,9 +1066,9 @@ Encoding Type:  One-Hot
 ; key_led_association:key_led_association_u|cnt_led[6]                                                                                                                                                                                                     ; 2       ;
 ; key_led_association:key_led_association_u|cnt_led[19]                                                                                                                                                                                                    ; 3       ;
 ; key_led_association:key_led_association_u|cnt_led[20]                                                                                                                                                                                                    ; 3       ;
-; key_led_association:key_led_association_u|cnt_led[23]                                                                                                                                                                                                    ; 3       ;
-; key_led_association:key_led_association_u|cnt_led[12]                                                                                                                                                                                                    ; 3       ;
+; key_led_association:key_led_association_u|cnt_led[12]                                                                                                                                                                                                    ; 4       ;
 ; key_led_association:key_led_association_u|cnt_led[15]                                                                                                                                                                                                    ; 3       ;
+; key_led_association:key_led_association_u|cnt_led[23]                                                                                                                                                                                                    ; 3       ;
 ; uart_send:u_uart_send|uart_txd                                                                                                                                                                                                                           ; 4       ;
 ; seg_led_pcf8591:u_seg_led_pcf8591|seg_sel[0]                                                                                                                                                                                                             ; 1       ;
 ; seg_led_pcf8591:u_seg_led_pcf8591|seg_sel[1]                                                                                                                                                                                                             ; 1       ;
@@ -1128,7 +1084,7 @@ Encoding Type:  One-Hot
 ; seg_led_pcf8591:u_seg_led_pcf8591|dot_disp                                                                                                                                                                                                               ; 1       ;
 ; i2c_dri_pcf8591:u_i2c_dri_pcf8591|dri_clk                                                                                                                                                                                                                ; 107     ;
 ; i2c_dri:u_i2c_dri|sda_out                                                                                                                                                                                                                                ; 7       ;
-; i2c_dri:u_i2c_dri|sda_dir                                                                                                                                                                                                                                ; 5       ;
+; i2c_dri:u_i2c_dri|sda_dir                                                                                                                                                                                                                                ; 4       ;
 ; i2c_dri_pcf8591:u_i2c_dri_pcf8591|sda_out                                                                                                                                                                                                                ; 6       ;
 ; i2c_dri_pcf8591:u_i2c_dri_pcf8591|sda_dir                                                                                                                                                                                                                ; 5       ;
 ; sld_hub:auto_hub|alt_sld_fab:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|tdo            ; 1       ;
@@ -1150,26 +1106,25 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
-; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |dev_board_top|Pulse_logic_gen:Pulse_logic_gen_u|IGBT_counter_1[12]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |dev_board_top|uart_send:u_uart_send|tx_data[0]                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |dev_board_top|uart_send:u_uart_send|tx_cnt[3]                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |dev_board_top|key_led_association:key_led_association_u|led_state[0] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |dev_board_top|uart_recv:u_uart_recv|rx_cnt[2]                        ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |dev_board_top|uart_send:u_uart_send|clk_cnt[14]                      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |dev_board_top|uart_send:u_uart_send|tx_data[7]                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |dev_board_top|uart_send:u_uart_send|tx_cnt[0]                        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |dev_board_top|key_led_association:key_led_association_u|led_state[3] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |dev_board_top|uart_recv:u_uart_recv|rx_cnt[0]                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |dev_board_top|uart_send:u_uart_send|clk_cnt[7]                       ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |dev_board_top|uart_recv:u_uart_recv|clk_cnt[4]                       ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; Yes        ; |dev_board_top|seg_led_pcf8591:u_seg_led_pcf8591|num_disp[0]          ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |dev_board_top|seg_led_pcf8591:u_seg_led_pcf8591|num_disp[3]          ;
-; 16:1               ; 8 bits    ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |dev_board_top|pcf8563_ctrl:u_pcf8563_ctrl|i2c_addr[2]                ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |dev_board_top|seg_led_pcf8591:u_seg_led_pcf8591|num_disp[1]          ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |dev_board_top|pcf8563_ctrl:u_pcf8563_ctrl|i2c_data_w[4]              ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |dev_board_top|key_scan:key_scan_u|key_push[0]                        ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |dev_board_top|uart_IGBT:u_uart_IGBT|wait_tx_busy_cnt[0]              ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |dev_board_top|uart_IGBT:u_uart_IGBT|rx_data_cnt[6]                   ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |dev_board_top|uart_IGBT:u_uart_IGBT|rx_data_cnt[4]                   ;
-; 18:1               ; 19 bits   ; 228 LEs       ; 19 LEs               ; 209 LEs                ; Yes        ; |dev_board_top|pcf8591:u_pcf8591|wait_cnt[6]                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |dev_board_top|uart_IGBT:u_uart_IGBT|wait_tx_busy_cnt[6]              ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |dev_board_top|uart_IGBT:u_uart_IGBT|rx_data_cnt[5]                   ;
+; 18:1               ; 19 bits   ; 228 LEs       ; 19 LEs               ; 209 LEs                ; Yes        ; |dev_board_top|pcf8591:u_pcf8591|wait_cnt[13]                         ;
 ; 18:1               ; 2 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |dev_board_top|pcf8591:u_pcf8591|flow_cnt[3]                          ;
-; 20:1               ; 2 bits    ; 26 LEs        ; 8 LEs                ; 18 LEs                 ; Yes        ; |dev_board_top|pcf8591:u_pcf8591|flow_cnt[0]                          ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |dev_board_top|i2c_dri:u_i2c_dri|cnt[2]                               ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |dev_board_top|i2c_dri_pcf8591:u_i2c_dri_pcf8591|cnt[2]               ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 8 LEs                ; 18 LEs                 ; Yes        ; |dev_board_top|pcf8591:u_pcf8591|flow_cnt[1]                          ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |dev_board_top|i2c_dri:u_i2c_dri|cnt[0]                               ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |dev_board_top|i2c_dri_pcf8591:u_i2c_dri_pcf8591|cnt[3]               ;
 ; 50:1               ; 8 bits    ; 264 LEs       ; 96 LEs               ; 168 LEs                ; Yes        ; |dev_board_top|uart_IGBT:u_uart_IGBT|send_data[7]                     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |dev_board_top|uart_IGBT:u_uart_IGBT|Selector0                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 
 
@@ -1421,6 +1376,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CLK_FREQ       ; 50000000 ; Signed Integer                         ;
 ; UART_BPS       ; 9600     ; Signed Integer                         ;
 +----------------+----------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adc_IGBT:adc_IGBT_u ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; REF_VOLTAGE    ; 10000 ; Signed Integer                          ;
+; RESOLUTION     ; 16383 ; Signed Integer                          ;
+; SCALE_VOLTAGE  ; 1     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2267,24 +2234,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+-------+----------+-------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FIFO:u_CHB_FIFO"                                                                     ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; wrreq ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------+
+; Port Connectivity Checks: "FIFO:u_CHB_FIFO" ;
++-------+-------+----------+------------------+
+; Port  ; Type  ; Severity ; Details          ;
++-------+-------+----------+------------------+
+; wrreq ; Input ; Info     ; Stuck at VCC     ;
++-------+-------+----------+------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FIFO:u_CHA_FIFO"                                                                     ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; wrreq ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------+
+; Port Connectivity Checks: "FIFO:u_CHA_FIFO" ;
++-------+-------+----------+------------------+
+; Port  ; Type  ; Severity ; Details          ;
++-------+-------+----------+------------------+
+; wrreq ; Input ; Info     ; Stuck at VCC     ;
++-------+-------+----------+------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2354,6 +2319,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adc_IGBT:adc_IGBT_u"                                                                                                                          ;
++----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+; adc_valuecap_1 ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "adc_valuecap_1[31..1]" have no fanouts ;
+; adc_valuecap_1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                 ;
+; adc_valuecap_2 ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "adc_valuecap_2[31..1]" have no fanouts ;
+; adc_valuecap_2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                 ;
+; adc_valuecap_3 ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "adc_valuecap_3[31..1]" have no fanouts ;
+; adc_valuecap_3 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                 ;
++----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Pulse_logic_gen:Pulse_logic_gen_u"                                                                                                                         ;
++--------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                                                                                      ;
++--------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset_IGBT_driver1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; reset_IGBT_driver2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; reset_IGBT_driver3 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; error_IGBT_driver1 ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; error_IGBT_driver2 ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; error_IGBT_driver3 ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++--------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "IGBT_SCR:IGBT_SCR_u"                                                                       ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; IGBT_status ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "uart_send:u_uart_send"                                                                                                                                                                   ;
 +---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2377,33 +2379,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 88                          ;
-; cycloneiii_ff         ; 591                         ;
-;     CLR               ; 136                         ;
-;     CLR SCLR          ; 83                          ;
+; boundary_port         ; 97                          ;
+; cycloneiii_ff         ; 525                         ;
+;     CLR               ; 134                         ;
+;     CLR SCLR          ; 59                          ;
+;     CLR SCLR SLD      ; 1                           ;
 ;     CLR SLD           ; 37                          ;
-;     ENA               ; 140                         ;
-;     ENA CLR           ; 129                         ;
+;     ENA               ; 136                         ;
+;     ENA CLR           ; 115                         ;
 ;     ENA CLR SCLR      ; 24                          ;
 ;     ENA CLR SLD       ; 9                           ;
-;     ENA SCLR          ; 32                          ;
-;     plain             ; 1                           ;
+;     ENA SCLR          ; 8                           ;
+;     ENA SLD           ; 2                           ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 1416                        ;
-;     arith             ; 396                         ;
+; cycloneiii_lcell_comb ; 1390                        ;
+;     arith             ; 332                         ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 241                         ;
-;         3 data inputs ; 148                         ;
-;     normal            ; 1020                        ;
+;         2 data inputs ; 176                         ;
+;         3 data inputs ; 149                         ;
+;     normal            ; 1058                        ;
 ;         0 data inputs ; 37                          ;
-;         1 data inputs ; 47                          ;
-;         2 data inputs ; 302                         ;
-;         3 data inputs ; 122                         ;
-;         4 data inputs ; 512                         ;
+;         1 data inputs ; 45                          ;
+;         2 data inputs ; 305                         ;
+;         3 data inputs ; 144                         ;
+;         4 data inputs ; 527                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 22.60                       ;
-; Average LUT depth     ; 7.31                        ;
+; Average LUT depth     ; 7.87                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2561,13 +2564,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Tue Apr 09 14:21:30 2024
+    Info: Processing started: Fri Apr 12 13:21:42 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dev_board -c dev_board
 Info (11104): Parallel Compilation has detected 20 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
-Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/uart_232/uart_loop.v
-    Info (12023): Found entity 1: uart_loop
-Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/uart_232/uart_igbt.v
-    Info (12023): Found entity 1: uart_IGBT
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/dev_board_top.v
+    Info (12023): Found entity 1: dev_board_top
 Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/pcf8591/seg_led_pcf8591.v
     Info (12023): Found entity 1: seg_led_pcf8591
 Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/pcf8591/pcf8591.v
@@ -2580,6 +2581,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file /work/s
     Info (12023): Found entity 1: FIFO
 Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/ad9248/ddio.v
     Info (12023): Found entity 1: DDIO
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/igbt&scr/adc_igbt.v
+    Info (12023): Found entity 1: adc_IGBT
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/igbt&scr/igbt&scr.v
+    Info (12023): Found entity 1: IGBT_SCR
 Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/igbt&scr/pulse_logic_gen.v
     Info (12023): Found entity 1: Pulse_logic_gen
 Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/rtc_seg_led/seg_bcd_dri.v
@@ -2592,6 +2597,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file /work/s
     Info (12023): Found entity 1: key_debounce
 Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/rtc_seg_led/i2c_dri.v
     Info (12023): Found entity 1: i2c_dri
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/uart_232/uart_message_upload.v
+    Info (12023): Found entity 1: uart_message_upload
+Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/uart_232/uart_igbt.v
+    Info (12023): Found entity 1: uart_IGBT
 Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/uart_232/uart_recv.v
     Info (12023): Found entity 1: uart_recv
 Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/uart_232/uart_send.v
@@ -2602,22 +2611,63 @@ Info (12021): Found 1 design units, including 1 entities, in source file /work/s
     Info (12023): Found entity 1: led_key
 Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/key_led/key_scan.v
     Info (12023): Found entity 1: key_scan
-Info (12021): Found 1 design units, including 1 entities, in source file /work/synologydrive/projects in progress/tms(transcranial magnetic stimulate)/verilog/development_board/rtl/dev_board_top.v
-    Info (12023): Found entity 1: dev_board_top
-Warning (10236): Verilog HDL Implicit Net warning at dev_board_top.v(259): created implicit net for "uart_Num_rx_data"
-Warning (10236): Verilog HDL Implicit Net warning at dev_board_top.v(416): created implicit net for "CHA_Empty"
-Warning (10236): Verilog HDL Implicit Net warning at dev_board_top.v(426): created implicit net for "CHB_Empty"
+Warning (10236): Verilog HDL Implicit Net warning at dev_board_top.v(251): created implicit net for "U_fault_IGBT_driver1"
+Warning (10236): Verilog HDL Implicit Net warning at dev_board_top.v(252): created implicit net for "U_fault_IGBT_driver2"
+Warning (10236): Verilog HDL Implicit Net warning at dev_board_top.v(253): created implicit net for "U_fault_IGBT_driver3"
+Warning (10236): Verilog HDL Implicit Net warning at dev_board_top.v(254): created implicit net for "U_reset_IGBT_driver1"
+Warning (10236): Verilog HDL Implicit Net warning at dev_board_top.v(255): created implicit net for "U_reset_IGBT_driver2"
+Warning (10236): Verilog HDL Implicit Net warning at dev_board_top.v(256): created implicit net for "U_reset_IGBT_driver3"
+Warning (10236): Verilog HDL Implicit Net warning at dev_board_top.v(285): created implicit net for "uart_Num_rx_data"
+Warning (10236): Verilog HDL Implicit Net warning at dev_board_top.v(440): created implicit net for "CHA_Empty"
+Warning (10236): Verilog HDL Implicit Net warning at dev_board_top.v(450): created implicit net for "CHB_Empty"
 Info (12127): Elaborating entity "dev_board_top" for the top level hierarchy
+Warning (10034): Output port "reset_IGBT_driver1" at dev_board_top.v(45) has no driver
+Warning (10034): Output port "reset_IGBT_driver2" at dev_board_top.v(46) has no driver
+Warning (10034): Output port "reset_IGBT_driver3" at dev_board_top.v(47) has no driver
 Info (12128): Elaborating entity "uart_recv" for hierarchy "uart_recv:u_uart_recv"
 Info (12128): Elaborating entity "uart_send" for hierarchy "uart_send:u_uart_send"
+Info (12128): Elaborating entity "IGBT_SCR" for hierarchy "IGBT_SCR:IGBT_SCR_u"
+Warning (10034): Output port "IGBT[4..2]" at IGBT&SCR.v(21) has no driver
+Warning (10034): Output port "IGBT_status[4..2]" at IGBT&SCR.v(23) has no driver
 Info (12128): Elaborating entity "Pulse_logic_gen" for hierarchy "Pulse_logic_gen:Pulse_logic_gen_u"
-Warning (10036): Verilog HDL or VHDL warning at Pulse_logic_gen.v(49): object "IGBT_status" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at Pulse_logic_gen.v(85): truncated value with size 32 to match size of target (24)
-Warning (10230): Verilog HDL assignment warning at Pulse_logic_gen.v(94): truncated value with size 32 to match size of target (24)
-Warning (10230): Verilog HDL assignment warning at Pulse_logic_gen.v(123): truncated value with size 32 to match size of target (24)
-Warning (10230): Verilog HDL assignment warning at Pulse_logic_gen.v(134): truncated value with size 32 to match size of target (24)
-Warning (10034): Output port "IGBT[4..2]" at Pulse_logic_gen.v(38) has no driver
+Warning (10036): Verilog HDL or VHDL warning at Pulse_logic_gen.v(54): object "IGBT_counter_1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Pulse_logic_gen.v(55): object "IGBT_counter_2" assigned a value but never read
+Warning (10034): Output port "reset_IGBT_driver1" at Pulse_logic_gen.v(28) has no driver
+Warning (10034): Output port "reset_IGBT_driver2" at Pulse_logic_gen.v(29) has no driver
+Warning (10034): Output port "reset_IGBT_driver3" at Pulse_logic_gen.v(30) has no driver
+Info (12128): Elaborating entity "adc_IGBT" for hierarchy "adc_IGBT:adc_IGBT_u"
+Warning (10235): Verilog HDL Always Construct warning at adc_IGBT.v(40): variable "Voltage_cap_set_1" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at adc_IGBT.v(52): variable "Voltage_cap_set_2" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10034): Output port "adc_valuecap_3" at adc_IGBT.v(25) has no driver
+Warning (10034): Output port "Voltage_cap_flag[2]" at adc_IGBT.v(27) has no driver
 Info (12128): Elaborating entity "uart_IGBT" for hierarchy "uart_IGBT:u_uart_IGBT"
+Warning (10240): Verilog HDL Always Construct warning at uart_IGBT.v(119): inferring latch(es) for variable "Voltage_cap_set_3", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at uart_IGBT.v(119): inferring latch(es) for variable "Voltage_cap_set_2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at uart_IGBT.v(119): inferring latch(es) for variable "Voltage_cap_set_1", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Voltage_cap_set_1[0]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_1[1]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_1[2]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_1[3]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_1[4]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_1[5]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_1[6]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_1[7]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_2[0]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_2[1]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_2[2]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_2[3]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_2[4]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_2[5]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_2[6]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_2[7]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_3[0]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_3[1]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_3[2]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_3[3]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_3[4]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_3[5]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_3[6]" at uart_IGBT.v(119)
+Info (10041): Inferred latch for "Voltage_cap_set_3[7]" at uart_IGBT.v(119)
 Info (12128): Elaborating entity "key_scan" for hierarchy "key_scan:key_scan_u"
 Info (12128): Elaborating entity "led_key" for hierarchy "led_key:led_key_u"
 Info (12128): Elaborating entity "key_led_association" for hierarchy "key_led_association:key_led_association_u"
@@ -2787,7 +2837,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ngc
 Info (12033): Analysis and Synthesis generated SignalTap II or debug node instance "uart_send_recv"
 Info (11170): Start IP generation for the debug fabric within sld_hub.
-Info (11172): 2024.04.09.14:21:39 Progress: Loading sld83ca10df/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.04.12.13:21:50 Progress: Loading sld83ca10df/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -2920,15 +2970,20 @@ Info (12131): Elaborated megafunction instantiation "pcf8591:u_pcf8591|lpm_mult:
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_pgh.tdf
     Info (12023): Found entity 1: add_sub_pgh
 Info (12131): Elaborated megafunction instantiation "pcf8591:u_pcf8591|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "pcf8591:u_pcf8591|lpm_mult:Mult0"
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "IGBT[0]" is stuck at GND
+    Warning (13410): Pin "IGBT[1]" is stuck at GND
     Warning (13410): Pin "IGBT[2]" is stuck at GND
     Warning (13410): Pin "IGBT[3]" is stuck at GND
     Warning (13410): Pin "IGBT[4]" is stuck at GND
+    Warning (13410): Pin "reset_IGBT_driver1" is stuck at GND
+    Warning (13410): Pin "reset_IGBT_driver2" is stuck at GND
+    Warning (13410): Pin "reset_IGBT_driver3" is stuck at GND
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 180 registers lost all their fanouts during netlist optimizations.
+Info (17049): 182 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Div1|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider|add_sub_14_result_int[1]~14"
     Info (17048): Logic cell "seg_led_pcf8591:u_seg_led_pcf8591|lpm_divide:Mod2|lpm_divide_0bm:auto_generated|sign_div_unsign_llh:divider|alt_u_div_u6f:divider|add_sub_19_result_int[0]~0"
@@ -2948,7 +3003,13 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (15897): PLL "PLL:PLL_CLK|altpll:altpll_component|PLL_altpll:auto_generated|pll1" has parameter compensate_clock set to clock0 but port CLK[0] is not connected
 Warning (15899): PLL "PLL:PLL_CLK|altpll:altpll_component|PLL_altpll:auto_generated|pll1" has parameters clk0_multiply_by and clk0_divide_by specified but port CLK[0] is not connected
-Warning (21074): Design contains 16 input pin(s) that do not drive logic
+Warning (21074): Design contains 22 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "fault_IGBT_driver1"
+    Warning (15610): No output dependent on input pin "fault_IGBT_driver2"
+    Warning (15610): No output dependent on input pin "fault_IGBT_driver3"
+    Warning (15610): No output dependent on input pin "error_IGBT_driver1"
+    Warning (15610): No output dependent on input pin "error_IGBT_driver2"
+    Warning (15610): No output dependent on input pin "error_IGBT_driver3"
     Warning (15610): No output dependent on input pin "Otr_A"
     Warning (15610): No output dependent on input pin "Otr_B"
     Warning (15610): No output dependent on input pin "Adc_In[0]"
@@ -2965,18 +3026,18 @@ Warning (21074): Design contains 16 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "Adc_In[11]"
     Warning (15610): No output dependent on input pin "Adc_In[12]"
     Warning (15610): No output dependent on input pin "Adc_In[13]"
-Info (21057): Implemented 3005 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 26 input pins
-    Info (21059): Implemented 30 output pins
+Info (21057): Implemented 2995 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 32 input pins
+    Info (21059): Implemented 33 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 2885 logic cells
+    Info (21061): Implemented 2866 logic cells
     Info (21064): Implemented 60 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 72 warnings
-    Info: Peak virtual memory: 4976 megabytes
-    Info: Processing ended: Tue Apr 09 14:21:47 2024
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 100 warnings
+    Info: Peak virtual memory: 4979 megabytes
+    Info: Processing ended: Fri Apr 12 13:21:59 2024
     Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Total CPU time (on all processors): 00:00:38
 
 
 +------------------------------------------+

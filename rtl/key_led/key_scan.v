@@ -29,7 +29,7 @@ module key_scan(
     input               sys_clk  ,    //50Mhz系统时钟
     input               sys_rst_n,    //系统复位，低有效
     input        [3:0]  key,          //按键输入信号  
-	 output  reg  [3:0]  key_push
+	output  reg  [3:0]  key_push
     );
 
 //reg define     

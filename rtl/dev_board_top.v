@@ -25,68 +25,57 @@ module dev_board_top(
     input                 sys_rst_n,          //外部复位信号，低有效
                      
     input                 uart_rxd,           //UART接收端口
-    output                uart_txd,            //UART发送端口
-    
-    output      [3:0]     led,         //4个LED灯
-    input       [3:0]     key,          //4个按键
-    
-    //////////////////////////rtc_seg_led begin
-    //按键
-    //input                key,         //输入按键KEY0
-    
-    //数码管
+    output                uart_txd,            //UART发送端口    
+    output      [3:0]     led,          //4个LED灯
+    input       [3:0]     key,          //4个按键    
+    //////////////////////////rtc_seg_led begin    
+    //input                key,         //输入按键KEY0      
     output      [5:0]     seg_sel,     //数码管位选信号
-    output      [7:0]     seg_led,     //数码管段选信号
-    
-    //RTC实时时钟
+    output      [7:0]     seg_led,     //数码管段选信号        
     output                iic_scl,     //RTC的时钟线scl
-    inout                 iic_sda,     //RTC的数据线sda      
-     
-    //Pulse_logic_gen   
-    output      [4:0]     IGBT,         //5个IGBT驱动端口
-   
-     //pcf8591 8bit AD/DA   
-   
+    inout                 iic_sda,     //RTC的数据线sda  
+	//////////igbt
+    output      [4:0]     IGBT,                   //5个IGBT驱动端口  
+    input                 fault_IGBT_driver1,     //IGBT驱动板1故障信号	
+	input                 fault_IGBT_driver2,     //IGBT驱动板2故障信号	
+	input                 fault_IGBT_driver3,     //IGBT驱动板3故障信号
+	input                 error_IGBT_driver1,     //IGBT驱动板1两路同时输入高报警
+	input                 error_IGBT_driver2,     //IGBT驱动板2两路同时输入高报警
+	input                 error_IGBT_driver3,     //IGBT驱动板3两路同时输入高报警
+    output                reset_IGBT_driver1,     //IGBT驱动板1复位 	
+	output                reset_IGBT_driver2,     //IGBT驱动板2复位
+	output                reset_IGBT_driver3,     //IGBT驱动板3复位	
+     //pcf8591 8bit AD/DA      
     output                scl_pcf8591        ,    // i2c时钟线
-    inout                 sda_pcf8591        ,    // i2c数据线
-   
+    inout                 sda_pcf8591        ,    // i2c数据线   
     //ADC
-    input                 Otr_A,      // 通道A超出范围
-    input                 Otr_B,      // 通道B超出范围
+    input                 Otr_A,       // 通道A超出范围
+    input                 Otr_B,       // 通道B超出范围
     input        [13:0]   Adc_In,      // 通道输入数据
     output                Adc_Clk_A,   // 通道A时钟
     output                Adc_Clk_B,   // 通道B时钟
-    output                clk_test    //测试时钟
-   
- 
-    
+    output                clk_test     //测试时钟    
     );
    
 //////////////////////////rtc_seg_led end
-
 //parameter define
 parameter  CLK_FREQ = 50000000;         //定义系统时钟频率
-parameter  UART_BPS = 9600;           //定义串口波特率
-
+parameter  UART_BPS = 9600;             //定义串口波特率
 //////////////////////////rtc_seg_led 
 parameter    SLAVE_ADDR = 7'b101_0001   ; //器件地址(SLAVE_ADDR)
 parameter    BIT_CTRL   = 1'b0          ; //字地址位控制参数(16b/8b)
 //parameter    CLK_FREQ   = 26'd50_000_000; //i2c_dri模块的驱动时钟频率(CLK_FREQ)
 parameter    I2C_FREQ   = 18'd250_000   ; //I2C的SCL时钟频率
 parameter    TIME_INIT  = 48'h20_04_01_09_30_00;//初始时间
-
     
 //wire define   
+///////////////////uart
 wire       uart_recv_done;              //UART接收完成
 wire [7:0] uart_recv_data;              //UART接收数据
 wire       uart_send_en;                //UART发送使能
 wire [7:0] uart_send_data;              //UART发送数据
 wire       uart_tx_busy;                //UART发送忙状态标志
-wire [3:0] led_state;                   //led将要改变的状态
-wire [3:0] key_push;                 //按键当前状态
-
 wire [7:0] uart_num_send_data; 
-
 wire [7:0] uart_rxdata_buff_0;
 wire [7:0] uart_rxdata_buff_1;
 wire [7:0] uart_rxdata_buff_2;
@@ -105,7 +94,15 @@ wire [7:0] uart_rxdata_buff_14;
 wire [7:0] uart_rxdata_buff_15;
 wire [7:0] uart_rxdata_buff_16;
 wire [7:0] uart_rxdata_buff_17;
+wire [7:0] uart_Voltage_cap_set_1;
+wire [7:0] uart_Voltage_cap_set_2;
+wire [7:0] uart_Voltage_cap_set_3;
 
+////////////led
+wire [3:0] led_state;                   //led将要改变的状态
+
+/////////////key
+wire [3:0] key_push;                   //按键当前状态
 
 //////////////////////////rtc_seg_led begin
 wire          dri_clk   ;   //I2C操作时钟
@@ -128,38 +125,37 @@ wire           key_value;   //消抖后的按键值
 wire    [5:0]  point    ;   //数码管小数点控制
 wire    [23:0] disp_data;   //数码管显示的数值控制
 
-
-wire    [4:0]  IGBT_status; //IGBT当前开通状态 
-wire    [4:0]  IGBT_on_EN;  //IGBT开通控制标志
-wire    [23:0] IGBT_on_time; //IGBT开通时常
+////////////////////IGBT
+wire    [4:0]  u_IGBT_status; //IGBT当前开通状态 
+wire    [4:0]  u_IGBT_on_EN;  //IGBT开通控制标志
+wire           u_adc_valuecap_1;  
+wire           u_adc_valuecap_2;  
+wire           u_adc_valuecap_3;      
+wire    [2:0]  u_Voltage_cap_flag;
 
 //////////////////////////rtc_seg_led end
 
-
 /////////////////////////SDC
-
-
-wire               ReadClk;         // 65MHz时钟
+wire               ReadClk;          // 65MHz时钟
 wire               Adc_Clk_65M;      // 65MHz的ADC时钟
 wire               clk_test_1;
-
 wire    [13:0]     CHA_DATA;         // 通道A采集数据
 wire    [13:0]     CHB_DATA;         // 通道B采集数据
-wire    [13:0]     Adc_Data_CHA;      // 通道A采集数据
-wire    [13:0]     Adc_Data_CHB;      // 通道B采集数据
+wire    [13:0]     CHC_DATA;         // 通道C采集数据
+wire    [13:0]     Adc_Data_CHA;     // 通道A采集数据
+wire    [13:0]     Adc_Data_CHB;     // 通道B采集数据
+
 //wire CHA_Empty;
+
 //wire CHB_Empty;
-
-
 
 /////pcf8591 8bit AD/DA
 //parameter define
-
 parameter          SLAVE_ADDR_pcf8591 =  7'h48        ; // 器件地址(SLAVE_ADDR_pcf8591)
 parameter          BIT_CTRL_pcf8591   =  1'b0         ; // 字地址位控制参数(16b/8b)
-parameter          CLK_FREQ_pcf8591  = 26'd50_000_000; // i2c_dri模块的驱动时钟频率(CLK_FREQ)
+parameter          CLK_FREQ_pcf8591  = 26'd50_000_000 ; // i2c_dri模块的驱动时钟频率(CLK_FREQ)
 parameter          I2C_FREQ_pcf8591   = 18'd250_000   ; // I2C的SCL时钟频率
-parameter          POINT      = 6'b00_1000    ; // 控制点亮数码管小数点的位置
+parameter          POINT      = 6'b00_1000    ;         // 控制点亮数码管小数点的位置
 
 //wire define
 wire               clk_pcf8591       ;                // I2C操作时钟
@@ -169,14 +165,12 @@ wire    [ 7:0]     i2c_data_w_pcf8591;                // i2c写入的数据
 wire               i2c_done_pcf8591  ;                // i2c操作结束标志
 wire               i2c_rh_wl_pcf8591 ;                // i2c读写控制
 wire    [ 7:0]     i2c_data_r_pcf8591;                // i2c读出的数据
-wire    [19:0]     num_pcf859       ;                // 数码管要显示的数据
+wire    [19:0]     num_pcf859       ;                 // 数码管要显示的数据
 
 //ADC
 assign Adc_Clk_A = Adc_Clk_65M;   // 通道A时钟输出
 assign Adc_Clk_B = ~Adc_Clk_65M; // 通道B时钟输出
 assign clk_test = clk_test_1;
-
-
 
 //*****************************************************
 //**                    main code
@@ -222,85 +216,118 @@ uart_loop u_uart_loop(
     .send_en        (uart_send_en),     //发送使能信号
     .send_data      (uart_send_data)    //待发送数据
     );
-*/    
-//IGBT控制
+*/ 
+
+/*
+//主机上传信息
+uart_message_upload uart_message_upload(
+    .sys_clk        (sys_clk ),   
+    .sys_rst_n      (sys_rst_n), 
+			       
+    .tx_busy        (tx_busy_u ),   
+    .send_en        (send_en_U ),   
+    .send_data_gg      (uart_send_data) 
+	//.send_data      (send_data_u) 
+
+);
+*/
+//IGBT开通和关断控制
+ IGBT_SCR   IGBT_SCR_u(
+    .sys_clk      (sys_clk      ), 
+    .sys_rst_n    (sys_rst_n    ), 
+			     
+    .IGBT_on_EN   (u_IGBT_on_EN ),
+    .IGBT         (IGBT         ),      
+    .IGBT_status  (u_IGBT_status)
+);
+   
+//IGBT动作的逻辑控制
 Pulse_logic_gen Pulse_logic_gen_u(
-   .sys_clk                 (sys_clk),          
-   .sys_rst_n               (sys_rst_n),          
-                        
-   .receive_data            (uart_recv_data),     
-   //.Burst_Frequency         (Burst_Frequency),  
-   //.Pulses_Frequency,       (Pulses_Frequency),   
-   //.IGBT_status            (IGBT_status),         
-   //.SCR_status             (SCR_status),        
-   //.IGBT                  (IGBT),                
-   //.SCR                  (SCR),                 
-   //.SCR_on_EN            (SCR_on_EN),        
-   //.IGBT_on_time             (IGBT_on_time),
-   //.SCR_on_time              (SCR_on_time),
-   //.IGBT_on_EN               (IGBT_on_EN)
-    .IGBT                     (IGBT)
+    .sys_clk                 (sys_clk),          
+    .sys_rst_n               (sys_rst_n),          
+       
+    .key_push                (key_push),   
+    .Voltage_cap_flag        (u_Voltage_cap_flag),    
+    .fault_IGBT_driver1      (U_fault_IGBT_driver1),
+    .fault_IGBT_driver2      (U_fault_IGBT_driver2),
+    .fault_IGBT_driver3      (U_fault_IGBT_driver3),
+    .reset_IGBT_driver1      (U_reset_IGBT_driver1),
+    .reset_IGBT_driver2      (U_reset_IGBT_driver2),
+    .reset_IGBT_driver3      (U_reset_IGBT_driver3),	
+    .IGBT_on_EN              (u_IGBT_on_EN)
+   //.IGBT                    (IGBT)   
  );
  
+ //ADC和UART设置IGBT控制电容充放电停止条件 
+ adc_IGBT adc_IGBT_u(
+    .adc_data_cap_1   (CHA_DATA   ),   
+    .adc_data_cap_2   (CHB_DATA   ),   
+    .adc_data_cap_3   (CHC_DATA   ),   
+    .Voltage_cap_set_1(uart_Voltage_cap_set_1),
+    .Voltage_cap_set_2(uart_Voltage_cap_set_2),
+    .Voltage_cap_set_3(uart_Voltage_cap_set_3),
+    .adc_valuecap_1   (u_adc_valuecap_1   ),	
+    .adc_valuecap_2   (u_adc_valuecap_2   ),	
+    .adc_valuecap_3   (u_adc_valuecap_3   ),	
+    .Voltage_cap_flag (u_Voltage_cap_flag )  
+ ); 
 
 //串口设置IGBT工作模式和参数    
 uart_IGBT u_uart_IGBT(
-    .sys_clk        (sys_clk),             
-    .sys_rst_n      (sys_rst_n),           
-   
-    .recv_done      (uart_recv_done),   //接收一帧数据完成标志信号
-    .recv_data      (uart_recv_data),   //接收的数据
-    	      
-				    
-	.tx_busy         (uart_tx_busy),        
-	.send_en         (uart_send_en),        
-	.send_data       (uart_send_data),       
-				    
-	.Num_rx_data     (uart_Num_rx_data),    
-	.rxdata_buff_0   (uart_rxdata_buff_0   ),  
-	.rxdata_buff_1   (uart_rxdata_buff_1   ),  
-	.rxdata_buff_2   (uart_rxdata_buff_2   ),  
-	.rxdata_buff_3   (uart_rxdata_buff_3   ),  
-	.rxdata_buff_4   (uart_rxdata_buff_4   ),  
-	.rxdata_buff_5   (uart_rxdata_buff_5   ),  
-	.rxdata_buff_6   (uart_rxdata_buff_6   ),  
-	.rxdata_buff_7   (uart_rxdata_buff_7   ),  
-	.rxdata_buff_8   (uart_rxdata_buff_8   ),  
-	.rxdata_buff_9   (uart_rxdata_buff_9   ),  
-	.rxdata_buff_10  (uart_rxdata_buff_10  ), 
-	.rxdata_buff_11  (uart_rxdata_buff_11  ),     
-	.rxdata_buff_12  (uart_rxdata_buff_12  ),  
-	.rxdata_buff_13  (uart_rxdata_buff_13  ),  
-	.rxdata_buff_14  (uart_rxdata_buff_14  ),  
-	.rxdata_buff_15  (uart_rxdata_buff_15  ), 
-	.rxdata_buff_16  (uart_rxdata_buff_16  ),   
-	.rxdata_buff_17  (uart_rxdata_buff_17  ) 	
+    .sys_clk            (sys_clk),             
+    .sys_rst_n          (sys_rst_n),           
+					    
+    .recv_done          (uart_recv_done),   //接收一帧数据完成标志信号
+    .recv_data          (uart_recv_data),   //接收的数据  	      				    
+	.tx_busy            (uart_tx_busy),        
+	.send_en            (uart_send_en),        
+	.send_data          (uart_send_data),      				    
+	.Num_rx_data        (uart_Num_rx_data),    
+	.rxdata_buff_0      (uart_rxdata_buff_0   ),  
+	.rxdata_buff_1      (uart_rxdata_buff_1   ),  
+	.rxdata_buff_2      (uart_rxdata_buff_2   ),  
+	.rxdata_buff_3      (uart_rxdata_buff_3   ),  
+	.rxdata_buff_4      (uart_rxdata_buff_4   ),  
+	.rxdata_buff_5      (uart_rxdata_buff_5   ),  
+	.rxdata_buff_6      (uart_rxdata_buff_6   ),  
+	.rxdata_buff_7      (uart_rxdata_buff_7   ),  
+	.rxdata_buff_8      (uart_rxdata_buff_8   ),  
+	.rxdata_buff_9      (uart_rxdata_buff_9   ),  
+	.rxdata_buff_10     (uart_rxdata_buff_10  ), 
+	.rxdata_buff_11     (uart_rxdata_buff_11  ),     
+	.rxdata_buff_12     (uart_rxdata_buff_12  ),  
+	.rxdata_buff_13     (uart_rxdata_buff_13  ),  
+	.rxdata_buff_14     (uart_rxdata_buff_14  ),  
+	.rxdata_buff_15     (uart_rxdata_buff_15  ), 
+	.rxdata_buff_16     (uart_rxdata_buff_16  ),   
+	.rxdata_buff_17     (uart_rxdata_buff_17  ), 		
+	.Voltage_cap_set_1  (uart_Voltage_cap_set_1),
+	.Voltage_cap_set_2  (uart_Voltage_cap_set_2),
+	.Voltage_cap_set_3  (uart_Voltage_cap_set_3)	
 );
-
-
 
 key_scan key_scan_u(
 .sys_clk     (sys_clk), 
 .sys_rst_n   (sys_rst_n), 
 
 .key         (key),           
-.key_push   (key_push)
+.key_push    (key_push)
 );
 
 
 led_key led_key_u(
-.sys_clk        (sys_clk), 
-.sys_rst_n      (sys_rst_n),
+.sys_clk         (sys_clk), 
+.sys_rst_n       (sys_rst_n),
       
 .led             (led),
-.led_state      (led_state)
+.led_state       (led_state)
 );
 
 key_led_association key_led_association_u(
 .sys_clk         (sys_clk),   
-.sys_rst_n      (sys_rst_n), 
+.sys_rst_n       (sys_rst_n), 
 
-.key_push      (key_push),
+.key_push        (key_push),
 .led_state       (led_state)
 );
 
@@ -355,7 +382,7 @@ key_debounce u_key_debounce(
     .sys_clk     (sys_clk   ),    //外部50M时钟
     .sys_rst_n   (sys_rst_n ),    //外部复位信号，低有效
     .key         (key       ),    //外部按键输入
-   .key_value   (key_value ),    //按键消抖后的数据
+    .key_value   (key_value ),    //按键消抖后的数据
     .key_flag    ()               //按键数据有效信号
 );
 
@@ -390,8 +417,6 @@ seg_bcd_dri u_seg_bcd_dri(
 );    
 */
 
-
-
 // 模块：PLL
 // 功能：为系统提供时钟源
 PLL PLL_CLK(
@@ -402,7 +427,6 @@ PLL PLL_CLK(
 );
 
 // 功能：读取通道A通道B的采集数据
-
 DDIO u_DDIO(
    .datain         ( Adc_In         ),
    .inclock      ( ReadClk         ),
