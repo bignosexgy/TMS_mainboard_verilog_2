@@ -89,7 +89,55 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
         counter <= 24'd0;
 end
 
+/*
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n) begin
+        IGBT_on_Flag    <= 5'b00000;
+        IGBT_on_EN      <= 5'b00000;	
+	end        
+    else begin	
+	    if (key_push[0]) begin           //按下按键1
+	        IGBT_on_Flag[0]    <= 1'b1;    
+	    end
+	    else begin           //未按按键1
+            if(IGBT_on_Flag[0] == 1'b1) begin
+                if(Voltage_cap_flag[0] == 1'b1) begin      //电容电压达到设定的值
+                    IGBT_on_Flag[0]    <= 1'b0;
+                    IGBT_on_EN[0]      <= 1'b0;				
+	    		end	                   
+                else  begin                   
+                    IGBT_on_EN[0]      <= 1'b1;					
+					IGBT_on_EN[1]      <= 1'b0;					
+				end	
+            end		
+	    	else
+	    	    IGBT_on_EN[0]      <= 1'b0;    
+            
+		
+	        if (key_push[1]) begin           //按下按键1
+	            IGBT_on_Flag[1]    <= 1'b1;    
+	        end
+	        else begin           //未按按键1
+                if(IGBT_on_Flag[1] == 1'b1) begin
+                    if(Voltage_cap_flag[1] == 1'b1) begin      //电容电压达到设定的值
+                        IGBT_on_Flag[1]    <= 1'b0;
+                        IGBT_on_EN[1]      <= 1'b0;				
+	        		end	                   
+                    else begin 
+		    		    IGBT_on_EN[0]      <= 1'b0;					
+                        IGBT_on_EN[1]      <= 1'b1;
+		    		end	
+                end		
+	        	else
+	        	    IGBT_on_EN[1]      <= 1'b0;    
+            end  
+        end			
+	end
+end
+*/
 
+
+/**/
 //按键1开启IGBT1，Vcap关断IGBT1
 always @(posedge sys_clk or negedge sys_rst_n) begin
     if (!sys_rst_n) begin
@@ -106,8 +154,9 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
                     IGBT_on_Flag[0]    <= 1'b0;
                     IGBT_on_EN[0]      <= 1'b0;				
 	    		end	                   
-                else  begin                   
+                else if(~IGBT_on_EN[1])  begin                   
                     IGBT_on_EN[0]      <= 1'b1;					
+					//IGBT_on_EN[1]      <= 1'b0;					
 				end	
             end		
 	    	else
@@ -132,15 +181,17 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
                     IGBT_on_Flag[1]    <= 1'b0;
                     IGBT_on_EN[1]      <= 1'b0;				
 	    		end	                   
-                else                   
+                else if(~IGBT_on_EN[0])begin 
+				    //IGBT_on_EN[0]      <= 1'b0;					
                     IGBT_on_EN[1]      <= 1'b1;
+				end	
             end		
 	    	else
 	    	    IGBT_on_EN[1]      <= 1'b0;    
         end    
 	end
 end
-
+/**/
 
 
 /*

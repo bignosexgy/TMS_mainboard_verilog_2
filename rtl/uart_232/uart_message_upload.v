@@ -23,10 +23,14 @@
 module uart_message_upload(
     input	            sys_clk,                   //系统时钟
     input               sys_rst_n,                 //系统复位，低电平有效					    
+
+
+    inout               uart_send_busy_flag,       //串口竞争
  	    
 	input               tx_busy,                   //发送忙状态标志      
     output reg          send_en,                   //发送使能信号
-    output reg   [7:0]  send_data_gg                  //待发送数据			     
+    output reg   [7:0]  send_data_gg                  //待发送数据	
+	
 
     );
 
@@ -98,7 +102,7 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
     else begin                                               
         if(tx_message_cnt == 32'd5000_0000)begin                 //检测串口接收到数据
             Send_One_flag <= 1;
-			Sen_Group_en <= 1;			
+			Sen_Group_en <= 1;            			
         end
 		else if (Sen_Group_en) begin
 		    case(tx_data_cnt)
@@ -108,7 +112,8 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
                         send_en  <= 1'b0; 
                         send_data_gg <= 8'hAF;							
                         Send_One_flag <= 1'b0;	
-                        wait_tx_busy_cnt <= 8'd0;						
+                        wait_tx_busy_cnt <= 8'd0;	
+						
 			 	    end
 			 	    else if(tx_ready && (~tx_busy)) begin   //检测串口发送模块空闲
 			 	        send_en  <= 1'b1; 

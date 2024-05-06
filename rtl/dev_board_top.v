@@ -128,10 +128,16 @@ wire    [23:0] disp_data;   //数码管显示的数值控制
 ////////////////////IGBT
 wire    [4:0]  u_IGBT_status; //IGBT当前开通状态 
 wire    [4:0]  u_IGBT_on_EN;  //IGBT开通控制标志
-wire           u_adc_valuecap_1;  
-wire           u_adc_valuecap_2;  
-wire           u_adc_valuecap_3;      
+wire           u_adc_value_cap_1;  
+wire           u_adc_value_cap_2;  
+wire           u_adc_value_cap_3;      
 wire    [2:0]  u_Voltage_cap_flag;
+wire    [13:0] filter_data_in1_u;
+wire    [13:0] filter_data_in2_u;
+wire    [13:0] filtered_data_out1_u;
+wire    [13:0] filtered_data_out2_u;
+
+
 
 //////////////////////////rtc_seg_led end
 
@@ -260,16 +266,50 @@ Pulse_logic_gen Pulse_logic_gen_u(
  
  //ADC和UART设置IGBT控制电容充放电停止条件 
  adc_IGBT adc_IGBT_u(
-    .adc_data_cap_1   (CHA_DATA   ),   
-    .adc_data_cap_2   (CHB_DATA   ),   
-    .adc_data_cap_3   (CHC_DATA   ),   
-    .Voltage_cap_set_1(uart_Voltage_cap_set_1),
-    .Voltage_cap_set_2(uart_Voltage_cap_set_2),
-    .Voltage_cap_set_3(uart_Voltage_cap_set_3),
-    .adc_valuecap_1   (u_adc_valuecap_1   ),	
-    .adc_valuecap_2   (u_adc_valuecap_2   ),	
-    .adc_valuecap_3   (u_adc_valuecap_3   ),	
-    .Voltage_cap_flag (u_Voltage_cap_flag )  
+    .sys_clk                 (sys_clk),          
+    .sys_rst_n               (sys_rst_n),
+	
+	
+	//.adc_data_cap_1         (filtered_data_out1   ),   
+	//.adc_data_cap_1         (filtered_data_out2   ),   
+	.adc_data_cap_1         (CHA_DATA   ),   
+    .adc_data_cap_2         (CHB_DATA   ),   
+    .adc_data_cap_3         (CHC_DATA   ),   
+    .Voltage_cap_set_1      (uart_Voltage_cap_set_1),
+    .Voltage_cap_set_2      (uart_Voltage_cap_set_2),
+    .Voltage_cap_set_3      (uart_Voltage_cap_set_3),
+	.filtered_data_out1     (filtered_data_out1_u),
+	.filtered_data_out2     (filtered_data_out2_u),
+	
+    .adc_value_cap_1        (u_adc_value_cap_1   ),	
+    .adc_value_cap_2        (u_adc_value_cap_2   ),	
+    .adc_value_cap_3        (u_adc_value_cap_3   ),	
+    .Voltage_cap_flag       (u_Voltage_cap_flag ) ,
+	.Voltage_cap_set_1_temp    (adc_value_cap_temp5_u),	
+	.Voltage_cap_set_2_temp    (adc_value_cap_temp6_u),	
+	.filter_data_in1        (filter_data_in1_u),
+	.filter_data_in2        (filter_data_in2_u),
+	.test1                  (test1_u),
+	//.test2                  (test2_u)
+	
+	
+ );
+
+ 
+ adc_filter adc_filter_u1(
+    .sys_clk         (sys_clk      ),
+    .sys_rst_n       (sys_rst_n    ),
+    //.adc_data        (CHA_DATA     ),
+	.adc_data        (filter_data_in1_u),
+    .filtered_data   (filtered_data_out1_u) 
+ );
+ 
+ adc_filter adc_filter_u2(
+    .sys_clk         (sys_clk      ),
+    .sys_rst_n       (sys_rst_n    ),
+    //.adc_data (CHB_DATA     ),
+	.adc_data        (filter_data_in2_u),
+    .filtered_data   (filtered_data_out2_u) 
  ); 
 
 //串口设置IGBT工作模式和参数    
@@ -280,6 +320,7 @@ uart_IGBT u_uart_IGBT(
     .recv_done          (uart_recv_done),   //接收一帧数据完成标志信号
     .recv_data          (uart_recv_data),   //接收的数据  	      				    
 	.tx_busy            (uart_tx_busy),        
+	//.Num_tx_data        (uart_Num_tx_data),
 	.send_en            (uart_send_en),        
 	.send_data          (uart_send_data),      				    
 	.Num_rx_data        (uart_Num_rx_data),    
@@ -303,7 +344,10 @@ uart_IGBT u_uart_IGBT(
 	.rxdata_buff_17     (uart_rxdata_buff_17  ), 		
 	.Voltage_cap_set_1  (uart_Voltage_cap_set_1),
 	.Voltage_cap_set_2  (uart_Voltage_cap_set_2),
-	.Voltage_cap_set_3  (uart_Voltage_cap_set_3)	
+	.Voltage_cap_set_3  (uart_Voltage_cap_set_3),	
+	.adc_value_cap_1     (u_adc_value_cap_1   ),	
+    .adc_value_cap_2     (u_adc_value_cap_2   ),	
+    .adc_value_cap_3     (u_adc_value_cap_3   )
 );
 
 key_scan key_scan_u(
@@ -429,29 +473,29 @@ PLL PLL_CLK(
 // 功能：读取通道A通道B的采集数据
 DDIO u_DDIO(
    .datain         ( Adc_In         ),
-   .inclock      ( ReadClk         ),
-   .dataout_h      ( Adc_Data_CHB      ),
-   .dataout_l      ( Adc_Data_CHA      )
+   .inclock        ( ReadClk        ),
+   .dataout_h      ( Adc_Data_CHA   ),
+   .dataout_l      ( Adc_Data_CHB   )
 );
 
 FIFO u_CHA_FIFO(
-   .data         ( Adc_Data_CHA       ),
+   .data          ( Adc_Data_CHA    ),
    .rdclk         ( ReadClk         ),
    .rdreq         ( ~CHA_Empty      ),
    .wrclk         ( ReadClk         ),
    .wrreq         ( 1'b1            ),
-   .q            ( CHA_DATA         ),
-   .rdempty      ( CHA_Empty       )
+   .q             ( CHA_DATA        ),
+   .rdempty       ( CHA_Empty       )
 );
 
 FIFO u_CHB_FIFO(
-   .data         ( Adc_Data_CHB       ),
+   .data          ( Adc_Data_CHB    ),
    .rdclk         ( ReadClk         ),
    .rdreq         ( ~CHB_Empty      ),
    .wrclk         ( ReadClk         ),
    .wrreq         ( 1'b1            ),
-   .q            ( CHB_DATA         ),
-   .rdempty      ( CHB_Empty       )
+   .q             ( CHB_DATA        ),
+   .rdempty       ( CHB_Empty       )
 );
 
 /////////////////pcf8591 ADDA///////////////////////////////////

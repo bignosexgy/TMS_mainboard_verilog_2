@@ -32,21 +32,29 @@ module key_scan(
 	output  reg  [3:0]  key_push
     );
 
+reg  [7:0]  key_cnt;
+reg          key_cnt_start_falg;
 //reg define     
-//reg  [23:0] cnt;
+reg  [23:0] cnt;
 //reg  [1:0]  led_control;
 
 //用于计数0.2s的计数器
-/*
+/**/
 always @ (posedge sys_clk or negedge sys_rst_n) begin
     if(!sys_rst_n)
         cnt<=24'd9_999_999;
     else if(cnt<24'd9_999_999)
         cnt<=cnt+1;
-    else
-        cnt<=0;
+    else begin
+	    cnt<=0;
+	    if(key_cnt_start_falg) 
+		    key_cnt <= key_cnt+ 1'b1; 
+        else begin
+            key_cnt <= 8'd0;   
+        end	        
+	end	
 end 
-*/
+/**/
 //用于led灯状态的选择
 /*
 always @(posedge sys_clk or negedge sys_rst_n) begin
@@ -94,17 +102,37 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
         led<=4'b0000;    //无按键按下时，LED熄灭     
 end
 */
+
+
+
 always @(posedge sys_clk or negedge sys_rst_n) begin
 	if(!sys_rst_n) begin
 		key_push <= 4'b0000;
 	end
-	else
+	else begin
 		case (key)
-			4'b1110 :key_push<=4'b0001;
-			4'b1101 :key_push<=4'b0010;
-			4'b1011 :key_push<=4'b0100;
-			4'b0111 :key_push<=4'b1000;
+			4'b1110 :begin
+			    key_push<=4'b0001;
+				key_cnt_start_falg <= 1'b1;
+			end	
+			4'b1101 :begin
+			    key_push<=4'b0010;
+				key_cnt_start_falg <= 1'b1;
+			end	
+			4'b1011 :begin
+			    key_push<=4'b0100;
+				key_cnt_start_falg <= 1'b1;
+			end	
+			4'b0111 :begin
+			    key_push<=4'b1000;
+				key_cnt_start_falg <= 1'b1;
+			end	
 		endcase
+		if(key_cnt >= 8'd3) begin
+            key_push <= 4'b0000;
+			key_cnt_start_falg  <= 1'b0;
+		end
+	end	
 end
 
 

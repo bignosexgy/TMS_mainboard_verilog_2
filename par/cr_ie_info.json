@@ -1,0 +1,22 @@
+{
+	"system" : {
+		"platform" : "windows64",
+		"os_name" : "Windows 7",
+		"os_version" : "6.2"
+	},
+	"error" : {
+		"executable" : "quartus",
+		"comment" : "not_applicable",
+		"error_message" : "seconds < 60.0",
+		"source_file" : "/quartus/sld/sdr/sdr_data_manager.cpp",
+		"line" : "180",
+		"stack_trace" : "\t0x7ffa9dde8817: sld_sdr + 0x8817 (?name_auto_gen_trigger_time@SDR_DATA_MANAGER@@SAPEAV?$basic_string@DU?$char_traits@D@std@@V?$MEM_STL_ALLOCATOR@D@@@std@@JPEBD@Z + 0x1e7)\n\t0x7ffacc011c24: sld_chi + 0x11c24 (?stop@CHI_CONTROL@@SA_NXZ + 0xe6d4)\n\t0x7ffacc0104f0: sld_chi + 0x104f0 (?stop@CHI_CONTROL@@SA_NXZ + 0xcfa0)\n\t0x7ffacc005d35: sld_chi + 0x5d35 (?stop@CHI_CONTROL@@SA_NXZ + 0x27e5)\n\t0x7ffac974e31c: CCL_MSG + 0xe31c (?msg_set_stack_size@@YAXH@Z + 0x7c)\n\t0x7ffaca5c4c0c: ccl_mem + 0x4c0c (?mem_malloc_wrapper@@YAPEAX_KPEAVMEM_TRACKER_THUNK@@PEBD@Z + 0x18c)\n\t0x7ffacb642791: ccl_thr + 0x2791 (thr_sleep + 0xb1)\n\t0x7ffaf2287343: KERNEL32 + 0x17343 (BaseThreadInitThunk + 0x13)\n\t0x7ffaf2a226b0: ntdll + 0x526b0 (RtlUserThreadStart + 0x20)\n",
+		"subsystem" : "SDR"
+	},
+	"quartus" : {
+		"quartus_bits" : "64",
+		"version" : "15.0.0",
+		"build" : "145",
+		"edition" : "Full Version"
+	}
+}
