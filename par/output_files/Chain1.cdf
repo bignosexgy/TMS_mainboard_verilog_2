@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE10F17) Path("D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/output_files/") File("dev_board.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE10) Path("D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/output_files/") File("dev_board.jic") MfrSpec(OpMask(1) SEC_Device(EPCQ16) Child_OpMask(1 1));
 
 ChainEnd;
 

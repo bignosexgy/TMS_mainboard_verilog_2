@@ -23,8 +23,8 @@ module adc_IGBT(
 	input                 [7:0]   Voltage_cap_set_1,       //脉冲功率，谐振电容1设置电压 
 	input                 [7:0]   Voltage_cap_set_2,       //脉冲功率，谐振电容2设置电压 
 	input                 [7:0]   Voltage_cap_set_3,       //脉冲功率，支撑电容电容设置电压 				          
-	input         [13:0]  filtered_data_out1,      //数字滤波器数据输入
-	input         [13:0]  filtered_data_out2,      //数字滤波器数据输入
+	input                 [13:0]  filtered_data_out1,      //数字滤波器数据输入
+	input                 [13:0]  filtered_data_out2,      //数字滤波器数据输入
 	output  reg   signed  [31:0]  adc_value_cap_1,	      //谐振电容1电压值mv   
 	output  reg   signed  [31:0]  adc_value_cap_2,	      //谐振电容2电压值mv
 	output  reg           [31:0]  adc_value_cap_3,	      //支撑电容电压值mv
@@ -33,8 +33,8 @@ module adc_IGBT(
     output  wire  signed  [31:0]  Voltage_cap_set_2_temp,	      //支撑电容电压值mv	
 	output  wire  signed  [31:0]  Voltage_cap_set_temp_1,
 	output  wire  signed  [31:0]  Voltage_cap_set_temp_2,
-	output  reg   [13:0]  filter_data_in1,             //传给数字滤波器数据  
-	output  reg   [13:0]  filter_data_in2,            //传给数字滤波器数据
+	output  reg           [13:0]  filter_data_in1,             //传给数字滤波器数据  
+	output  reg           [13:0]  filter_data_in2,            //传给数字滤波器数据
 	//output  reg           [3:0]     adc_voltage_over_1_cnt,
 	//output  reg           [3:0]     adc_voltage_over_2_cnt,
 	//output  wire  [3:0]  adc_voltage_over_1_cnt_temp,
@@ -159,8 +159,8 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
 	    //test1 <= ~test1;
         //adc_value_cap_1 <=  adc_value_cap_temp5 - 12000 ;
 		//adc_value_cap_2 <=  adc_value_cap_temp6 - 12000 ;
-		adc_value_cap_1 <=  adc_value_cap_temp5  ;
-		adc_value_cap_2 <=  adc_value_cap_temp6  ;
+		adc_value_cap_1 <=  adc_value_cap_temp5*2  ;
+		adc_value_cap_2 <=  adc_value_cap_temp6*2  ;
 	end      
     else begin
 	    adc_value_cap_1 <=  adc_value_cap_1;

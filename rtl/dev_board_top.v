@@ -35,17 +35,21 @@ module dev_board_top(
     output                iic_scl,     //RTC的时钟线scl
     inout                 iic_sda,     //RTC的数据线sda  
 	//////////igbt
-    output      [4:0]     IGBT,                   //5个IGBT驱动端口  
     input                 fault_IGBT_driver1,     //IGBT驱动板1故障信号	
 	input                 fault_IGBT_driver2,     //IGBT驱动板2故障信号	
 	input                 fault_IGBT_driver3,     //IGBT驱动板3故障信号
 	input                 error_IGBT_driver1,     //IGBT驱动板1两路同时输入高报警
 	input                 error_IGBT_driver2,     //IGBT驱动板2两路同时输入高报警
 	input                 error_IGBT_driver3,     //IGBT驱动板3两路同时输入高报警
+	output      [4:0]     IGBT,                   //5个IGBT驱动端口     
     output                reset_IGBT_driver1,     //IGBT驱动板1复位 	
 	output                reset_IGBT_driver2,     //IGBT驱动板2复位
 	output                reset_IGBT_driver3,     //IGBT驱动板3复位	
-     //pcf8591 8bit AD/DA      
+	
+	///////////SCR	
+	output      [1:0]     SCR,                    //2个SCR驱动端口	
+	
+    //pcf8591 8bit AD/DA      
     output                scl_pcf8591        ,    // i2c时钟线
     inout                 sda_pcf8591        ,    // i2c数据线   
     //ADC
@@ -137,7 +141,9 @@ wire    [13:0] filter_data_in2_u;
 wire    [13:0] filtered_data_out1_u;
 wire    [13:0] filtered_data_out2_u;
 
-
+///////////////////SCR
+wire    [1:0]  SCR_on_EN_u;      
+wire    [1:0]  SCR_status_u;
 
 //////////////////////////rtc_seg_led end
 
@@ -244,8 +250,11 @@ uart_message_upload uart_message_upload(
 			     
     .IGBT_on_EN   (u_IGBT_on_EN ),
     .IGBT         (IGBT         ),      
-    .IGBT_status  (u_IGBT_status)
-);
+    .IGBT_status  (u_IGBT_status),
+	.SCR_on_EN    (SCR_on_EN_u  ),
+	.SCR          (SCR          ),
+    .SCR_status   (SCR_status_u )	
+);  
    
 //IGBT动作的逻辑控制
 Pulse_logic_gen Pulse_logic_gen_u(
@@ -260,8 +269,9 @@ Pulse_logic_gen Pulse_logic_gen_u(
     .reset_IGBT_driver1      (U_reset_IGBT_driver1),
     .reset_IGBT_driver2      (U_reset_IGBT_driver2),
     .reset_IGBT_driver3      (U_reset_IGBT_driver3),	
-    .IGBT_on_EN              (u_IGBT_on_EN)
-   //.IGBT                    (IGBT)   
+    .IGBT_on_EN              (u_IGBT_on_EN),
+    .SCR_status              (SCR_status_u),
+	.SCR_on_EN               (SCR_on_EN_u) 
  );
  
  //ADC和UART设置IGBT控制电容充放电停止条件 

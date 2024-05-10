@@ -14,16 +14,20 @@
 //****************************************************************************************//
 
 module IGBT_SCR(
-    input                  sys_clk  ,        //系统时钟
-    input                  sys_rst_n,        //系统复位，低电平有效
+    input                  sys_clk  ,         //系统时钟
+    input                  sys_rst_n,         //系统复位，低电平有效
 	
-    input        [4:0]     IGBT_on_EN,       //5个IGBT开通使能控制位	
-    output  reg  [4:0]     IGBT,             //5个IGBT驱动端口
-	output  reg  [4:0]     IGBT_status       //5个IGBT状态位
+    input        [4:0]     IGBT_on_EN,        //5个IGBT开通使能控制位			
+    output  reg  [4:0]     IGBT,              //5个IGBT驱动端口
+	output  reg  [4:0]     IGBT_status,       //5个IGBT状态位
+	
+	input        [1:0]     SCR_on_EN,         //2个SCR开通使能控制位
+	output  reg  [1:0]     SCR,                //2个SCR驱动端口
+	output  reg  [1:0]     SCR_status        //2个SCR状态位
     );
 
 //reg define
-reg [23:0] counter;
+reg [23:0]  counter;
 reg [23:0]  IGBT_counter_1;    //IGBT驱动时长
 
 
@@ -79,6 +83,35 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
     else begin	
         IGBT[1] <= 1'b0;                              //开通IGBT
         IGBT_status[1] <= 1'b0;                       //置位IGBT开通状态标志            
+    end               
+end
+
+
+//控制SCR1的开通或断开
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n)
+        SCR[0] <= 1'b0;
+    else if(SCR_on_EN[0]) begin                      //IGBT开通使能        
+        SCR_status[0] <= 1'b1;                       //复位IGBT开通状态标志
+        SCR[0] <= 1'b1;                              //关断IGBT
+    end  
+    else begin	
+        SCR[0] <= 1'b0;                              //开通IGBT
+        SCR_status[0] <= 1'b0;                       //置位IGBT开通状态标志            
+    end               
+end
+
+//控制SCR2的开通或断开
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n)
+        SCR[1] <= 1'b0;
+    else if(SCR_on_EN[1]) begin                      //IGBT开通使能        
+        SCR_status[1] <= 1'b1;                       //复位IGBT开通状态标志
+        SCR[1] <= 1'b1;                              //关断IGBT
+    end  
+    else begin	
+        SCR[1] <= 1'b0;                              //开通IGBT
+        SCR_status[1] <= 1'b0;                       //置位IGBT开通状态标志            
     end               
 end
 

@@ -1,5 +1,5 @@
 EDA Netlist Writer report for dev_board
-Tue Apr 30 15:05:47 2024
+Fri May 10 10:21:10 2024
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Apr 30 15:05:47 2024 ;
+; EDA Netlist Writer Status ; Successful - Fri May 10 10:21:10 2024 ;
 ; Revision Name             ; dev_board                             ;
 ; Top-level Entity Name     ; dev_board_top                         ;
 ; Family                    ; Cyclone IV E                          ;
@@ -89,7 +89,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Tue Apr 30 15:05:44 2024
+    Info: Processing started: Fri May 10 10:21:07 2024
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off dev_board -c dev_board
 Info (204019): Generated file dev_board_8_1200mv_85c_slow.vo in folder "D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file dev_board_8_1200mv_0c_slow.vo in folder "D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/" for EDA simulation tool
@@ -100,9 +100,9 @@ Info (204019): Generated file dev_board_8_1200mv_0c_v_slow.sdo in folder "D:/wor
 Info (204019): Generated file dev_board_min_1200mv_0c_v_fast.sdo in folder "D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file dev_board_v.sdo in folder "D:/work/SynologyDrive/Projects in progress/TMS(Transcranial magnetic stimulate)/verilog/Development_Board/par/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4773 megabytes
-    Info: Processing ended: Tue Apr 30 15:05:47 2024
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Fri May 10 10:21:10 2024
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 

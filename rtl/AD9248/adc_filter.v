@@ -29,8 +29,8 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
 		    filtered_data <= sum_temp[13:0];    
     end       
 end                                                                                                                                                                                                                                                                                
-always @(posedge sys_clk or negedge sys_rst_n) begin	if(!sys_rst_n) begin
-       
+always @(posedge sys_clk or negedge sys_rst_n) begin	
+    if(!sys_rst_n) begin       
         sum <= 1'b0;       
 		adc_min <= 14'd16383;
 		adc_max <= 14'd0;
