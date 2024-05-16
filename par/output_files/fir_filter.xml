@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<instance entity-name="altera_fir_compiler_ii" version="15.0" >
+<generic name="filterType" value="single" />
+<generic name="interpFactor" value="1" />
+<generic name="decimFactor" value="1" />
+<generic name="symmetryMode" value="nsym" />
+<generic name="L_bandsFilter" value="1" />
+<generic name="inputChannelNum" value="1" />
+<generic name="clockRate" value="65" />
+<generic name="clockSlack" value="0" />
+<generic name="inputRate" value="65" />
+<generic name="coeffReload" value="false" />
+<generic name="baseAddress" value="0" />
+<generic name="readWriteMode" value="read_write" />
+<generic name="backPressure" value="false" />
+<generic name="deviceFamily" value="Cyclone IV E" />
+<generic name="speedGrade" value="medium" />
+<generic name="delayRAMBlockThreshold" value="20" />
+<generic name="dualMemDistRAMThreshold" value="1280" />
+<generic name="mRAMThreshold" value="1000000" />
+<generic name="hardMultiplierThreshold" value="-1" />
+<generic name="inputType" value="int" />
+<generic name="inputBitWidth" value="14" />
+<generic name="inputFracBitWidth" value="0" />
+<generic name="coeffSetRealValue" value="0.0239639282226563,0.0254592895507813,0.0269088745117188,0.028289794921875,0.0296096801757813,0.0308456420898438,0.0319976806640625,0.033050537109375,0.03399658203125,0.0348358154296875,0.035552978515625,0.0361480712890625,0.03662109375,0.036956787109375,0.0371551513671875,0.0372238159179688,0.0371551513671875,0.036956787109375,0.03662109375,0.0361480712890625,0.035552978515625,0.0348358154296875,0.03399658203125,0.033050537109375,0.0319976806640625,0.0308456420898438,0.0296096801757813,0.028289794921875,0.0269088745117188,0.0254592895507813,0.0239639282226563" />
+<generic name="coeffScaling" value="auto" />
+<generic name="coeffType" value="int" />
+<generic name="coeffBitWidth" value="14" />
+<generic name="coeffFracBitWidth" value="0" />
+<generic name="outType" value="int" />
+<generic name="outMSBRound" value="trunc" />
+<generic name="outMsbBitRem" value="0" />
+<generic name="outLSBRound" value="trunc" />
+<generic name="outLsbBitRem" value="0" />
+<generic name="bankCount" value="1" />
+<generic name="bankDisplay" value="0" />
+</instance>

@@ -1,0 +1,28 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "D:\work\SynologyDrive\Projects in progress\TMS(Transcranial magnetic stimulate)\verilog\Development_Board\par\test.qsys" --block-symbol-file --output-directory="D:\work\SynologyDrive\Projects in progress\TMS(Transcranial magnetic stimulate)\verilog\Development_Board\par\test" --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading par/test.qsys
+Progress: Reading input file
+Progress: Adding cic_ii_0 [altera_cic_ii 15.0]
+Progress: Parameterizing module cic_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "D:\work\SynologyDrive\Projects in progress\TMS(Transcranial magnetic stimulate)\verilog\Development_Board\par\test.qsys" --synthesis=VERILOG --output-directory="D:\work\SynologyDrive\Projects in progress\TMS(Transcranial magnetic stimulate)\verilog\Development_Board\par\test\synthesis" --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading par/test.qsys
+Progress: Reading input file
+Progress: Adding cic_ii_0 [altera_cic_ii 15.0]
+Progress: Parameterizing module cic_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: test: Generating test "test" for QUARTUS_SYNTH
+Info: cic_ii_0: "test" instantiated altera_cic_ii "cic_ii_0"
+Info: test: Done "test" with 2 modules, 31 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

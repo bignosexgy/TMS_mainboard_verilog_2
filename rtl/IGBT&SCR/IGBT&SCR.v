@@ -58,7 +58,7 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
 end
 */
 
-//控制IGBT[0]的开通或断开
+//控制IGBT1的开通或断开
 always @(posedge sys_clk or negedge sys_rst_n) begin
     if (!sys_rst_n)
         IGBT[0] <= 1'b0;
@@ -72,7 +72,7 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
     end               
 end
 
-//控制IGBT[1]的开通或断开
+//控制IGBT2的开通或断开
 always @(posedge sys_clk or negedge sys_rst_n) begin
     if (!sys_rst_n)
         IGBT[1] <= 1'b0;
@@ -83,6 +83,51 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
     else begin	
         IGBT[1] <= 1'b0;                              //开通IGBT
         IGBT_status[1] <= 1'b0;                       //置位IGBT开通状态标志            
+    end               
+end
+
+//控制IGBT3的开通或断开
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n)
+        IGBT[2] <= 1'b0;
+    else if(IGBT_on_EN[2]) begin                      //IGBT开通使能        
+        IGBT_status[2] <= 1'b1;                       //复位IGBT开通状态标志
+        IGBT[2] <= 1'b1;                              //关断IGBT
+    end  
+    else begin	
+        IGBT[2] <= 1'b0;                              //开通IGBT
+        IGBT_status[2] <= 1'b0;                       //置位IGBT开通状态标志            
+    end               
+end
+
+
+
+//控制IGBT4的开通或断开
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n)
+        IGBT[3] <= 1'b0;
+    else if(IGBT_on_EN[3]) begin                      //IGBT开通使能        
+        IGBT_status[3] <= 1'b1;                       //复位IGBT开通状态标志
+        IGBT[3] <= 1'b1;                              //关断IGBT
+    end  
+    else begin	
+        IGBT[3] <= 1'b0;                              //开通IGBT
+        IGBT_status[3] <= 1'b0;                       //置位IGBT开通状态标志            
+    end               
+end
+
+
+//控制IGBT5的开通或断开
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n)
+        IGBT[4] <= 1'b0;
+    else if(IGBT_on_EN[4]) begin                      //IGBT开通使能        
+        IGBT_status[4] <= 1'b1;                       //复位IGBT开通状态标志
+        IGBT[4] <= 1'b1;                              //关断IGBT
+    end  
+    else begin	
+        IGBT[4] <= 1'b0;                              //开通IGBT
+        IGBT_status[4] <= 1'b0;                       //置位IGBT开通状态标志            
     end               
 end
 

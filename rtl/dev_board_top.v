@@ -100,7 +100,7 @@ wire [7:0] uart_rxdata_buff_16;
 wire [7:0] uart_rxdata_buff_17;
 wire [7:0] uart_Voltage_cap_set_1;
 wire [7:0] uart_Voltage_cap_set_2;
-wire [7:0] uart_Voltage_cap_set_3;
+
 
 ////////////led
 wire [3:0] led_state;                   //led将要改变的状态
@@ -130,17 +130,22 @@ wire    [5:0]  point    ;   //数码管小数点控制
 wire    [23:0] disp_data;   //数码管显示的数值控制
 
 ////////////////////IGBT
-wire    [4:0]  u_IGBT_status; //IGBT当前开通状态 
-wire    [4:0]  u_IGBT_on_EN;  //IGBT开通控制标志
-wire           u_adc_value_cap_1;  
-wire           u_adc_value_cap_2;  
-wire           u_adc_value_cap_3;      
-wire    [2:0]  u_Voltage_cap_flag;
+wire    [4:0]  IGBT_status_u; //IGBT当前开通状态 
+wire    [4:0]  IGBT_on_EN_u;  //IGBT开通控制标志
+wire    [31:0]       adc_value_cap_1_u;  
+wire    [31:0]       adc_value_cap_2_u;  
+     
+wire    [2:0]  Voltage_cap_flag_u;
 wire    [13:0] filter_data_in1_u;
 wire    [13:0] filter_data_in2_u;
 wire    [13:0] filtered_data_out1_u;
 wire    [13:0] filtered_data_out2_u;
-
+wire    [31:0] Voltage_cap_set_temp_1_u;
+wire    [31:0] Voltage_cap_set_temp_2_u;
+wire    [31:0] Voltage_cap_set_1_temp_u;
+wire    [31:0] Voltage_cap_set_2_temp_u;
+wire    [1:0]  CAP_charge_flag_u;
+wire    [1:0]  CAP_discharge_flag_u;
 ///////////////////SCR
 wire    [1:0]  SCR_on_EN_u;      
 wire    [1:0]  SCR_status_u;
@@ -248,9 +253,9 @@ uart_message_upload uart_message_upload(
     .sys_clk      (sys_clk      ), 
     .sys_rst_n    (sys_rst_n    ), 
 			     
-    .IGBT_on_EN   (u_IGBT_on_EN ),
+    .IGBT_on_EN   (IGBT_on_EN_u ),
     .IGBT         (IGBT         ),      
-    .IGBT_status  (u_IGBT_status),
+    .IGBT_status  (IGBT_status_u),
 	.SCR_on_EN    (SCR_on_EN_u  ),
 	.SCR          (SCR          ),
     .SCR_status   (SCR_status_u )	
@@ -260,17 +265,29 @@ uart_message_upload uart_message_upload(
 Pulse_logic_gen Pulse_logic_gen_u(
     .sys_clk                 (sys_clk),          
     .sys_rst_n               (sys_rst_n),          
-       
+     
+	.adc_value_cap_1         (adc_value_cap_1_u),
+	.adc_value_cap_2         (adc_value_cap_2_u),
+	.Voltage_cap_set_temp_1  (Voltage_cap_set_temp_1_u),
+	.Voltage_cap_set_temp_2  (Voltage_cap_set_temp_2_u), 
     .key_push                (key_push),   
-    .Voltage_cap_flag        (u_Voltage_cap_flag),    
-    .fault_IGBT_driver1      (U_fault_IGBT_driver1),
-    .fault_IGBT_driver2      (U_fault_IGBT_driver2),
-    .fault_IGBT_driver3      (U_fault_IGBT_driver3),
-    .reset_IGBT_driver1      (U_reset_IGBT_driver1),
-    .reset_IGBT_driver2      (U_reset_IGBT_driver2),
-    .reset_IGBT_driver3      (U_reset_IGBT_driver3),	
-    .IGBT_on_EN              (u_IGBT_on_EN),
+    .Voltage_cap_flag        (Voltage_cap_flag_u),    
+    .fault_IGBT_driver1      (fault_IGBT_driver1_u),
+    .fault_IGBT_driver2      (fault_IGBT_driver2_u),
+    .fault_IGBT_driver3      (fault_IGBT_driver3_u),
+    .reset_IGBT_driver1      (reset_IGBT_driver1_u),
+    .reset_IGBT_driver2      (reset_IGBT_driver2_u),
+    .reset_IGBT_driver3      (reset_IGBT_driver3_u),	
+	.CAP_charge_flag         (CAP_charge_flag_u  ),   
+	.CAP_discharge_flag      (CAP_discharge_flag_u),
+	.IGBT_status             (IGBT_status_u),
+    .IGBT_on_EN              (IGBT_on_EN_u),
+	//.CAP_charge_flag         (CAP_charge_flag_u), 
+	//.CAP_discharge_flag      (CAP_discharge_flag_u),	
     .SCR_status              (SCR_status_u),
+	.test1                   (test1_u),
+	.test2                   (test2_u),
+	.test3                   (test3_u),
 	.SCR_on_EN               (SCR_on_EN_u) 
  );
  
@@ -278,47 +295,45 @@ Pulse_logic_gen Pulse_logic_gen_u(
  adc_IGBT adc_IGBT_u(
     .sys_clk                 (sys_clk),          
     .sys_rst_n               (sys_rst_n),
-	
-	
-	//.adc_data_cap_1         (filtered_data_out1   ),   
-	//.adc_data_cap_1         (filtered_data_out2   ),   
-	.adc_data_cap_1         (CHA_DATA   ),   
-    .adc_data_cap_2         (CHB_DATA   ),   
-    .adc_data_cap_3         (CHC_DATA   ),   
+	.adc_clk                 (ReadClk),	
+	  
+	//.adc_data_cap_1         (CHA_DATA   ),   
+    //.adc_data_cap_2         (CHB_DATA   ),   
+     
     .Voltage_cap_set_1      (uart_Voltage_cap_set_1),
-    .Voltage_cap_set_2      (uart_Voltage_cap_set_2),
-    .Voltage_cap_set_3      (uart_Voltage_cap_set_3),
+    .Voltage_cap_set_2      (uart_Voltage_cap_set_2),   
 	.filtered_data_out1     (filtered_data_out1_u),
 	.filtered_data_out2     (filtered_data_out2_u),
+	.CAP_charge_flag         (CAP_charge_flag_u  ),   
+	.CAP_discharge_flag      (CAP_discharge_flag_u),	
+	.IGBT_on_EN             (IGBT_on_EN_u),	
+    .adc_value_cap_1        (adc_value_cap_1_u   ),	
+    .adc_value_cap_2        (adc_value_cap_2_u   ),	   
+    .Voltage_cap_flag       (Voltage_cap_flag_u ) ,		
+	.Voltage_cap_set_temp_1  (Voltage_cap_set_temp_1_u),
+	.Voltage_cap_set_temp_2  (Voltage_cap_set_temp_2_u),
+	.Voltage_cap_set_1_temp  (Voltage_cap_set_1_temp_u),
+	.Voltage_cap_set_2_temp  (Voltage_cap_set_2_temp_u),
+	.test1                  (test1_u)
 	
-    .adc_value_cap_1        (u_adc_value_cap_1   ),	
-    .adc_value_cap_2        (u_adc_value_cap_2   ),	
-    .adc_value_cap_3        (u_adc_value_cap_3   ),	
-    .Voltage_cap_flag       (u_Voltage_cap_flag ) ,
-	.Voltage_cap_set_1_temp    (adc_value_cap_temp5_u),	
-	.Voltage_cap_set_2_temp    (adc_value_cap_temp6_u),	
-	.filter_data_in1        (filter_data_in1_u),
-	.filter_data_in2        (filter_data_in2_u),
-	.test1                  (test1_u),
-	//.test2                  (test2_u)
 	
 	
  );
 
  
  adc_filter adc_filter_u1(
-    .sys_clk         (sys_clk      ),
+    .clk             (ReadClk      ),
     .sys_rst_n       (sys_rst_n    ),
     //.adc_data        (CHA_DATA     ),
-	.adc_data        (filter_data_in1_u),
+	.adc_data        (CHA_DATA),
     .filtered_data   (filtered_data_out1_u) 
  );
  
  adc_filter adc_filter_u2(
-    .sys_clk         (sys_clk      ),
+    .clk             (ReadClk      ),
     .sys_rst_n       (sys_rst_n    ),
     //.adc_data (CHB_DATA     ),
-	.adc_data        (filter_data_in2_u),
+	.adc_data        (CHB_DATA),
     .filtered_data   (filtered_data_out2_u) 
  ); 
 
@@ -355,9 +370,9 @@ uart_IGBT u_uart_IGBT(
 	.Voltage_cap_set_1  (uart_Voltage_cap_set_1),
 	.Voltage_cap_set_2  (uart_Voltage_cap_set_2),
 	.Voltage_cap_set_3  (uart_Voltage_cap_set_3),	
-	.adc_value_cap_1     (u_adc_value_cap_1   ),	
-    .adc_value_cap_2     (u_adc_value_cap_2   ),	
-    .adc_value_cap_3     (u_adc_value_cap_3   )
+	.adc_value_cap_1     (adc_value_cap_1_u   ),	
+    .adc_value_cap_2     (adc_value_cap_2_u   )	
+   
 );
 
 key_scan key_scan_u(
@@ -563,7 +578,18 @@ seg_led_pcf8591 u_seg_led_pcf8591(
     .sign          (1'b0     )            // 符号位（高电平显示“-”号）
 );
 
-
-
+/*
+//例化FIR滤波器
+fir_filter fir_filter_u(
+    .clk               (ReadClk           ),              //                     clk.clk
+    .reset_n           (sys_rst_n         ),          //                     rst.reset_n
+    .ast_sink_data     (Adc_Data_CHA  ),    //   avalon_streaming_sink.data
+    .ast_sink_valid    (ast_sink_valid_u  ),   //                        .valid
+    .ast_sink_error    (ast_sink_error_u  ),   //                        .error
+    .ast_source_data   (ast_source_data_u ),  // avalon_streaming_source.data
+    .ast_source_valid  (ast_source_valid_u), //                        .valid
+    .ast_source_error  (ast_source_error_u)  //                        .error
+);
+*/
     
 endmodule
