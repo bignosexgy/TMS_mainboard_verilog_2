@@ -55,7 +55,7 @@ module uart_IGBT(
 	output reg         [7:0]  rxdata_buff_17,            //check code l  	
 	output reg         [7:0]  Voltage_cap_set_1,         //脉冲功率，谐振电容1设置电压 
 	output reg         [7:0]  Voltage_cap_set_2,         //脉冲功率，谐振电容2设置电压 
-	output reg         [7:0]  Voltage_cap_set_3,          //脉冲功率，支撑电容电容设置电压 
+	//output reg         [7:0]  Voltage_cap_set_3,          //脉冲功率，支撑电容电容设置电压 
 	
 	input  signed      [31:0] adc_value_cap_1,	      //谐振电容1电压值mv   
 	input  signed      [31:0] adc_value_cap_2,	      //谐振电容2电压值mv
@@ -171,52 +171,49 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
     if (!sys_rst_n) begin	
         uart_data_send_en <= 1'b0;    
     end                                                          
-    else    if(recv_full_data_flag) begin
-            txdata_buff_0  <= rxdata_buff_0 ;    
-            txdata_buff_1  <= rxdata_buff_1 ;
-            txdata_buff_2  <= rxdata_buff_2 ;
-            txdata_buff_3  <= rxdata_buff_3 ;
-            txdata_buff_4  <= rxdata_buff_4 ;
-            txdata_buff_5  <= rxdata_buff_5 ;
-            txdata_buff_6  <= rxdata_buff_6 ;
-            txdata_buff_7  <= rxdata_buff_7 ;
-            txdata_buff_8  <= rxdata_buff_8 ;
-            txdata_buff_9  <= rxdata_buff_9 ;
-            txdata_buff_10 <= rxdata_buff_10;
-            txdata_buff_11 <= rxdata_buff_11;
-            txdata_buff_12 <= rxdata_buff_12;
-            txdata_buff_13 <= rxdata_buff_13;
-            txdata_buff_14 <= rxdata_buff_14;
-            txdata_buff_15 <= rxdata_buff_15;
-            txdata_buff_16 <= rxdata_buff_16;
-            txdata_buff_17 <= rxdata_buff_17;	
-	        Num_tx_data <= Num_rx_data;
-			uart_data_send_en <= 1'b1;
-	    end		
-        else if(adc_uart_send_flag && (~recv_full_data_flag)) begin	
-	        txdata_buff_0   <= frame_header_1;    
-            txdata_buff_1   <= frame_header_2;
-	     	txdata_buff_2   <= 8'd15;
-	     	txdata_buff_3   <= 3'd1;
-	     	txdata_buff_4   <= adc_value_cap_1[7:0];
-	     	txdata_buff_5   <= (adc_value_cap_1 >> 8);
-	     	txdata_buff_6   <= (adc_value_cap_1 >> 16);
-	     	txdata_buff_7   <= (adc_value_cap_1 >> 24);
-	     	txdata_buff_8   <= 3'd2;
-	     	txdata_buff_9   <= adc_value_cap_2;
-	     	txdata_buff_10  <= (adc_value_cap_2 >> 8);
-	     	txdata_buff_11  <= (adc_value_cap_2 >> 16);
-	     	txdata_buff_12  <= (adc_value_cap_2 >> 24);
-	     	txdata_buff_13  <= 3'd3;
-	     	txdata_buff_14  <= adc_value_cap_3;
-	     	txdata_buff_15  <= (adc_value_cap_3 >> 8);
-	     	txdata_buff_16  <= (adc_value_cap_3 >> 16);
-	     	txdata_buff_17  <= (adc_value_cap_3 >> 24);				
-			uart_data_send_en <= 1'b1;
-			Num_tx_data <= 8'd15;
-        end			
-	    else
-	        uart_data_send_en <= 1'b0; 	
+    else if(recv_full_data_flag) begin
+        txdata_buff_0  <= rxdata_buff_0 ;    
+        txdata_buff_1  <= rxdata_buff_1 ;
+        txdata_buff_2  <= rxdata_buff_2 ;
+        txdata_buff_3  <= rxdata_buff_3 ;
+        txdata_buff_4  <= rxdata_buff_4 ;
+        txdata_buff_5  <= rxdata_buff_5 ;
+        txdata_buff_6  <= rxdata_buff_6 ;
+        txdata_buff_7  <= rxdata_buff_7 ;
+        txdata_buff_8  <= rxdata_buff_8 ;
+        txdata_buff_9  <= rxdata_buff_9 ;
+        txdata_buff_10 <= rxdata_buff_10;
+        txdata_buff_11 <= rxdata_buff_11;
+        txdata_buff_12 <= rxdata_buff_12;
+        txdata_buff_13 <= rxdata_buff_13;
+        txdata_buff_14 <= rxdata_buff_14;
+        txdata_buff_15 <= rxdata_buff_15;
+        txdata_buff_16 <= rxdata_buff_16;
+        txdata_buff_17 <= rxdata_buff_17;	
+	    Num_tx_data <= Num_rx_data;
+	    uart_data_send_en <= 1'b1;
+	end		
+    else if(adc_uart_send_flag && (~recv_full_data_flag)) begin	
+	    txdata_buff_0   <= frame_header_1;    
+        txdata_buff_1   <= frame_header_2;
+	 	txdata_buff_2   <= 8'd12;
+	 	txdata_buff_3   <= 3'd1;
+	 	txdata_buff_4   <= adc_value_cap_1 >> 16;
+	 	txdata_buff_5   <= adc_value_cap_1 >> 8;
+	 	txdata_buff_6   <= adc_value_cap_1[7:0];
+	 	txdata_buff_7   <= 3'd2;
+	 	txdata_buff_8   <= adc_value_cap_2 >> 16;
+	 	txdata_buff_9   <= adc_value_cap_2 >> 8;
+	 	txdata_buff_10  <= adc_value_cap_2[7:0];
+	 	txdata_buff_11  <= 3'd3;
+	 	txdata_buff_12  <= adc_value_cap_3 >> 16;
+	 	txdata_buff_13  <= adc_value_cap_3 >> 8;
+	 	txdata_buff_14  <= adc_value_cap_3[7:0];		 		
+		uart_data_send_en <= 1'b1;
+		Num_tx_data <= 8'd12;
+    end			
+	else
+	    uart_data_send_en <= 1'b0; 	
 end
 
 always @ (rxdata_buff_3) begin
@@ -227,9 +224,9 @@ always @ (rxdata_buff_3) begin
 	    8'd2: begin
 	         Voltage_cap_set_2 <= rxdata_buff_5;   
 	    end
-		8'd3: begin
-	         Voltage_cap_set_3 <= rxdata_buff_5;   
-	    end
+		//8'd3: begin
+	         //Voltage_cap_set_3 <= rxdata_buff_5;   
+	    //end
         default
 	        ;
 	endcase	   

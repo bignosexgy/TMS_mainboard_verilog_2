@@ -24,8 +24,8 @@ module adc_IGBT(
 	input                 [7:0]   Voltage_cap_set_1,       //脉冲功率，谐振电容1设置电压 
 	input                 [7:0]   Voltage_cap_set_2,       //脉冲功率，谐振电容2设置电压 
 	
-	input                 [13:0]  filtered_data_out1,      //数字滤波器数据输入
-	input                 [13:0]  filtered_data_out2,      //数字滤波器数据输入
+	input                 [13:0]  filtered_data_out1,      //数字滤波后数据
+	input                 [13:0]  filtered_data_out2,      //数字滤波后数据
 		
 	input                 [4:0]   IGBT_on_EN,             //5个IGBT开启使能
 	
@@ -44,6 +44,8 @@ module adc_IGBT(
 	
 	output wire  signed  [31:0]     Voltage_cap_set_1_temp, 	      //支撑电容电压值mv
     output wire  signed  [31:0]     Voltage_cap_set_2_temp, 	      //支撑电容电压值mv	
+	
+	 output wire  signed  [31:0]     adc_value_cap_temp3, 	      //支撑电容电压值mv
 	
 	output  reg                   test2, 
 	output  reg                   test3,
@@ -79,7 +81,7 @@ reg  signed [7:0] data2;
 
 //wire  signed  [31:0]     Voltage_cap_set_temp_1;
 //wire  signed  [31:0]     Voltage_cap_set_temp_2;
-wire  signed  [31:0]     adc_value_cap_temp3; 	      //支撑电容电压值mv
+//wire  signed  [31:0]     adc_value_cap_temp3; 	      //支撑电容电压值mv
 wire  signed  [31:0]     adc_value_cap_temp4; 	      //支撑电容电压值mv	
 
 
@@ -91,23 +93,24 @@ wire  [3:0]  adc_voltage_below_2_cnt_temp;     //CAP2欠压计数
 
 // 分辨率是16384，所以每个ADC值对应于10V/16384 = 0.0006V
 //parameter  REF_VOLTAGE         = 10000;        // 10V转换为整数
-parameter  REF_VOLTAGE_1          = 24000;        // 测量量程，转换为mv
-parameter  REF_VOLTAGE_2          = 10000;        // 测量量程，转换为mv
+//parameter  REF_VOLTAGE_1          = 24000;        // 24测量量程，转换为mv
+parameter  REF_VOLTAGE_1          = 1000000;        // 1000V测量量程，转换为mv
+parameter  REF_VOLTAGE_2          = 10000;        // 10V 测量量程，转换为mv
 parameter  RESOLUTION           = 16383;        // 14bitADC
 parameter  SCALE_VOLTAGE        = 1;            //输入功率百分比和电容充电电压的比率  输入0-10V
-parameter  VOLTAGE_MAX_CAP_1    = 24;           //v,谐振电容1的最大电压
+parameter  VOLTAGE_MAX_CAP_1    = 1000;           //v,谐振电容1的最大电压
 parameter  VOLTAGE_MAX_CAP_2    = 10;           //v,谐振电容2的最大电压
 parameter  VOLTAGE_MAX_CAP_3    = 2400;         //支撑电容的最大电压
 							    
-assign  adc_value_cap_temp3     = {18'b0,filtered_data_out1};
-assign  adc_value_cap_temp4     = {18'b0,filtered_data_out2};
-assign  Voltage_cap_set_1_temp  = {18'b0,Voltage_cap_set_1};
-assign  Voltage_cap_set_2_temp  = {18'b0,Voltage_cap_set_2};
+assign  adc_value_cap_temp3     = {32'b0,filtered_data_out1};
+assign  adc_value_cap_temp4     = {32'b0,filtered_data_out2};
+assign  Voltage_cap_set_1_temp  = {32'b0,Voltage_cap_set_1};
+assign  Voltage_cap_set_2_temp  = {32'b0,Voltage_cap_set_2};
 
 
 
-assign  Voltage_cap_set_temp_1  = Voltage_cap_set_1_temp * VOLTAGE_MAX_CAP_1 *10 ;  //CAP1充电
-assign  Voltage_cap_set_temp_2  = Voltage_cap_set_2_temp * VOLTAGE_MAX_CAP_2 *10 ;  //CAP2充电
+assign  Voltage_cap_set_temp_1  = Voltage_cap_set_1_temp * VOLTAGE_MAX_CAP_1 *10 ;  //CAP1充电电压mv  m%*Vmax*1000
+assign  Voltage_cap_set_temp_2  = Voltage_cap_set_2_temp * VOLTAGE_MAX_CAP_2 *10 ;  //CAP2充电电压mv
 
 
 assign  adc_voltage_over_1_cnt_temp = adc_voltage_over_1_cnt;
@@ -126,11 +129,12 @@ end
 
 always @(posedge adc_clk or negedge sys_rst_n) begin
     if (!sys_rst_n) 	begin        
-		adc_value_cap_1 <=  14'd0;
-		adc_value_cap_2 <=  14'd0;		
+		adc_value_cap_1 <=  32'd0;
+		adc_value_cap_2 <=  32'd0;		
 	end	
     else   begin       	         		
-		adc_value_cap_1 <=  2*adc_value_cap_temp3 * REF_VOLTAGE_1 / RESOLUTION - REF_VOLTAGE_1;
+		//adc_value_cap_1 <=  2*adc_value_cap_temp3 * REF_VOLTAGE_1 / RESOLUTION - REF_VOLTAGE_1;
+		adc_value_cap_1 <=  2*REF_VOLTAGE_1/RESOLUTION*adc_value_cap_temp3 - REF_VOLTAGE_1;
 		//adc_value_cap_2 <=  2*adc_value_cap_temp4 * REF_VOLTAGE_2 / RESOLUTION - REF_VOLTAGE_2;
 		adc_value_cap_2 <=  adc_value_cap_temp4 * REF_VOLTAGE_2 / RESOLUTION - REF_VOLTAGE_2/2;
 	end                 

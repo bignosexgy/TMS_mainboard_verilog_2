@@ -64,7 +64,7 @@ module dev_board_top(
 //////////////////////////rtc_seg_led end
 //parameter define
 parameter  CLK_FREQ = 50000000;         //定义系统时钟频率
-parameter  UART_BPS = 9600;             //定义串口波特率
+parameter  UART_BPS = 921600;             //定义串口波特率
 //////////////////////////rtc_seg_led 
 parameter    SLAVE_ADDR = 7'b101_0001   ; //器件地址(SLAVE_ADDR)
 parameter    BIT_CTRL   = 1'b0          ; //字地址位控制参数(16b/8b)
@@ -187,7 +187,7 @@ wire    [19:0]     num_pcf859       ;                 // 数码管要显示的�
 //ADC
 assign Adc_Clk_A = Adc_Clk_65M;   // 通道A时钟输出
 assign Adc_Clk_B = ~Adc_Clk_65M; // 通道B时钟输出
-assign clk_test = clk_test_1;
+assign clk_test = sys_clk;
 
 //*****************************************************
 //**                    main code
@@ -369,35 +369,35 @@ uart_IGBT u_uart_IGBT(
 	.rxdata_buff_17     (uart_rxdata_buff_17  ), 		
 	.Voltage_cap_set_1  (uart_Voltage_cap_set_1),
 	.Voltage_cap_set_2  (uart_Voltage_cap_set_2),
-	.Voltage_cap_set_3  (uart_Voltage_cap_set_3),	
+	//.Voltage_cap_set_3  (uart_Voltage_cap_set_3),	
 	.adc_value_cap_1     (adc_value_cap_1_u   ),	
     .adc_value_cap_2     (adc_value_cap_2_u   )	
    
 );
 
 key_scan key_scan_u(
-.sys_clk     (sys_clk), 
-.sys_rst_n   (sys_rst_n), 
-
-.key         (key),           
-.key_push    (key_push)
+    .sys_clk     (sys_clk), 
+    .sys_rst_n   (sys_rst_n), 
+    
+    .key         (key),           
+    .key_push    (key_push)
 );
 
 
 led_key led_key_u(
-.sys_clk         (sys_clk), 
-.sys_rst_n       (sys_rst_n),
-      
-.led             (led),
-.led_state       (led_state)
+    .sys_clk         (sys_clk), 
+    .sys_rst_n       (sys_rst_n),
+          
+    .led             (led),
+    .led_state       (led_state)
 );
 
 key_led_association key_led_association_u(
-.sys_clk         (sys_clk),   
-.sys_rst_n       (sys_rst_n), 
-
-.key_push        (key_push),
-.led_state       (led_state)
+    .sys_clk         (sys_clk),   
+    .sys_rst_n       (sys_rst_n), 
+    
+    .key_push        (key_push),
+    .led_state       (led_state)
 );
 
 
